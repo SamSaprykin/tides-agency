@@ -46,7 +46,7 @@ const Header = ({ siteTitle, className }) => {
       <button onClick={handleMenu}>
         Menu
       </button>
-      <Navigation state={state} />
+      <Navigation state={state} setState={setState} />
     </Container>
   </header> 
   )

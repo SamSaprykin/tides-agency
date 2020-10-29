@@ -6,6 +6,7 @@ import { MainWrapper } from "./layoutComponents"
 import Header from "./header"
 import Footer from "./footer"
 import Preloading from "./Preloading/preloading"
+import CustomCursor from "../components/customCursor"
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -22,6 +23,7 @@ const Layout = ({ children }) => (
       <>
         <Preloading />
         <GlobalStyle />
+        <CustomCursor />
         <MainWrapper>
           <Header siteTitle={data.site.siteMetadata.title} />
           <main>{children}</main>

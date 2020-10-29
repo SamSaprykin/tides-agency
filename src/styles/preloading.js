@@ -6,7 +6,7 @@ export const WrapperPreloading = styled.div`
     width:100%;
     position:absolute;
     top:0;
-    background-color:black;
+    background-color:#191B1C;
     z-index:100;
 `
 

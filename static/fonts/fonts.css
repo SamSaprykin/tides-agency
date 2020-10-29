@@ -1,0 +1,41 @@
+@font-face {
+    font-family: Verona Serial;
+    font-weight: 400;
+    src: url("SoftMaker\ -\ VeronaSerial.otf") format("opentype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Verona Serial;
+    font-weight: 800;
+    src: url("SoftMaker\ -\ VeronaSerial-Bold.otf") format("opentype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Bandeins Sans;
+    font-weight: 400;
+    src: url("BandeinsSans-Regular.otf") format("opentype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Bandeins Sans;
+    font-weight: 600;
+    src: url("BandeinsSans-SemiBold.otf") format("opentype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Stinger Fit;
+    font-weight: 400;
+    src: url("Stinger-Fit-Regular.otf") format("opentype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Stinger Wide;
+    font-weight: 400;
+    src: url("Stinger-Wide-Regular.otf") format("opentype");
+    font-display: swap;
+}

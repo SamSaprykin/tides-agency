@@ -4,6 +4,9 @@ import { Link } from "gatsby"
 import Wave from 'react-wavify'
 import Helmet from 'react-helmet'
 import anime from 'animejs'
+
+
+
 import { 
     HamburgerMenu,
     MenuSecondaryBackgroundColor,
@@ -12,47 +15,61 @@ import {
     MenuWrapper,
     MenuLinks,
     MenuInfo,
+    SocialLinks,
+    SocialLinksItem,
+    EmailTides,
+    MenuHeader,
+    LogoWrapper,
+    CloseButtonWrapper,
+    WrapperText,
+    Hamburger,
   } from "../../styles/navigation"
-
-  
-
-    
 
 
 import {
     menuShow,
     menuHide,
     staggerLinks,
-    textIntro,
-  } from '../animate'
+    staggerLinksFast,
+    staggerLinksSocial,
+} from '../animate'
 
 const plugins = [ CSSPlugin ];
 
-
-
-const Navigation = ({ state }) => {
+const Navigation = ({ state, setState }) => {
    //create refs for our DOM elements
-  
+  console.log(state)
+  const [menuClosing, setMenuClosing] = React.useState(false);
   let menuWrapper = useRef(null)
   let show1 = useRef(null)
   let show2 = useRef(null)
-  let info = useRef(null)
+
   let line1 = useRef(null)
   let line2 = useRef(null)
   let line3 = useRef(null)
-
+  let line4 = useRef(null)
+  let line5 = useRef(null)
+  let line6 = useRef(null)
+  let line7 = useRef(null)
+  let line8 = useRef(null)
+  let line9 = useRef(null)
+  let line10 = useRef(null)
+  let line11 = useRef(null)
+  let line12 = useRef(null)
+  let line13 = useRef(null)
+  let line14 = useRef(null)
   if (typeof window !== `undefined`) {
     var bioLayerIn = anime.timeline();
     bioLayerIn
     .add({
       targets: ['.color-layer'],
-      translateX: '10%',
+      translateX: '14%',
       easing: 'easeInOutQuint',
       duration: 400
     })
     .add({
       targets: ['.color-layer'],
-      translateX: '30.1%',
+      translateX: '14%',
       easing: 'easeInOutQuint',
       duration: 430,
       delay:5
@@ -88,10 +105,34 @@ const Navigation = ({ state }) => {
         y:0,
       });
       menuShow(show1, show2);
-      textIntro(info);
-      staggerLinks(line1, line2, line3);
+      
+      staggerLinks(line3, line4, line5, line6);
+      staggerLinksFast(line1, line2);
+      staggerLinksSocial(line7,line8,line9,line10,line11,line12,line13,line14)
     }
   }, [state])
+  const handleMenu = () => {
+    
+    if (state.initial === false) {
+      setState({
+        initial: null,
+        clicked: true,
+        menuName: "Close"
+      });
+    } else if (state.clicked === true) {
+      setMenuClosing(true)
+      setState({
+        clicked: !state.clicked,
+        menuName: "Menu"
+      });
+    } else if (state.clicked === false) {
+      setState({
+        clicked: !state.clicked,
+        menuName: "Close"
+      });
+    }
+  };
+
   
   return (
     <>
@@ -130,7 +171,7 @@ const Navigation = ({ state }) => {
             points: 6
           }}
         />
-        <Wave fill='black'
+        <Wave fill='#191B1C'
         className="four"
         paused={false}
           options={{
@@ -145,39 +186,146 @@ const Navigation = ({ state }) => {
       <MenuLayer ref={(el) => (show2 = el)} className="menu-layer">
         <MenuContainer className="container">
           <MenuWrapper className="wrapper">
+            <MenuHeader>
+              <LogoWrapper ref={(el) => (line1 = el)}>
+                <img src="/logo.png" />
+                <h5>
+                  tides agency
+                </h5>
+              </LogoWrapper>
+              <CloseButtonWrapper ref={(el) => (line2 = el)}>
+                <div>
+                  <span>
+                    Close
+                  </span>
+                  <button onClick={handleMenu}>
+                    <Hamburger />
+                  </button>
+                </div>
+                
+              </CloseButtonWrapper>
+            </MenuHeader>
             <MenuLinks className="menu-links">
               <nav className="color-layer">
                 <ul>
                   <li>
-                    <h2 ref={(el) => (line1 = el)}>
-                      <Link to="/about-us">
-                        About
-                      </Link>
-                    </h2>
-                  </li>
-                  <li>
-                    <h2 ref={(el) => (line2 = el)}>
-                      <Link to="/about-us">
-                        About
-                      </Link>
-                    </h2>
-                  </li>
-                  <li>
                     <h2 ref={(el) => (line3 = el)}>
                       <Link to="/about-us">
-                        About
+                        Home
+                      </Link>
+                    </h2>
+                  </li>
+                  <li>
+                    <h2 ref={(el) => (line4 = el)}>
+                      <Link to="/about-us">
+                        About us
+                      </Link>
+                    </h2>
+                  </li>
+                  <li>
+                    <h2 ref={(el) => (line5 = el)}>
+                      <Link to="/about-us">
+                        Case study
+                      </Link>
+                    </h2>
+                  </li>
+                  <li>
+                    <h2 ref={(el) => (line6 = el)}>
+                      <Link to="/about-us">
+                        Contact
                       </Link>
                     </h2>
                   </li>
                 </ul>
               </nav>
-              <MenuInfo ref={(el) => (info = el)} className="info">
-                <h3>Our Vision</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, ipsam nesciunt dolores, 
-                  similique minus perspiciatis non repudiandae 
-                  dolore nulla eos dicta, libero molestias eaque omnis excepturi! Est corporis earum fuga.
-                </p>
+              <MenuInfo  className="info">
+                <WrapperText >
+                  <h5 ref={(el) => (line7 = el)}>Social Media</h5>
+                </WrapperText>
+                
+                <SocialLinks>
+                  
+                      <SocialLinksItem 
+                          
+                      >
+                        <h3 ref={(el) => (line8 = el)}>
+                          <a 
+                            href="https://dribbble.com/"
+                            target="_blank"
+                          >
+                            Dribble
+                          </a>
+                        </h3>
+                        
+                        
+                      </SocialLinksItem>
+                      <SocialLinksItem 
+                          
+                      >
+                        <h3 ref={(el) => (line9 = el)}>
+                          <a 
+                            href="https://dribbble.com/" 
+                            target="_blank"
+                          >
+                            Behance
+                          </a>
+                        </h3>
+                        
+                        
+                      </SocialLinksItem>  
+                      <SocialLinksItem 
+                          
+                      >
+                        <h3 ref={(el) => (line10 = el)}>
+                          <a 
+                            href="https://dribbble.com/" 
+                            target="_blank"
+                          >
+                            Instagram
+                          </a>
+                        </h3>
+                        
+                        
+                      </SocialLinksItem>  
+                      <SocialLinksItem 
+                         
+                      >
+                        <h3 ref={(el) => (line11 = el)}>
+                          <a 
+                            href="https://dribbble.com/"
+                            target="_blank"
+                          >
+                            Facebook
+                          </a>
+                        </h3>
+                        
+                        
+                      </SocialLinksItem>  
+                      <SocialLinksItem 
+                          
+                      >
+                        <h3 ref={(el) => (line12 = el)}>
+                          <a 
+                            href="https://dribbble.com/" 
+                            target="_blank"
+                          >
+                            Twitter
+                          </a>
+                        </h3>
+                        
+                        
+                      </SocialLinksItem>        
+                   
+                </SocialLinks>
+                <WrapperText >
+                  <h5 ref={(el) => (line13 = el)}>Contact</h5>
+                </WrapperText>
+                <WrapperText ref={(el) => (line14 = el)}>
+                  <EmailTides>
+                    info@tides.agency
+                  </EmailTides>
+                </WrapperText>
+                
               </MenuInfo>
             </MenuLinks>
           </MenuWrapper>
