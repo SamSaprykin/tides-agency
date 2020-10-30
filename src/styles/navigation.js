@@ -151,6 +151,8 @@ export const SocialLinksItem = styled.li`
         a {
             font-family:Bandeins Sans;
             font-weight:400;
+            color:#E8ECF3;
+    
         }
     }
 `
@@ -200,6 +202,7 @@ export const LogoWrapper = styled.div`
         max-width:80px;
         margin-bottom:0 !important;
         font-family:Bandeins Sans;
+        
     }
 `
 
@@ -245,6 +248,7 @@ export const WrapperText = styled.div`
        font-family:Bandeins Sans;
        font-weight:400;
        font-size:20px;
+       color:#E8ECF3;
    }
 `
 

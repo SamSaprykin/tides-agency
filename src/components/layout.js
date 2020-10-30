@@ -2,9 +2,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import { GlobalStyle } from "./globalStyle"
-import { MainWrapper } from "./layoutComponents"
-import Header from "./header"
-import Footer from "./footer"
+
+
+
 import Preloading from "./Preloading/preloading"
 import CustomCursor from "../components/customCursor"
 
@@ -24,11 +24,7 @@ const Layout = ({ children }) => (
         <Preloading />
         <GlobalStyle />
         <CustomCursor />
-        <MainWrapper>
-          <Header siteTitle={data.site.siteMetadata.title} />
           <main>{children}</main>
-          <Footer />
-        </MainWrapper>
       </>
     )}
   />
