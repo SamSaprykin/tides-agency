@@ -66,4 +66,17 @@ export const staggerLinksSocial = (elem1, elem2, elem3, elem4, elem5, elem6, ele
 }
 
 
+export const staggerLinksHero = (elem1, elem2, elem3, elem4) => {
+  gsap.from([elem1, elem2, elem3, elem4], {
+    duration: 1.5,
+    y: 110,
+    delay: 0.9,
+    ease: "power2.inOut",
+    stagger: {
+      amount: 0.4,
+    },
+  })
+}
+
+
 

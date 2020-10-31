@@ -125,7 +125,6 @@ export const MenuInfo = styled.div`
     position:relative;
     overflow:hidden;
     p {
-        
         font-size: 20px;
         line-height:34px;
     }

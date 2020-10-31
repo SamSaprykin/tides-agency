@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 import { gsap, CSSPlugin } from "gsap"
 import { Link } from "gatsby"
 import Wave from 'react-wavify'
@@ -39,7 +39,7 @@ const plugins = [ CSSPlugin ];
 const Navigation = ({ state, setState }) => {
    //create refs for our DOM elements
   console.log(state)
-  const [menuClosing, setMenuClosing] = React.useState(false);
+  const [menuClosing, setMenuClosing] = useState(false);
   let menuWrapper = useRef(null)
   let show1 = useRef(null)
   let show2 = useRef(null)

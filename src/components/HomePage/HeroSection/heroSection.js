@@ -1,5 +1,5 @@
-import React, {useState} from "react"
-import styled from "styled-components"
+import React, {useState, useRef, useEffect} from "react"
+
 
 import TidesIcons from "../../DecorationElements/tidesIcons"
 import Navigation from "../../Navigation/navigation"
@@ -15,7 +15,12 @@ import {
     LogoImage,
     ButtonMenu,
     IconWaveWrapper,
+    WordsWrapper,
 } from "../../../styles/IndexPage/heroSection"
+
+import {
+  staggerLinksHero
+} from '../../animate'
 
 const HeroSection = ({ }) => {
   const [state, setState] = useState({
@@ -23,6 +28,11 @@ const HeroSection = ({ }) => {
     clicked: null,
     menuName: "Menu"
   });
+
+  let text1 = useRef(null)
+  let text2 = useRef(null)
+  let text3 = useRef(null)
+  let text4 = useRef(null)
   // State of our button
   const [hovered, setHovered] = useState(false);
 
@@ -59,6 +69,10 @@ const HeroSection = ({ }) => {
       });
     }
   };
+  useEffect(() => { 
+    staggerLinksHero(text1, text2, text3, text4);
+  },[])
+  
   return (
   <>
     <HeroLayout>
@@ -86,11 +100,23 @@ const HeroSection = ({ }) => {
       </HeroNavWrapper>
       <HeroText>
           <ul>
-            <li>We help startups 	&amp;</li>
-            <li>private equity</li>
-            <li>backed companies</li>
-            <li>grow their revenue</li>
-            <TidesIcons type="waveTextDecoration" />
+            <WordsWrapper >
+              <li ref={(el) => (text1 = el)}>We help startups 	&amp;</li>
+            </WordsWrapper >
+            <WordsWrapper >
+              <li ref={(el) => (text2 = el)}>private equity</li>
+            </WordsWrapper>
+            <WordsWrapper >
+              <li ref={(el) => (text3 = el)}>backed companies</li>
+            </WordsWrapper>
+            <WordsWrapper >
+              <li ref={(el) => (text4 = el)}>
+                grow their revenue
+                <TidesIcons type="waveTextDecoration" />
+              </li>
+             
+            </WordsWrapper>
+            
           </ul>
           <ShapeIndex />
       </HeroText>

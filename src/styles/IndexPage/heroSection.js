@@ -17,7 +17,7 @@ export const HeroLayout = styled.div`
 
 
 export const HeroNavWrapper = styled.div`
-    position:absolute;
+    position:fixed;
     top:0;
     width:100%;
     height:100px;
@@ -68,14 +68,18 @@ export const HeroText = styled.div`
     li {
       color:#1A6AFF;
       font-size:84px;
-      line-height:100px;
+      line-height:110px;
       letter-spacing:0.05em;
       text-align:center;
       font-family:Verona Serial;
       font-weight:400;
       text-transform:uppercase;
       position:relative;
-      
+      display:flex;
+      flex-direction:column;
+      svg {
+        margin-top:-15px;
+      }
     }
   }
   
@@ -115,6 +119,17 @@ export const IconWaveWrapper = styled.div`
       if (hovered === true) return "translate(-75px,0);"
       if (hovered === false) return "initial;"
     }};
+  }
+`
+
+export const WordsWrapper = styled.div`
+  position:relative;
+  height:110px;
+  overflow:hidden;
+  li {
+    position:absolute;
+    height: 110px;
+    
   }
 `
 

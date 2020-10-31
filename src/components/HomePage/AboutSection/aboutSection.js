@@ -1,7 +1,8 @@
-import React  from "react"
-import styled from "styled-components"
+import React from "react"
 
+import gsap from "gsap"
 import StainsBackground from "../../DecorationElements/stainsBackgrounds"
+import MarkueComponent from "./markueComponent"
 
 import "./aboutSection.css"
 
@@ -14,8 +15,50 @@ import {
     ImpactAreasList,
 } from "../../../styles/IndexPage/aboutSection"
 
+const dataMarque = [
+    {
+        title:"strategy",
+        innersElem: [
+            "strategy","strategy","strategy","strategy","strategy","strategy","strategy","strategy","strategy",
+        ],
+        descrItems: [
+            "Research","Remote Design Sprints","Roadmaps","Insights","Brand Positioning","Processess"
+        ],
+        id: 0,
+    },
+    {
+        title:"design",
+        innersElem: [
+            "design","design","design","design","design","design","design","design","design",
+        ],
+        descrItems: [
+            "Research","Remote Design Sprints","Roadmaps","Insights","Brand Positioning","Processess"
+        ],
+        id: 1,
+    },
+    {
+        title:"marketing",
+        innersElem: [
+            "marketing","marketing","marketing","marketing","marketing","marketing","marketing","marketing","marketing",
+        ],
+        descrItems: [
+            "Research","Remote Design Sprints","Roadmaps","Insights","Brand Positioning","Processess"
+        ],
+        id: 2,
+    },
+    {
+        title:"development",
+        innersElem: [
+            "development","development","development","development","development","development","development","development","strategy",
+        ],
+        descrItems: [
+            "Research","Remote Design Sprints","Roadmaps","Insights","Brand Positioning","Processess"
+        ],
+        id: 3,
+    }
+]
+
 const AboutSection = ({ }) => {
-  
   return (
   <WrapperAbout>
     <TextSectionAbout>
@@ -31,81 +74,20 @@ const AboutSection = ({ }) => {
                 impact areas
             </ImpactAreasTitle>
             <ImpactAreasList>
-                <li className="menu__item">
-                    <h5 className="menu__item-link">strategy</h5>
-                    <div className="marquee">
-                        <button className="button-expand">+</button>
-                        <div className="marquee__inner" aria-hidden="true">
-                            <span>strategy</span>
-                            <span>strategy</span>
-                            <span>strategy</span>
-                            <span>strategy</span>
-                            <span>strategy</span>
-                            <span>strategy</span>
-                            <span>strategy</span>
-                            <span>strategy</span>
-                        </div>
-				    </div>
-                </li>
-                <li className="menu__item">
-                    <h5 className="menu__item-link">design</h5>
-                    <div className="marquee">
-                        <button className="button-expand">+</button>
-                        <div className="marquee__inner" aria-hidden="true">
-                            <span>design</span>
-                            <span>design</span>
-                            <span>design</span>
-                            <span>design</span>
-                            <span>design</span>
-                            <span>design</span>
-                            <span>design</span>
-                            <span>design</span>
-                        </div>
-				    </div>
-                </li>
-                <li className="menu__item">
-                    <h5 className="menu__item-link">marketing</h5>
-                    <div className="marquee">
-                        <button className="button-expand">+</button>
-                        <div className="marquee__inner" aria-hidden="true">
-                            <span>marketing</span>
-                            <span>marketing</span>
-                            <span>marketing</span>
-                            <span>marketing</span>
-                            <span>marketing</span>
-                            <span>marketing</span>
-                            <span>marketing</span>
-                            <span>marketing</span>
-                        </div>
-				    </div>
-                </li>
-                <li className="menu__item">
-                    <h5 className="menu__item-link">development</h5>
-                    <div className="marquee">
-                        <button className="button-expand">+</button>
-                        <div className="marquee__inner" aria-hidden="true">
-                            <span>development</span>
-                            <span>development</span>
-                            <span>development</span>
-                            <span>development</span>
-                            <span>development</span>
-                            <span>development</span>
-                            <span>development</span>
-                            <span>development</span>
-                        </div>
-				    </div>
-                </li>
+                {dataMarque.map((marque) => {
+                    
+                    return (
+                      <MarkueComponent data={marque} />
+                    )
+                })}
             </ImpactAreasList>
         </ImpactAreasAbout>
     </TextSectionAbout>
     <StainsBackground top="0" left="0" height="600px" />
-    <StainsBackground top="82%" left="40%" height="600px" />
+    <StainsBackground top="72%" left="40%" height="600px" />
   </WrapperAbout>
   )
 }
   
-
-
-
-
 export default AboutSection
+
