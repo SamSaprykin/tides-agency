@@ -1,7 +1,8 @@
 import styled from "styled-components"
 
 
-export const WrapperCaseStudy = styled.div`
+
+export const FinishedProjectsWrapper = styled.div`
     background-color:#191B1C;
     padding-top:50px;
 `
@@ -18,7 +19,7 @@ export const WrapperContent = styled.div`
 
 `
 
-export const TitleCaseStudy  = styled.h2`
+export const Titleprojects  = styled.h2`
     font-size:57px;
     line-height:116px;
     text-transform:uppercase;
@@ -64,20 +65,59 @@ export const ProjectItem = styled.li`
     border-bottom:1px solid #191B1C;
     padding:21px 0;
     justify-content:space-between;
+   
+    transition: all .5s;
+    :hover {
+        padding:21px 30px;
+        background-color:#191B1C;
+        
+    }
     div {
         text-align:left;
-        width:266px;
-        span {
-            padding:0 4px;
-        }
-    }
-    svg {
-        width:116px;
-        height:45px;
+        width:100%;
+        max-width:300px;
+        
+        
     }
     
+    
+`
+export const WorkType = styled.span `
+padding:0 4px;
+font-family:Bandeins Sans;
+font-size:20px;
+line-height:34px;
+color: #191B1C;
+font-weight:400;
+${ProjectItem} : hover & {
+    color:#E8ECF3;
+}
+`
+
+export const IconItem = styled.img`
+    width:120px;
+    margin-bottom:0;
+    ${ProjectItem}:hover & {
+        filter: invert(1);
+    }
 `
 
 export const WorkYear = styled.h5`
-    
+    color: #191B1C;
+    margin-bottom:0;
+    font-size:20px;
+    line-height:34px;
+    font-family:Bandeins Sans;
+    font-weight:400;
+    ${ProjectItem} : hover & {
+        color:#E8ECF3;
+    }
+`
+
+export const ArrowWork = styled.img`
+    width:13px;
+    height:13px;
+    ${ProjectItem}:hover & {
+        filter: invert(1);
+    }
 `

@@ -8,7 +8,8 @@ import ShapeIndex from "../components/DecorationElements/shapeIndex"
 
 import HeroSection from "../components/HomePage/HeroSection/heroSection"
 import AboutSection from "../components/HomePage/AboutSection/aboutSection"
-import CaseStudy from "../components/HomePage/CaseStudy/caseStudy"
+import FinishedProjects from "../components/HomePage/FinishedProjects/finishedProjects"
+import SkillsSection from "../components/HomePage/SkillsSection/skillsSection"
 
 const IndexPage = () => (
   <Layout>
@@ -16,7 +17,8 @@ const IndexPage = () => (
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
       <HeroSection />
       <AboutSection />
-      <CaseStudy />
+      <FinishedProjects />
+      <SkillsSection />
   </Layout>
 )
 

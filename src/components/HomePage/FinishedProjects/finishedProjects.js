@@ -1,40 +1,43 @@
 import React from "react"
-import TidesIcons from "../../DecorationElements/tidesIcons"
+
 import { Link } from "gatsby"
 import { 
-  WrapperCaseStudy,
+  FinishedProjectsWrapper,
   WrapperBoard,
   WrapperContent,
-  TitleCaseStudy,
+  Titleprojects,
   DescriptionWrapper,
   Description,
   Information,
   ProjectsLinks,
   ProjectItem,
   WorkYear,
-} from "../../../styles/IndexPage/caseStudy"
+  WorkType,
+  IconItem,
+  ArrowWork
+} from "../../../styles/IndexPage/finishedProjects"
 
 const projectList = [
   {
-    icon:"advent",
+    icon:"/advent.png",
     workTypes:["Strategy", "Design", "Development"],
     year:"2020",
     linkTo:"/",
   },
   {
-    icon:"am_tt",
+    icon:"/amtt.png",
     workTypes:["Strategy", "Design"],
     year:"2019",
     linkTo:"/",
   },
   {
-    icon:"nauwork",
+    icon:"/cooperline.png",
     workTypes:["Strategy", "Design", "Marketing"],
     year:"2020",
     linkTo:"/",
   },
   {
-    icon:"amn_healthcare",
+    icon:"/amn.png",
     workTypes:["Strategy", "Design", "Development"],
     year:"2018",
     linkTo:"/",
@@ -43,16 +46,15 @@ const projectList = [
   
 ]
 
-const CaseStudy = ({ }) => {
-  
+const FinishedProjects = ({ }) => {
   
   return (
-    <WrapperCaseStudy>
+    <FinishedProjectsWrapper>
         <WrapperBoard>
             <WrapperContent>
-                <TitleCaseStudy>
+                <Titleprojects>
                     Exrepience for dayysssss
-                </TitleCaseStudy>
+                </Titleprojects>
                 <DescriptionWrapper>
                     <Description>
                       Leverage the eons of experience Tides has in 
@@ -73,19 +75,23 @@ const CaseStudy = ({ }) => {
                     {
                       projectList.map(item => {
                         return (
-                          <ProjectItem key={item.year}>
-                              <TidesIcons type={item.icon} />
+                          <ProjectItem key={item.year} >
+                              <IconItem 
+                                src={item.icon}
+                              />
                               <div>
                                 {
                                   item.workTypes.map(type => {
                                     return (
-                                      <span key={type}>{type} </span>
+                                      <WorkType key={type}>{type} </WorkType>
                                     )
                                   })
                                 }
                               </div>
                               <WorkYear>{item.year}</WorkYear>
-                              <Link to={item.linkTo}>Icon arrow</Link>
+                              <Link to={item.linkTo}>
+                                <ArrowWork src="/arrow-work.png" />
+                              </Link>
                           </ProjectItem>
                         )
                       })
@@ -93,7 +99,7 @@ const CaseStudy = ({ }) => {
                 </ProjectsLinks>
             </WrapperContent>
         </WrapperBoard>
-    </WrapperCaseStudy>
+    </FinishedProjectsWrapper>
   )
 }
   
@@ -101,4 +107,6 @@ const CaseStudy = ({ }) => {
 
 
 
-export default CaseStudy
+export default FinishedProjects
+
+
