@@ -24,7 +24,7 @@ const Preloading = () => {
       }
       
       if(listRefs && listRefs.current !== null) {
-        tl.add(TweenLite.fromTo(listRefs.current, .5, {height: "30px"}, {height: "0px" }),"+=.2")
+        tl.add(TweenLite.fromTo(listRefs.current, .5, {height: "3.81vh"}, {height: "0px" }),"+=.2")
       }
       tl.from(app,.1,{y:"0"})
       tl.to(app,.1,{y:"-100%"})

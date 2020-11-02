@@ -5,10 +5,11 @@ import styled from "styled-components"
 export const FinishedProjectsWrapper = styled.div`
     background-color:#191B1C;
     padding-top:50px;
+    max-width:1302px;
+    margin:0 auto;
 `
 
 export const WrapperBoard = styled.div`
-    margin:0 69px;
     background-color:#E8ECF3;
 `
 

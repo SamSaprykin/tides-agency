@@ -11,7 +11,8 @@ export const WrapperAbout = styled.div`
     flex-direction:column;
     align-items:center;
     justify-content:space-between;
-    
+    max-width:1002px;
+    margin:0 auto;
 `
 
 export const TextSectionAbout = styled.div`
