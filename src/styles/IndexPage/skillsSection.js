@@ -7,6 +7,7 @@ export const SkillsSectionContainer = styled.div`
     background-image: url('/background-planets.png');
     background-size: 100% 65%;
     background-position: center bottom;
+    background-repeat: no-repeat;
 `
 
 export const SkillsSectionWrapper = styled.div`

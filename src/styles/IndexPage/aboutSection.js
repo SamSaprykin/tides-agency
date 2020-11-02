@@ -11,12 +11,11 @@ export const WrapperAbout = styled.div`
     flex-direction:column;
     align-items:center;
     justify-content:space-between;
-    max-width:1002px;
-    margin:0 auto;
+   
 `
 
 export const TextSectionAbout = styled.div`
-
+    width:100%;
 `
 
 
@@ -25,16 +24,16 @@ export const AboutDescription = styled.div`
     flex-direction:column;
     align-items:center;
     justify-content:space-between;
-    padding:0 219px;
+    
     p {
-        
+
         color:#FFFFFF;
         font-size:38px;
         line-height:50px;
         font-family: Bandeins Sans;
         font-weight:400;
         padding-bottom:80px;
-        
+        max-width:1002px;
         span {
             color:#1A6AFF;
             font-family:Stinger Wide;
@@ -59,7 +58,9 @@ export const ImpactAreasTitle = styled.h4`
     font-family:Verona Serial;
     font-weight:400;
     text-transform:uppercase;
-    padding:0 219px;
+    width:100%;
+    max-width:1002px;
+    margin:0 auto;
 `
 
 export const ImpactAreasList = styled.ul`
