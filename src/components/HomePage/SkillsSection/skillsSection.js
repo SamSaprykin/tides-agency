@@ -17,6 +17,7 @@ import {
   SkillSectionMoon,
   SkillSectionMoonWrapper,
   SkillSectionSunWrapper,
+  SmallPlanet,
 } from "../../../styles/IndexPage/skillsSection"
 
 const SkillsSection = ({ }) => {
@@ -34,7 +35,7 @@ const SkillsSection = ({ }) => {
                         Learn more about the skills of the team
                     </SkillsSectionCta>
                     <SkillsSectionCtaButton>
-                        <TidesIcons type="arrowButton" />
+                        <TidesIcons type="arrowButton" fill="#FFCC00"/>
                     </SkillsSectionCtaButton>
                 </SkillsSectionCtaWrapper>
                 <SkillSectionPlanetsWrapper>
@@ -42,7 +43,8 @@ const SkillsSection = ({ }) => {
                             <SkillSectionSun src="/sun.png"/>
                         </SkillSectionSunWrapper>
                         <SkillSectionMoonWrapper>
-                            <SkillSectionMoon src="/moon.png"/>
+                            <SkillSectionMoon  src="/moon.svg"/>
+                            <SmallPlanet src="/planet.svg" />
                         </SkillSectionMoonWrapper>
                 </SkillSectionPlanetsWrapper>
         </SkillsSectionWrapper>

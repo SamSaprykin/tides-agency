@@ -19,7 +19,7 @@ const dataMarque = [
     {
         title:"strategy",
         innersElem: [
-            "strategy","strategy","strategy","strategy","strategy","strategy","strategy","strategy","strategy",
+            "strategy -","strategy -","strategy -","strategy -","strategy -","strategy -","strategy -","strategy -","strategy -",
         ],
         descrItems: [
             "Research","Remote Design Sprints","Roadmaps","Insights","Brand Positioning","Processess"
@@ -29,7 +29,7 @@ const dataMarque = [
     {
         title:"design",
         innersElem: [
-            "design","design","design","design","design","design","design","design","design",
+            "design -","design -","design -","design -","design -","design -","design -","design -","design -",
         ],
         descrItems: [
             "Research","Remote Design Sprints","Roadmaps","Insights","Brand Positioning","Processess"
@@ -39,7 +39,7 @@ const dataMarque = [
     {
         title:"marketing",
         innersElem: [
-            "marketing","marketing","marketing","marketing","marketing","marketing","marketing","marketing","marketing",
+            "marketing -","marketing -","marketing -","marketing -","marketing -","marketing -","marketing -","marketing -","marketing -",
         ],
         descrItems: [
             "Research","Remote Design Sprints","Roadmaps","Insights","Brand Positioning","Processess"
@@ -49,7 +49,7 @@ const dataMarque = [
     {
         title:"development",
         innersElem: [
-            "development","development","development","development","development","development","development","development","strategy",
+            "development -","development -","development -","development -","development -","development -","development -","development -","strategy -",
         ],
         descrItems: [
             "Research","Remote Design Sprints","Roadmaps","Insights","Brand Positioning","Processess"

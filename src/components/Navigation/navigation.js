@@ -38,7 +38,7 @@ const plugins = [ CSSPlugin ];
 
 const Navigation = ({ state, setState }) => {
    //create refs for our DOM elements
-  console.log(state)
+  
   const [menuClosing, setMenuClosing] = useState(false);
   let menuWrapper = useRef(null)
   let show1 = useRef(null)

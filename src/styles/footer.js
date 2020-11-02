@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const FooterWrapper = styled.div`
     max-width:1002px;
-    margin:150px auto 0;
+    margin:0 auto;
     border-top:1px solid #E8ECF3;
     border-bottom:1px solid #E8ECF3;
     padding:17px 0 72px;
@@ -12,7 +12,7 @@ export const FooterWrapper = styled.div`
 export const FooterTitle = styled.h3`
     font-size:60px;
     line-height:140px;
-    letter-spacin:0.05em;
+    letter-spacing:0.05em;
     color:#E8ECF3;
     font-family: Verona Serial;
     font-weight:400;
@@ -107,4 +107,35 @@ export const ClockWrapper = styled.div`
         }
     }
     
+`
+
+
+export const FooterFooter = styled.div`
+    padding: 67px 0 50px;
+    max-width:1002px;
+    width:100%;
+    margin:0 auto;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+`
+
+export const BackToTop = styled.div`
+    span {
+        font-size:20px;
+        line-height:34px;
+        font-family: Bandeins Sans;
+        color:#E8ECF3;
+        margin-left:10px;
+    }
+    svg {
+        transform: rotate(-90deg);
+    }
+`
+
+export const RightsText = styled.p`
+    font-size:20px;
+    line-height:34px;
+    font-family: Bandeins Sans;
+    color:#E8ECF3;
 `

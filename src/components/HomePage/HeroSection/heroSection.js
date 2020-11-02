@@ -75,7 +75,7 @@ const HeroSection = ({ }) => {
   
   return (
   <>
-    <HeroLayout>
+    <HeroLayout id="hero-section">
       <HeroNavWrapper>
         <HeroLogo>
           <LogoImage src="/logo.png" />

@@ -2,8 +2,10 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Clock from 'react-live-clock'
-
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 import StainsBackground from "./DecorationElements/stainsBackgrounds"
+
+import TidesIcons from "../components/DecorationElements/tidesIcons"
 
 import { 
    FooterWrapper,
@@ -14,10 +16,14 @@ import {
    FooterButton,
    TitleItem,
    ClockWrapper,
+   FooterFooter,
+   BackToTop,
+   RightsText,
   } from "../styles/footer"
 
 const Footer = () => {
     return (
+        <>
         <FooterWrapper>
             <FooterTitle>
                 Contact
@@ -73,8 +79,21 @@ const Footer = () => {
                     say hello
                 </FooterButton>
             </FooterContentWrapper>
+            
             <StainsBackground rotate="-10deg" top="-50%" left="1%" height="400px"/>
         </FooterWrapper>
+        <FooterFooter>
+            <BackToTop>
+                <AnchorLink to="/#hero-section" title="Our team">
+                    <TidesIcons type="arrowButton" />
+                    <span>Back to Top</span>
+                </AnchorLink>
+            </BackToTop>
+            <RightsText>
+                &copy; 2020 Tides Agency. All Rights Reserved.
+            </RightsText>
+        </FooterFooter>
+     </>
     )
 }
 

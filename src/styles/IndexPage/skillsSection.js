@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 
 
 export const SkillsSectionContainer = styled.div`
@@ -87,8 +87,29 @@ export const SkillSectionSunWrapper = styled.div`
 export const SkillSectionMoonWrapper = styled.div`
     margin-top:36px;
     width:50%;
+    position:relative;
+    height:500px;
 `
+const rotate = keyframes`
+    from { transform: rotate(0deg) translateX(120px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(120px) rotate(-360deg); }
+`;
+
+export const SmallPlanet = styled.img`
+    width:70px;
+    height:70px;
+    position:absolute;
+    z-index:2;
+    top:225px;
+    left:210px;
+    animation: ${rotate} 7s linear infinite;
+`
+
+
 
 export const SkillSectionSun = styled.img``
 
-export const SkillSectionMoon = styled.img``
+export const SkillSectionMoon = styled.img`
+    position:relative;
+    z-index:2;
+`

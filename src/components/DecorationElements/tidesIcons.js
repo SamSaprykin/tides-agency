@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-
+import PropTypes from "prop-types"
 /* Elements Decoration Icons */
 
 const TidesIcons = ({
-    type, radiusIcon, bgColor, shadow, opacity,
+    type, radiusIcon, bgColor, shadow, opacity, fill
 }) => {
 
   return type === 'mistakes' ? (
@@ -77,9 +77,13 @@ const TidesIcons = ({
             </svg>
         ) : type === 'arrowButton' ? (
             <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10.026 1.19559e-07L8.08104 9.63655e-08C8.79884 2.02247 10.767 4.51685 12.9436 5.14607L8.17323e-08 5.14607L6.13662e-08 6.85393L12.9436 6.85393C10.767 7.48315 8.79884 9.97753 8.08104 12L10.026 12C11.3227 9.57303 12.4573 8.40449 16 6.5618L16 5.4382C12.4573 3.59551 11.3227 2.42697 10.026 1.19559e-07Z" fill="#FFCC00"/>
+                <path d="M10.026 1.19559e-07L8.08104 9.63655e-08C8.79884 2.02247 10.767 4.51685 12.9436 5.14607L8.17323e-08 5.14607L6.13662e-08 6.85393L12.9436 6.85393C10.767 7.48315 8.79884 9.97753 8.08104 12L10.026 12C11.3227 9.57303 12.4573 8.40449 16 6.5618L16 5.4382C12.4573 3.59551 11.3227 2.42697 10.026 1.19559e-07Z" fill={fill}/>
             </svg>
-        ) : (
+        ) : type === 'arrowForm' ? (
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22.3888 18.1109C22.0515 18.1109 21.7777 17.8371 21.7777 17.4997V3.0863L2.04292 22.8213C1.80458 23.0596 1.4171 23.0596 1.17876 22.8213C0.940414 22.5829 0.940414 22.1955 1.17876 21.9571L20.9135 2.22224H6.49936C6.16201 2.22224 5.8882 1.94845 5.8882 1.61112C5.8882 1.27379 6.16201 1 6.49936 1H22.3888C22.4683 1 22.5477 1.01587 22.6223 1.04646C22.7715 1.1088 22.8912 1.22733 22.9535 1.37766C22.9841 1.4522 23 1.53166 23 1.61112V17.4998C23 17.8371 22.7262 18.1109 22.3888 18.1109Z" fill="#E8ECF3" stroke="#E8ECF3" stroke-width="1.2"/>
+            </svg>
+        ) :  (
             <></>
         )
 };
@@ -103,5 +107,14 @@ const IconWrapper = styled.div`
        
     }
 `
+
+TidesIcons.propTypes = {
+    fill: PropTypes.string, // 'left', 'center', 'right', 'justify'
+  }
+  
+TidesIcons.defaultProps = {
+    fill: "#E8ECF3",
+
+}
   
 export default TidesIcons;
