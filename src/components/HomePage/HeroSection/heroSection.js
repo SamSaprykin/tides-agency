@@ -1,6 +1,4 @@
 import React, {useState, useRef, useEffect} from "react"
-
-
 import TidesIcons from "../../DecorationElements/tidesIcons"
 import Navigation from "../../Navigation/navigation"
 import ShapeIndex from "../../DecorationElements/shapeIndex"
@@ -16,6 +14,8 @@ import {
     ButtonMenu,
     IconWaveWrapper,
     WordsWrapper,
+    ScrollWrapper,
+    Centered,
 } from "../../../styles/IndexPage/heroSection"
 
 import {
@@ -121,9 +121,15 @@ const HeroSection = ({ }) => {
           </ul>
           <ShapeIndex />
       </HeroText>
-      <HeroScrollDown>
-        <TidesIcons type="scrollDown" />
-      </HeroScrollDown>
+      <ScrollWrapper>
+        <Centered>
+         <TidesIcons type="arrowScroll" className="centered" />
+        </Centered>
+        <HeroScrollDown>
+          <TidesIcons type="scrollDown" />
+        </HeroScrollDown>
+      </ScrollWrapper>
+      
     </HeroLayout>
     <Navigation state={state} setState={setState} />
   </>

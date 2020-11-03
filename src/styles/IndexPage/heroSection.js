@@ -1,5 +1,5 @@
 
-import styled from "styled-components"
+import styled, {keyframes} from "styled-components"
 
 export const HeroLayout = styled.div`
   width:100%;
@@ -85,8 +85,37 @@ export const HeroText = styled.div`
   
 `
 
+
+const rotation = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
+
 export const HeroScrollDown = styled.div`
+  position:absolute;
+  svg {
+      animation: ${rotation} 10s linear infinite;
+  }
+
+  top:-50%;
+`
+
+export const ScrollWrapper = styled.div`
   margin-top:100px;
+  position:relative;
+  width:120px;
+  height:120px;
+`
+
+export const Centered  = styled.div`
+  position:absolute;
+
+  top:-50%;
 `
 
 export const LogoImage = styled.img`
@@ -132,5 +161,8 @@ export const WordsWrapper = styled.div`
    
   }
 `
+
+
+
 
 //mix-blend-mode: difference;

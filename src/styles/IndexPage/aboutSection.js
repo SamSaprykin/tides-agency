@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 
 export const WrapperAbout = styled.div`
-    padding-top:100px;
+    margin-top:100px;
     width:100%;
     height:100%;
     background-color: #191B1C;
@@ -34,6 +34,8 @@ export const AboutDescription = styled.div`
         font-weight:400;
         padding-bottom:80px;
         max-width:1002px;
+        transform:translate(0,60px);
+        opacity:1;
         span {
             color:#1A6AFF;
             font-family:Stinger Wide;
@@ -61,6 +63,11 @@ export const ImpactAreasTitle = styled.h4`
     width:100%;
     max-width:1002px;
     margin:0 auto;
+    
+    p {
+        transform:translate(0,60px);
+    }
+    
 `
 
 export const ImpactAreasList = styled.ul`

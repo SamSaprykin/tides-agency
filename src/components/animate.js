@@ -78,5 +78,20 @@ export const staggerLinksHero = (elem1, elem2, elem3, elem4) => {
   })
 }
 
+export const elementShow = (elem1) => {
+  gsap.to(elem1, {
+    duration: 2,
+    opacity:1,
+    ease: "power4.inOut",
+    y:0,
+    delay:0.5,
+    ScrollTrigger:{
+      trigger: elem1,
+      start: "top bottom",
+      scrub: true
+    }
+  });
+}
+
 
 
