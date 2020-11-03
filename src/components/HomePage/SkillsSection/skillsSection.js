@@ -3,7 +3,7 @@ import { keyframes, css } from "styled-components"
 import { Link } from "gatsby"
 
 import TidesIcons from "../../DecorationElements/tidesIcons"
-import { useScroll } from "../../../hooks/useScroll"
+import { useScrollPosition } from "../../../hooks/useScroll"
 
 import { 
   SkillsSectionWrapper,
@@ -22,13 +22,13 @@ import {
 } from "../../../styles/IndexPage/skillsSection"
 
 const SkillsSection = ({ }) => {
-    
-    
-    let { scrollX, scrollY, scrollDirection } = useScroll();
-   
-  
-  
- 
+    const [position, setPostition] = useState(null)
+    useScrollPosition(({ prevPos, currPos }) => {
+        setPostition(currPos.y)
+      },
+      [position]
+    );
+    console.log(position)
   return (
     <SkillsSectionContainer >
         <SkillsSectionWrapper>
@@ -51,7 +51,7 @@ const SkillsSection = ({ }) => {
                         </SkillSectionSunWrapper>
                         <SkillSectionMoonWrapper>
                             <SkillSectionMoon  src="/moon.svg"/>
-                            <SmallPlanet  position={scrollY} src="/planet.svg" />
+                            <SmallPlanet  position={position} src="/planet.svg" />
                         </SkillSectionMoonWrapper>
                 </SkillSectionPlanetsWrapper>
         </SkillsSectionWrapper>

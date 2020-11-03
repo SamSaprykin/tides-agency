@@ -104,7 +104,7 @@ export const SmallPlanet = styled.img`
     left:210px;
     transform: rotate(0deg) translateX(120px) rotate(0deg);
     transform: ${({ position }) => {
-        if (position) return `rotate(${position/4}deg) translateX(120px) rotate(${position/4}deg);`
+        if (position) return `rotate(${position/5}deg) translateX(120px) rotate(${position/5}deg);`
     }};
     transition: all .5s linear;
 `

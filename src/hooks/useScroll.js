@@ -1,43 +1,43 @@
-import { useState, useEffect } from "react";
+import { useRef, useLayoutEffect } from 'react'
 
-export function useScroll() {
-  const isBrowser = typeof window !== `undefined`
-  if(isBrowser) {
-  const [lastScrollTop, setLastScrollTop] = useState(0);
-  const [bodyOffset, setBodyOffset] = useState(
-    document.body.getBoundingClientRect()
-  );
-  const [scrollY, setScrollY] = useState(bodyOffset.top);
-  const [scrollX, setScrollX] = useState(bodyOffset.left);
-  const [scrollDirection, setScrollDirection] = useState();
- 
+const isBrowser = typeof window !== `undefined`
 
-  
-    const listener = e => {
-      setBodyOffset(document.body.getBoundingClientRect());
-      setScrollY(-bodyOffset.top);
-      setScrollX(bodyOffset.left);
-      setScrollDirection(lastScrollTop > -bodyOffset.top ? "down" : "up");
-      setLastScrollTop(-bodyOffset.top);
-    };
-    useEffect(() => {
-      window.addEventListener("scroll", listener);
-      return () => {
-        window.removeEventListener("scroll", listener);
-      };
-    });
-    return {
-      scrollY,
-      scrollX,
-      scrollDirection
-    };
+function getScrollPosition({ element, useWindow }) {
+  if (!isBrowser) return { x: 0, y: 0 }
+
+  const target = element ? element.current : document.body
+  const position = target.getBoundingClientRect()
+
+  return useWindow
+    ? { x: window.scrollX, y: window.scrollY }
+    : { x: position.left, y: position.top }
+}
+
+export function useScrollPosition(effect, deps, element, useWindow, wait) {
+  const position = useRef(getScrollPosition({ useWindow }))
+
+  let throttleTimeout = null
+
+  const callBack = () => {
+    const currPos = getScrollPosition({ element, useWindow })
+    effect({ prevPos: position.current, currPos })
+    position.current = currPos
+    throttleTimeout = null
   }
-  if(!isBrowser) {
-    return {
-      scrollY:0,
-      scrollX:0,
-      scrollDirection:'none'
+
+  useLayoutEffect(() => {
+    const handleScroll = () => {
+      if (wait) {
+        if (throttleTimeout === null) {
+          throttleTimeout = setTimeout(callBack, wait)
+        }
+      } else {
+        callBack()
+      }
     }
-  }
 
+    window.addEventListener('scroll', handleScroll)
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, deps)
 }
