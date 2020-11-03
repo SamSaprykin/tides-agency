@@ -34,6 +34,10 @@ export const HeroLogo = styled.div`
 `
 
 export const HeroMenuButtonWrapper = styled.div`
+  filter: ${({ secondaryColor }) => {
+    if (secondaryColor <= -2350 && -3500 <= secondaryColor ) return "invert(1);"
+    if (secondaryColor <= -3500) return "invert(0);"
+  }};
   display:flex;
   flex-direction:row;
   align-items:center;
@@ -55,7 +59,9 @@ export const HeroMenuButtonWrapper = styled.div`
 export const HeroText = styled.div`
   
   margin-top:20vh;
-  
+  &:hover ~ ${HeroNavWrapper} {
+    opacity: 0;
+  }
   ul {
     width:100%;
     height:100%;
@@ -122,6 +128,10 @@ export const LogoImage = styled.img`
   width:50px;
   height:50px;
   margin-bottom:0;
+  filter: ${({ secondaryColor }) => {
+    if (secondaryColor <= -2350 && -3500 <= secondaryColor ) return "invert(1);"
+    if (secondaryColor <= -3500) return "invert(0);"
+  }};
 `
 
 export const ButtonMenu  = styled.button`
@@ -141,7 +151,7 @@ export const IconWaveWrapper = styled.div`
   svg {
     transition: transform 7s;
     fill: ${({ hovered }) => {
-      if (hovered === true) return "#828489;"
+      if (hovered === true) return "#1A6AFF;"
       if (hovered === false) return "#E8ECF3;"
     }};
     transform: ${({ hovered }) => {

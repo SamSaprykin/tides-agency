@@ -58,23 +58,7 @@ const Navigation = ({ state, setState }) => {
   let line12 = useRef(null)
   let line13 = useRef(null)
   let line14 = useRef(null)
-  if (typeof window !== `undefined`) {
-    var bioLayerIn = anime.timeline();
-    bioLayerIn
-    .add({
-      targets: ['.color-layer'],
-      translateX: '14%',
-      easing: 'easeInOutQuint',
-      duration: 400
-    })
-    .add({
-      targets: ['.color-layer'],
-      translateX: '14%',
-      easing: 'easeInOutQuint',
-      duration: 430,
-      delay:5
-    });
-  }
+  
 
   useEffect(() => {
     // If the menu is open and we click the menu button to close it.

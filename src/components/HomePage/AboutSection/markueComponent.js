@@ -46,9 +46,9 @@ class MarkueComponent extends React.Component {
     return (
       <>
         <li className="menu__item"  key={this.props.data.id} onMouseLeave={this.hideDescr} >
-            <h5 className="menu__item-link" >{this.props.data.title}
+            <h5 className="menu__item-link" onClick={this.showDescr} >{this.props.data.title}
                 <button className="button-expand"  
-                    onClick={this.showDescr}    
+                    
                 >+</button>
             </h5>
             <Marque className="marquee"  ref={this.marqueRef}>

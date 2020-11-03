@@ -66,7 +66,7 @@ export const ProjectItem = styled.li`
     border-bottom:1px solid #191B1C;
     padding:21px 0;
     justify-content:space-between;
-   
+    height:88px;
     transition: all .5s;
     :hover {
         padding:21px 30px;

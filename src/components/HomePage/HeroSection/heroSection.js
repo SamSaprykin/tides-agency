@@ -2,6 +2,7 @@ import React, {useState, useRef, useEffect} from "react"
 import TidesIcons from "../../DecorationElements/tidesIcons"
 import Navigation from "../../Navigation/navigation"
 import ShapeIndex from "../../DecorationElements/shapeIndex"
+import { useScrollPosition } from "../../../hooks/useScroll"
 
 import { 
     HeroLayout,
@@ -23,6 +24,8 @@ import {
 } from '../../animate'
 
 const HeroSection = ({ }) => {
+  const [position, setPostition] = useState(null)
+
   const [state, setState] = useState({
     initial: false,
     clicked: null,
@@ -39,7 +42,13 @@ const HeroSection = ({ }) => {
   const onMouseEnterHandler = () => {
     setHovered(true)
   }
-
+  
+  useScrollPosition(({ prevPos, currPos }) => {
+      setPostition(currPos.y)
+    },
+    [position]
+  );
+  
   
   const onMouseLeaveHandler = () => {
       const timeout = setTimeout(() => {
@@ -78,13 +87,14 @@ const HeroSection = ({ }) => {
     <HeroLayout id="hero-section">
       <HeroNavWrapper>
         <HeroLogo>
-          <LogoImage src="/logo.png" />
+          <LogoImage src="/logo.png" secondaryColor={position} />
         </HeroLogo>
-        <HeroMenuButtonWrapper>
+        <HeroMenuButtonWrapper secondaryColor={position}>
           <ButtonMenu 
             onClick={handleMenu}
             onMouseOver={onMouseEnterHandler}
             onMouseLeave={onMouseLeaveHandler}
+            
           >
             <span>Menu</span>
             <IconWaveWrapper

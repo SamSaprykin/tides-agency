@@ -19,25 +19,25 @@ import {
 
 const projectList = [
   {
-    icon:"/advent.png",
+    icon:"/advent.svg",
     workTypes:["Strategy", "Design", "Development"],
     year:"2020",
     linkTo:"/",
   },
   {
-    icon:"/amtt.png",
+    icon:"/amtt.svg",
     workTypes:["Strategy", "Design"],
     year:"2019",
     linkTo:"/",
   },
   {
-    icon:"/cooperline.png",
+    icon:"/healthcare.svg",
     workTypes:["Strategy", "Design", "Marketing"],
     year:"2020",
     linkTo:"/",
   },
   {
-    icon:"/amn.png",
+    icon:"/amn.svg",
     workTypes:["Strategy", "Design", "Development"],
     year:"2018",
     linkTo:"/",

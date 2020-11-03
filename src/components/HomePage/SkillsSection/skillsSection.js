@@ -28,7 +28,7 @@ const SkillsSection = ({ }) => {
       },
       [position]
     );
-    console.log(position)
+    
   return (
     <SkillsSectionContainer >
         <SkillsSectionWrapper>
