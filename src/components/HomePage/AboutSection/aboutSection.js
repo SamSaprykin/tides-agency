@@ -96,7 +96,7 @@ const AboutSection = ({ }) => {
     };
   
     // checking to see when the vieport is visible to the user
-    intersection && intersection.intersectionRatio < 0.1 ? fadeOut(".fadeIn") : fadeIn(".fadeIn");
+    // intersection && intersection.intersectionRatio < 0.1 ? fadeOut(".fadeIn") : fadeIn(".fadeIn");
 
     
   
@@ -104,7 +104,7 @@ const AboutSection = ({ }) => {
   <WrapperAbout>
     <TextSectionAbout>
         <AboutDescription>
-            <p className="fadeIn" ref={sectionRef}>
+            <p>
                 <span>TIDES</span> is a boutique digital solutions agency with an innate ability to grasp complex 
                 problems and build value through technology, creativity, and good ole’ fashion hard work. 
                 Let’s disrupt and impact change for the better.
@@ -112,7 +112,7 @@ const AboutSection = ({ }) => {
         </AboutDescription>
         <ImpactAreasAbout className="menu">
             <ImpactAreasTitle >
-                <p className="fadeIn">
+                <p>
                   impact areas
                 </p>
             </ImpactAreasTitle>
