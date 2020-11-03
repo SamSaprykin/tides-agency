@@ -99,6 +99,7 @@ const HeroSection = ({ }) => {
         </HeroMenuButtonWrapper>
       </HeroNavWrapper>
       <HeroText>
+          
           <ul>
             <WordsWrapper >
               <li ref={(el) => (text1 = el)}>We help startups 	&amp;</li>

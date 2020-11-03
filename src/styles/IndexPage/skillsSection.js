@@ -91,10 +91,9 @@ export const SkillSectionMoonWrapper = styled.div`
     position:relative;
     height:500px;
 `
-const rotate = keyframes`
-    from { transform: rotate(0deg) translateX(120px) rotate(0deg); }
-    to   { transform: rotate(360deg) translateX(120px) rotate(-360deg); }
-`;
+
+
+
 
 export const SmallPlanet = styled.img`
     width:70px;
@@ -103,7 +102,11 @@ export const SmallPlanet = styled.img`
     z-index:2;
     top:225px;
     left:210px;
-    animation: ${rotate} 7s linear infinite;
+    transform: rotate(0deg) translateX(120px) rotate(0deg);
+    transform: ${({ position }) => {
+        if (position) return `rotate(${position/4}deg) translateX(120px) rotate(${position/4}deg);`
+    }};
+    transition: all .5s linear;
 `
 
 

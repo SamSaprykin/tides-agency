@@ -129,7 +129,7 @@ export const WordsWrapper = styled.div`
   li {
     position:absolute;
     height: 110px;
-    
+   
   }
 `
 

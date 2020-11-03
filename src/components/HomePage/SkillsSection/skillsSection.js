@@ -1,8 +1,9 @@
-import React from "react"
-
+import React, { useState, useEffect } from 'react';
+import { keyframes, css } from "styled-components"
 import { Link } from "gatsby"
 
 import TidesIcons from "../../DecorationElements/tidesIcons"
+import { useScroll } from "../../../hooks/useScroll"
 
 import { 
   SkillsSectionWrapper,
@@ -21,9 +22,15 @@ import {
 } from "../../../styles/IndexPage/skillsSection"
 
 const SkillsSection = ({ }) => {
+    
+    
+    let { scrollX, scrollY, scrollDirection } = useScroll();
+   
   
+  
+ 
   return (
-    <SkillsSectionContainer>
+    <SkillsSectionContainer >
         <SkillsSectionWrapper>
                 <SkillsSectionTitle>Did you know?</SkillsSectionTitle>
                 <SkillsSectionDescription>
@@ -44,7 +51,7 @@ const SkillsSection = ({ }) => {
                         </SkillSectionSunWrapper>
                         <SkillSectionMoonWrapper>
                             <SkillSectionMoon  src="/moon.svg"/>
-                            <SmallPlanet src="/planet.svg" />
+                            <SmallPlanet  position={scrollY} src="/planet.svg" />
                         </SkillSectionMoonWrapper>
                 </SkillSectionPlanetsWrapper>
         </SkillsSectionWrapper>
@@ -53,6 +60,8 @@ const SkillsSection = ({ }) => {
     
   )
 }
+
+
   
 
 

@@ -4,6 +4,8 @@ import gsap from "gsap"
 import StainsBackground from "../../DecorationElements/stainsBackgrounds"
 import MarkueComponent from "./markueComponent"
 
+
+
 import "./aboutSection.css"
 
 import { 
