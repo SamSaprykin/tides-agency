@@ -27,7 +27,6 @@
     "react-helmet": "^5.2.1",
     "react-live-clock": "^5.0.11",
     "react-moment": "^1.0.0",
-    "react-use": "^15.3.4",
     "react-wavify": "^1.4.0",
     "styled-components": "^4.4.0"
   },

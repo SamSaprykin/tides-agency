@@ -34,8 +34,7 @@ export const AboutDescription = styled.div`
         font-weight:400;
         padding-bottom:80px;
         max-width:1002px;
-        transform:translate(0,60px);
-        opacity:1;
+        
         span {
             color:#1A6AFF;
             font-family:Stinger Wide;
@@ -64,9 +63,7 @@ export const ImpactAreasTitle = styled.h4`
     max-width:1002px;
     margin:0 auto;
     
-    p {
-        transform:translate(0,60px);
-    }
+   
     
 `
 
