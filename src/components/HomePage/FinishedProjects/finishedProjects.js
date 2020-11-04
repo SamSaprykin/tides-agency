@@ -5,7 +5,7 @@ import {
   FinishedProjectsWrapper,
   WrapperBoard,
   WrapperContent,
-  Titleprojects,
+  TitleProjects,
   DescriptionWrapper,
   Description,
   Information,
@@ -16,29 +16,31 @@ import {
   IconItem,
   ArrowWork
 } from "../../../styles/IndexPage/finishedProjects"
-
+import AnimParagraph from "../../animateParagraph"
+import AnimHighParagraph from "../../animateHeight"
+import AnimSmall from "../../animSmall"
 const projectList = [
   {
     icon:"/advent.svg",
-    workTypes:["Strategy", "Design", "Development"],
+    workTypes:"Strategy,Design, Development",
     year:"2020",
     linkTo:"/",
   },
   {
     icon:"/amtt.svg",
-    workTypes:["Strategy", "Design"],
+    workTypes:"Strategy, Design",
     year:"2019",
     linkTo:"/",
   },
   {
     icon:"/healthcare.svg",
-    workTypes:["Strategy", "Design", "Marketing"],
+    workTypes:"Strategy, Design, Marketing",
     year:"2020",
     linkTo:"/",
   },
   {
     icon:"/amn.svg",
-    workTypes:["Strategy", "Design", "Development"],
+    workTypes:"Strategy, Design, Development",
     year:"2018",
     linkTo:"/",
   },
@@ -52,23 +54,29 @@ const FinishedProjects = ({ }) => {
     <FinishedProjectsWrapper>
         <WrapperBoard>
             <WrapperContent>
-                <Titleprojects>
+                <TitleProjects>
+                  <AnimParagraph>
                     Exrepience for dayysssss
-                </Titleprojects>
+                  </AnimParagraph>
+                </TitleProjects>
                 <DescriptionWrapper>
                     <Description>
-                      Leverage the eons of experience Tides has in 
-                      strategy, design, marketing, &amp; development 
-                      initiatives.
+                      <AnimHighParagraph>
+                        Leverage the eons of experience Tides has in 
+                        strategy, design, marketing, &amp; development 
+                        initiatives.
+                      </AnimHighParagraph>
                     </Description>
                     <Information>
-                      We can help guide you through all the minesia and distractions of growing your company. 
-                      Let us hunt down game-changing insights to help inform stakeholders on key decisions, 
-                      build your brand that connects with customers, architect solutions that empower your 
-                      team to focus on the things that matter, collect structured data that can be leveraged, 
-                      embed design in your organization, product, team, and brand. <br />
-                      <br />
-                      We've helped these companies
+                      <AnimHighParagraph>
+                        We can help guide you through all the minesia and distractions of growing your company. 
+                        Let us hunt down game-changing insights to help inform stakeholders on key decisions, 
+                        build your brand that connects with customers, architect solutions that empower your 
+                        team to focus on the things that matter, collect structured data that can be leveraged, 
+                        embed design in your organization, product, team, and brand. <br />
+                        <br />
+                        We've helped these companies
+                      </AnimHighParagraph>
                     </Information>
                 </DescriptionWrapper>
                 <ProjectsLinks>
@@ -76,22 +84,27 @@ const FinishedProjects = ({ }) => {
                       projectList.map(item => {
                         return (
                           <ProjectItem key={item.year} >
-                              <IconItem 
-                                src={item.icon}
-                              />
-                              <div>
-                                {
-                                  item.workTypes.map(type => {
-                                    return (
-                                      <WorkType key={type}>{type} </WorkType>
-                                    )
-                                  })
-                                }
-                              </div>
-                              <WorkYear>{item.year}</WorkYear>
-                              <Link to={item.linkTo}>
-                                <ArrowWork src="/arrow-work.png" />
-                              </Link>
+                            
+                              <AnimSmall delay={.1}>
+                                <IconItem 
+                                  src={item.icon}
+                                />
+                              </AnimSmall>
+                              
+                              <AnimSmall delay={.2}>
+                                <WorkType>{item.workTypes} </WorkType>
+                              </AnimSmall>
+                             
+                              <AnimSmall delay={.3}>
+                                <WorkYear>{item.year}</WorkYear>
+                              </AnimSmall>
+
+                              <AnimSmall delay={.4}>
+                                <Link to={item.linkTo}>
+                                  <ArrowWork src="/arrow-angle.svg" />
+                                </Link>
+                              </AnimSmall>
+                              
                           </ProjectItem>
                         )
                       })

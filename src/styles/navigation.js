@@ -90,7 +90,6 @@ export const MenuLinks = styled.div`
         padding: 0;
         li {
             list-style: none;
-            
             overflow: hidden;
             position: relative;
             width: 700px;

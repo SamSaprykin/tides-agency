@@ -13,6 +13,8 @@ import {
     FormCta,
 } from "../../../styles/IndexPage/subscribeSection"
 
+import AnimParagraph from "../../animateParagraph"
+
 const SubscribeSection = ({ }) => {
   
   return (
@@ -24,11 +26,16 @@ const SubscribeSection = ({ }) => {
         </SubscribeMarque>
         <SubscribeForm>
           <FormCta>
-            Don't miss out and join  <br />
-            our monthly insights
+            <h5>
+              <AnimParagraph>
+                Don't miss out and join  <br />
+                our monthly insights
+              </AnimParagraph>
+            </h5>
+            
           </FormCta>
           <InputContainer>
-            <StyledInput placeholder="Yout E-mail" />
+            <StyledInput placeholder="Your E-mail" />
             <button>
               <TidesIcons type="arrowForm" />
             </button>

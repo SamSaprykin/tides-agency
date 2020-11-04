@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { keyframes, css } from "styled-components"
+import React, { useState } from 'react';
 import { Link } from "gatsby"
 
 import TidesIcons from "../../DecorationElements/tidesIcons"
@@ -21,6 +20,8 @@ import {
   SmallPlanet,
 } from "../../../styles/IndexPage/skillsSection"
 
+import AnimParagraph from "../../animateParagraph"
+
 const SkillsSection = ({ }) => {
     const [position, setPostition] = useState(null)
     useScrollPosition(({ prevPos, currPos }) => {
@@ -32,19 +33,32 @@ const SkillsSection = ({ }) => {
   return (
     <SkillsSectionContainer >
         <SkillsSectionWrapper>
-                <SkillsSectionTitle>Did you know?</SkillsSectionTitle>
+                <SkillsSectionTitle>
+                  <AnimParagraph>
+                      Did you know?
+                  </AnimParagraph>
+                </SkillsSectionTitle>
                 <SkillsSectionDescription>
-                    Tides is a documented world phenonomen. Similarly, <br />
-                    the people of <span> Tides </span> are a force to be weckonend with.
+                    <AnimParagraph>
+                      Tides is a documented world phenonomen. Similarly, <br />
+                      the people of <span> Tides </span> are a force to be weckonend with.
+                   </AnimParagraph>
                 </SkillsSectionDescription>
-                <SkillsSectionCtaWrapper>
-                    <SkillsSectionCta>
-                        Learn more about the skills of the team
-                    </SkillsSectionCta>
-                    <SkillsSectionCtaButton>
-                        <TidesIcons type="arrowButton" fill="#FFCC00"/>
-                    </SkillsSectionCtaButton>
-                </SkillsSectionCtaWrapper>
+                
+                
+                  <AnimParagraph>
+                    <SkillsSectionCtaWrapper>
+                      <SkillsSectionCta>
+                          Learn more about the skills of the team
+                      </SkillsSectionCta>
+                      <SkillsSectionCtaButton>
+                          <TidesIcons type="arrowButton" fill="#FFCC00"/>
+                      </SkillsSectionCtaButton>
+                    </SkillsSectionCtaWrapper>
+                  </AnimParagraph>
+                
+                
+               
                 <SkillSectionPlanetsWrapper>
                         <SkillSectionSunWrapper>
                             <SkillSectionSun src="/sun.png"/>

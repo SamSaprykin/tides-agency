@@ -25,10 +25,16 @@ export const SkillsSectionTitle = styled.h4`
     font-weight: 400;
     font-size:60px;
     line-height:116px;
+    height:116px;
     margin-top:30px;
     text-transform:uppercase;
     color:#E8ECF3;
     letter-spacing:0.05em;
+    position:relative;
+    overflow:hidden;
+    p {
+        position:absolute;
+    }
 `
 
 export const SkillsSectionDescription = styled.p`
@@ -37,6 +43,12 @@ export const SkillsSectionDescription = styled.p`
     font-size:38px;
     line-height:50px;
     font-weight:400;
+    position:relative;
+    overflow:hidden;
+    height:100px;
+    p {
+        position:absolute;
+    }
     span {
         color:#1A6AFF;
         text-transform:uppercase;
@@ -71,6 +83,7 @@ export const SkillsSectionCtaButton = styled.button`
     flex-direction:column;
     align-items:center;
     justify-content:center;
+    
 `
 
 export const SkillSectionPlanetsWrapper = styled.div`

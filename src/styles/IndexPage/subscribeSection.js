@@ -29,7 +29,7 @@ export const SubscribeMarque = styled.h5`
     position:absolute;
     z-index:1;
     top:50%;
-    animation: ${marquee} 18s linear infinite;
+    animation: ${marquee} 30s linear infinite;
 `
 export const SubscribeForm = styled.form`
     margin:0 auto;
@@ -58,11 +58,20 @@ export const StyledInput = styled.input`
 export const FormCta = styled.div`
     padding:60px 40px;
     background-color: #E8ECF3;
-    color: #191B1C;
-    font-family: Bandeins Sans;
-    font-weight:400;
-    font-size:31px;
-    line-height:36px;
+    
+    h5 {
+        color: #191B1C;
+        font-family: Bandeins Sans;
+        font-weight:400;
+        font-size:31px;
+        line-height:36px;
+        height:80px;
+        position:relative;
+        overflow:hidden;
+        p {
+            position:absolute;
+        }
+    }
 `
 
 

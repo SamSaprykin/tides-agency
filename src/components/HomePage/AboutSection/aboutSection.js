@@ -14,8 +14,8 @@ import {
 } from "../../../styles/IndexPage/aboutSection"
 
 
-
-
+import AnimParagraph from "../../animateParagraph"
+import AnimHighParagraph from "../../animateHeight"
 
 const dataMarque = [
     {
@@ -69,17 +69,17 @@ const AboutSection = ({ }) => {
   <WrapperAbout>
     <TextSectionAbout>
         <AboutDescription>
-            <p>
-                <span>TIDES</span> is a boutique digital solutions agency with an innate ability to grasp complex 
-                problems and build value through technology, creativity, and good ole’ fashion hard work. 
-                Let’s disrupt and impact change for the better.
-            </p>
+                <AnimHighParagraph>
+                    <span>TIDES</span> is a boutique digital solutions agency with an innate ability to grasp complex 
+                    problems and build value through technology, creativity, and good ole’ fashion hard work. 
+                    Let’s disrupt and impact change for the better.
+                </AnimHighParagraph>
         </AboutDescription>
         <ImpactAreasAbout className="menu">
             <ImpactAreasTitle >
-                <p>
+                <AnimParagraph>
                   impact areas
-                </p>
+                </AnimParagraph>
             </ImpactAreasTitle>
             <ImpactAreasList>
                 {dataMarque.map((marque) => {

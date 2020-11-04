@@ -1,5 +1,5 @@
 import gsap from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 
 
 
@@ -74,6 +74,18 @@ export const staggerLinksHero = (elem1, elem2, elem3, elem4) => {
     ease: "power2.inOut",
     stagger: {
       amount: 0.4,
+    },
+  })
+}
+
+export const staggerParagraphs = (elem1, elem2, elem3, elem4, elem5, elem6) => {
+  gsap.to([elem1, elem2, elem3, elem4, elem5, elem6], {
+    duration: 1.5,
+    marginTop: 0,
+    delay: 0.9,
+    ease: "power2.inOut",
+    stagger: {
+      amount: 0.01,
     },
   })
 }

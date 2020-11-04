@@ -107,6 +107,12 @@ export const InsightsTitle = styled.h2`
       color:#E8ECF3;
       text-transform:uppercase;
       font-weight:400;
+      position:relative;
+      overflow:hidden;
+      height:116px;
+      p {
+        position:absolute;
+      }
 `
 
 export const InsightsButton = styled.button`
@@ -121,6 +127,7 @@ export const InsightsButton = styled.button`
       border:1px solid #E8ECF3;
       outline:none;
       margin-right:14px;
+      margin-top:32px;
       :hover {
         border:1px solid #1A6AFF;
         svg {
@@ -178,6 +185,8 @@ export const InsightsDescription = styled.p`
     font-family: Bandeins Sans;
     text-align:justify;
     font-weight:400;
+    position:relative;
+    overflow:hidden;
 `
 
 export const WrapInform = styled.div`

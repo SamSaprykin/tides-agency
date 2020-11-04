@@ -24,9 +24,10 @@ export const AboutDescription = styled.div`
     flex-direction:column;
     align-items:center;
     justify-content:space-between;
+    position:relative;
+    overflow:hidden;
     
     p {
-
         color:#FFFFFF;
         font-size:38px;
         line-height:50px;
@@ -62,8 +63,14 @@ export const ImpactAreasTitle = styled.h4`
     width:100%;
     max-width:1002px;
     margin:0 auto;
-    
-   
+    position:relative;
+    height:165px;
+    overflow:hidden;
+    border-top:1px solid #E8ECF3;
+    padding:30px 0 19px;
+    p {
+        position:absolute;
+    }
     
 `
 
@@ -80,7 +87,7 @@ export const ImpactAreasList = styled.ul`
             border-top:1px solid #E8ECF3;
             color:transparent;
             width:100%;
-            padding:30px 0 14px !important;
+            padding:28px 0 14px !important;
             max-width:1002px;
             text-align:left;
             box-sizing: border-box;
@@ -120,6 +127,9 @@ export const DescriptionItems = styled.ul`
         flex-grow: 1;
         text-align:left;
         margin-bottom:17px;
+        height:36px;
+        position:relative;
+        overflow:hidden;
         :nth-of-type(3n) {
             padding-left:15%;
         }
@@ -129,9 +139,16 @@ export const DescriptionItems = styled.ul`
         :nth-of-type(5) {
             padding-left:5%;
         }
+        p {
+            height:36px;
+            margin-top:36px;
+            position:absolute;
+
+        }
     }
 `
 
 export const Marque = styled.div`
     height:188px;   
 `
+

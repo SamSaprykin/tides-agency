@@ -18,7 +18,7 @@ import {
     Column,
 } from "../../../styles/IndexPage/insightsSection"
 
-
+import AnimParagraph from "../../animateParagraph"
 
 const insights = [
     {
@@ -155,18 +155,24 @@ const InsightsSetion = ({ }) => {
     <InsightsSectionWrapper>
       <ContentWrapper>
         <InsightsTitle>
-            Insights
+            <AnimParagraph>
+              Insights
+            </AnimParagraph>
         </InsightsTitle>
         <InsightsContainerInformation ref={el => (testimonialList = el)}>
             <WrapInform className={state.isActive1 ? "active" : ""}>
                 <Column>
                     <InsightsQuote>
-                        {insights[0].quote }
+                        <AnimParagraph>
+                          {insights[0].quote }
+                        </AnimParagraph>
                     </InsightsQuote>
                 </Column>
                 <Column>
                     <InsightsDescription>
-                        <div dangerouslySetInnerHTML={{ __html: `<div> ${insights[0].description } </div>` }} />
+                        <AnimParagraph>
+                          <div dangerouslySetInnerHTML={{ __html: `<div> ${insights[0].description } </div>` }} />
+                        </AnimParagraph>
                     </InsightsDescription>
                 </Column>
             </WrapInform>
