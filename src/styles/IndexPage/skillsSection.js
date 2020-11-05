@@ -83,6 +83,16 @@ export const SkillsSectionCtaButton = styled.button`
     flex-direction:column;
     align-items:center;
     justify-content:center;
+    transition: all .2s ease-in-out;
+    ${SkillsSectionCtaWrapper} : hover & {
+        background-color:#FFCC00;
+        svg {
+            path {
+                fill: #191B1C !important;
+            }
+        }
+    }
+
     
 `
 

@@ -47,14 +47,18 @@ const SkillsSection = ({ }) => {
                 
                 
                   <AnimParagraph>
-                    <SkillsSectionCtaWrapper>
-                      <SkillsSectionCta>
-                          Learn more about the skills of the team
-                      </SkillsSectionCta>
-                      <SkillsSectionCtaButton>
-                          <TidesIcons type="arrowButton" fill="#FFCC00"/>
-                      </SkillsSectionCtaButton>
-                    </SkillsSectionCtaWrapper>
+                    <Link to="/about">
+                      <SkillsSectionCtaWrapper>
+                        <SkillsSectionCta>
+                            Learn more about the skills of the team
+                        </SkillsSectionCta>
+                        <SkillsSectionCtaButton>
+                          
+                            <TidesIcons type="arrowButton" fill="#FFCC00"/>
+                          
+                        </SkillsSectionCtaButton>
+                      </SkillsSectionCtaWrapper>
+                    </Link>  
                   </AnimParagraph>
                 
                 
