@@ -18,6 +18,7 @@ import {
 
 import AnimParagraph from "../../animateParagraph"
 import AnimBorder from "../../borderAnimation"
+import AnimSmall from "../../animSmall"
 import BorderElement from "../../DecorationElements/borderElement"
 
 
@@ -35,9 +36,12 @@ const InsightsSetion = ({ }) => {
               Insights
             </AnimParagraph>
         </InsightsTitle>
-        <PostTitle>
+        <AnimSmall delay=".7">
+          <PostTitle>
               GenZ, the Super Creatives
-        </PostTitle>
+          </PostTitle>
+        </AnimSmall>
+        
       </ContentWrapper>
       <ImageContainer className="insights-container">
         <AnimParagraph>
@@ -52,9 +56,12 @@ const InsightsSetion = ({ }) => {
                           "gen z are absolutely more creative, but it's more utilitarian than other generations."
                         </AnimParagraph>
                     </InsightsQuote>
-                    <InsightsMonth>
+                    <AnimSmall delay=".7">
+                      <InsightsMonth>
                         November Edition
-                    </InsightsMonth>
+                      </InsightsMonth>
+                    </AnimSmall>
+                    
                 </Column>
                 <Column>
                     <InsightsDescription>

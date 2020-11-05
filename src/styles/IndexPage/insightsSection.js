@@ -114,11 +114,10 @@ export const PostTitle = styled.h5`
   font-weight:400;
   position:relative;
   overflow:hidden;
-  height:40px;
-  margin-bottom:30px;
+  margin-bottom:32px !important;
 `
 
-export const InsightsMonth = styled.span`
+export const InsightsMonth = styled.div`
   font-size:17px;
   line-height:24px;
   font-family: Bandeins Sans;

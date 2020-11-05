@@ -67,24 +67,13 @@ export const FormCta = styled.div`
 export const InputContainer = styled.div`
     display:flex;
     flex-direction:row;
-    alig-items:center;
+    align-items:center;
     width:100%;
     height:auto;
     background-color:#1A6AFF;
     position:relative;
     height:126px;
-    border-bottom:4px solid #FFCC00;
-    :hover {
-        button {
-            svg {
-                path {
-                    fill: #FFCC00 !important;
-                    stroke: #FFCC00  !important;
-                }
-            }
-        }
-        
-    }
+    
     button {
         margin-right:46px;
         width:24px;
@@ -112,10 +101,21 @@ export const StyledInput = styled.input`
     font-weight:400;
     padding-bottom:4px;
     box-sizing:border-box;
-    ${InputContainer} :hover & {
-        border-bottom:1px solid white;
-    }
     
+    
+`
+
+export const InputBorder = styled.div`
+    width:0;
+    height:4px;
+    background-color:#FFCC00;
+    position:absolute;
+    bottom:0;
+    left:0;
+    transition: width .5s ease-in-out;
+    ${InputContainer} :hover & {
+        width:100%;
+    }
 `
 
 

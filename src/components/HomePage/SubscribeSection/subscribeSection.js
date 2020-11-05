@@ -10,6 +10,7 @@ import {
     SubscribeForm,
     InputContainer,
     StyledInput,
+    InputBorder,
     FormCta,
 } from "../../../styles/IndexPage/subscribeSection"
 
@@ -40,6 +41,7 @@ const SubscribeSection = ({ }) => {
             <button>
               <TidesIcons type="arrowForm" />
             </button>
+            <InputBorder />
           </InputContainer>
           
         </SubscribeForm>
