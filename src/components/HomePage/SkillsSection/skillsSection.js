@@ -61,7 +61,7 @@ const SkillsSection = ({ }) => {
                
                 <SkillSectionPlanetsWrapper>
                         <SkillSectionSunWrapper>
-                            <SkillSectionSun src="/sun.png"/>
+                            <SkillSectionSun src="/sun.svg"/>
                         </SkillSectionSunWrapper>
                         <SkillSectionMoonWrapper>
                             <SkillSectionMoon  src="/moon.svg"/>
