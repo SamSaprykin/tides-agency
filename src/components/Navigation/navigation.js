@@ -175,16 +175,15 @@ const Navigation = ({ state, setState }) => {
                   tides agency
                 </h5>
               </LogoWrapper>
-              <CloseButtonWrapper ref={(el) => (line2 = el)}>
+              <CloseButtonWrapper ref={(el) => (line2 = el)} onClick={handleMenu}>
                 <div>
                   <span>
                     Close
                   </span>
-                  <button onClick={handleMenu}>
+                  <button>
                     <Hamburger />
                   </button>
                 </div>
-                
               </CloseButtonWrapper>
             </MenuHeader>
             <MenuLinks className="menu-links">

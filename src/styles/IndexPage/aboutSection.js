@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 
 export const WrapperAbout = styled.div`
-    margin-top:100px;
+    margin-top:110px;
     width:100%;
     height:100%;
     background-color: #191B1C;
@@ -11,7 +11,7 @@ export const WrapperAbout = styled.div`
     flex-direction:column;
     align-items:center;
     justify-content:space-between;
-   
+    margin-bottom:180px;
 `
 
 export const TextSectionAbout = styled.div`
@@ -66,9 +66,6 @@ export const ImpactAreasTitle = styled.h4`
     position:relative;
     height:165px;
     overflow:hidden;
-    
-    
-    margin-top:30px;
     p {
         position:absolute;
     }
@@ -84,11 +81,11 @@ export const ImpactAreasList = styled.ul`
             font-family: Bandeins Sans;
             text-transform:uppercase;
             font-size:80px;
-            line-height:116px;
+            line-height:140px;
             
             color:transparent;
             width:100%;
-            padding:28px 0 14px !important;
+            padding:0 0 17px !important;
             max-width:1002px;
             text-align:left;
             box-sizing: border-box;

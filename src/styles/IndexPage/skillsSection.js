@@ -32,6 +32,7 @@ export const SkillsSectionTitle = styled.h4`
     letter-spacing:0.05em;
     position:relative;
     overflow:hidden;
+    margin-bottom:9px;
     p {
         position:absolute;
     }
@@ -100,7 +101,7 @@ export const SkillSectionPlanetsWrapper = styled.div`
     display:flex;
     flex-direction:row;
     justify-content:flex-start;
-    margin-top:150px;
+    margin-top:146.5px;
     justify-content:space-between;
 `
 

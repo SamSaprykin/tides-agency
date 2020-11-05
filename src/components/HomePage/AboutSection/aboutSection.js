@@ -79,7 +79,7 @@ const AboutSection = ({ }) => {
         <ImpactAreasAbout className="menu">
             <ImpactAreasTitle >
                 <AnimBorder>
-                    <BorderElement padding="0 0 30px"/>
+                    <BorderElement padding="0 0 18px"/>
                 </AnimBorder>
                 <AnimParagraph>
                   impact areas

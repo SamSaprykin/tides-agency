@@ -73,6 +73,7 @@ export const InputContainer = styled.div`
     background-color:#1A6AFF;
     position:relative;
     height:126px;
+    border-bottom:4px solid #FFCC00;
     :hover {
         button {
             svg {

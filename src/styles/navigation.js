@@ -9,6 +9,7 @@ export const HamburgerMenu = styled.div`
     position: fixed;
     height: 100%;
     width: 100%;
+
 `
 
 export const MenuSecondaryBackgroundColor = styled.div`
@@ -236,7 +237,6 @@ export const LogoWrapper = styled.div`
 
 export const CloseButtonWrapper = styled.div`
     position:absolute;
-    display: flex;
     height: 50px;
     right:0;
     top:50%;
@@ -244,6 +244,7 @@ export const CloseButtonWrapper = styled.div`
     display:flex;
     flex-direction:row;
     align-items:center;
+    
     span {
         margin-left:8px;
         margin-right:12px;
@@ -252,6 +253,7 @@ export const CloseButtonWrapper = styled.div`
         color:#E8ECF3;
         font-family:Bandeins Sans;
         font-weight:400;
+        
     }
     button {
         width:24px;
@@ -300,7 +302,9 @@ export const Hamburger = styled.div`
     background-color:#E8ECF3;
     border-radius:2px;
     top:8px;
-    
+    ${CloseButtonWrapper} :hover & {
+        background-color:#1A6AFF !important;   
+    }
     
   }
 

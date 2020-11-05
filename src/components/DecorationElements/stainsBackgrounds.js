@@ -9,7 +9,7 @@ const StainsBackgrounds = ({
 
   return  (
     <BackWrapper top={top} left={left} rotate={rotate}>
-        <img src="/stains.png" height={height}/>
+        <img src="/stains_background.svg" height={height}/>
     </BackWrapper>
   )
         

@@ -79,7 +79,7 @@ export const ProjectItem = styled.li`
     display:flex;
     flex-direction:row;
     align-items:center;
-    padding:41px 0;
+    padding:50px 0;
     justify-content:space-between;
     height:48px;
     transition: all .5s;
@@ -95,7 +95,7 @@ export const ProjectItem = styled.li`
         }
     }
     :hover {
-        padding:41px 30px;
+        padding:50px 30px;
         background-color:#191B1C;
         
     }
