@@ -2,10 +2,8 @@ import React, {useEffect, useRef, useState} from 'react'
 import { gsap, CSSPlugin } from "gsap"
 import { Link } from "gatsby"
 import Wave from 'react-wavify'
-import Helmet from 'react-helmet'
-import anime from 'animejs'
 
-
+import TidesIcons from "../DecorationElements/tidesIcons"
 
 import { 
     HamburgerMenu,
@@ -229,10 +227,9 @@ const Navigation = ({ state, setState }) => {
                 
                 <SocialLinks>
                   
-                      <SocialLinksItem 
-                          
-                      >
+                      <SocialLinksItem>
                         <h3 ref={(el) => (line8 = el)}>
+                          <TidesIcons type="arrowButton"  />
                           <a 
                             href="https://dribbble.com/"
                             target="_blank"
@@ -247,6 +244,7 @@ const Navigation = ({ state, setState }) => {
                           
                       >
                         <h3 ref={(el) => (line9 = el)}>
+                          <TidesIcons type="arrowButton"  />
                           <a 
                             href="https://dribbble.com/" 
                             target="_blank"
@@ -261,6 +259,7 @@ const Navigation = ({ state, setState }) => {
                           
                       >
                         <h3 ref={(el) => (line10 = el)}>
+                          <TidesIcons type="arrowButton"  />  
                           <a 
                             href="https://dribbble.com/" 
                             target="_blank"
@@ -275,6 +274,7 @@ const Navigation = ({ state, setState }) => {
                          
                       >
                         <h3 ref={(el) => (line11 = el)}>
+                          <TidesIcons type="arrowButton"  />
                           <a 
                             href="https://dribbble.com/"
                             target="_blank"
@@ -289,6 +289,7 @@ const Navigation = ({ state, setState }) => {
                           
                       >
                         <h3 ref={(el) => (line12 = el)}>
+                          <TidesIcons type="arrowButton"  />
                           <a 
                             href="https://dribbble.com/" 
                             target="_blank"

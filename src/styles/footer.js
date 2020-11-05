@@ -3,9 +3,7 @@ import styled, {keyframes} from "styled-components"
 export const FooterWrapper = styled.div`
     max-width:1002px;
     margin:0 auto;
-    border-top:1px solid #E8ECF3;
-    border-bottom:1px solid #E8ECF3;
-    padding:17px 0 72px;
+    padding:17px 0 0;
     position:relative;
 `
 
@@ -17,24 +15,52 @@ export const FooterTitle = styled.h3`
     font-family: Verona Serial;
     font-weight:400;
     text-transform:uppercase;
+    height:140px;
+    position:relative;
+    overflow:hidden;
+    p {
+        position:absolute;
+    }
 `
 
 export const FooterContentWrapper = styled.div`
     display:flex;
     flex-direction:row;
     justify-content:space-between;
+    padding-bottom:72px;
 `
 
 export const FooterSocial = styled.ul`
     list-style:none;
+    overflow: hidden;
+    position: relative;
+    width:160px;
     li {
+        margin-left:-24px;
+        transition: margin-left .2s ease-in-out;
+        svg {
+            margin-right:8px;
+        }
+        :hover {
+            margin-left:0;
+            a {
+                color:#1A6AFF;
+            }
+            svg {
+                path {
+                    fill: #1A6AFF !important;
+                }
+            }
+        }
         a {
+            display:flex;
+            flex-direction:row;
+            align-items:center;
             color:#E8ECF3;
             font-size:31px;
             line-height:36px;
             font-family: Bandeins Sans;
             font-weight:400;
-            margin-bottom:50px;
             margin-bottom:4px;
         }
         
@@ -56,14 +82,25 @@ export const FooterAdress = styled.div`
 `
 const fill = keyframes`
   from {
-    top:270px;
-    transform: translateX(-50%) rotate(0deg);
+    top:0;
+    left:50%;
+    top:50%;
+    background-size:100%;
+    background-image:none;
+    transform:  translate(-50%,-50%) rotate(0deg);
+    z-index:10;
   }
   to {
-    top:-100px;
-    transform: translateX(-50%) rotate(-360deg);
+    top:0;
+    left:50%;
+    top:50%;
+    background-image:url('/blot4.svg');
+    background-size:0%;
+    transform: translate(-50%,-50%) rotate(-960deg);
+    z-index:-1;
   }
 `;
+
 
 export const FooterButton = styled.button`
     width:236px;
@@ -84,28 +121,40 @@ export const FooterButton = styled.button`
     position:relative;
     overflow:hidden;
     outline:none;
-    transition: all 1.2s ease-in-out;
+    transition: all .2s ease-in-out;
+    
     :hover {
         color:#191B1C;
-        font-size:28px;
+        font-size:22px;
+        transition-delay:.4s;
         :before {
             content:"";
             position:absolute;
             z-index:-1;
-            width:400px;
-            height:400px;
-            background:#FFCC00;
+            width:472px;
+            height:472px;
+            background-position:center center;
+            background-repeat:no-repeat;
+            background-color:#FFCC00;
             left:50%;
-            transform:translateX(-50%);
+            top:50%;
+            transform:translate(-50%,-50%);
             border-radius:38%;
-            animation: ${fill} 4s ease-in-out;
+            animation: ${fill} .4s linear;
         }
     }
     
     
 `
 
-
+export const AdressWrapper = styled.div`
+    height:80px;
+    position:relative;
+    overflow:hidden;
+    p {
+        position:absolute;
+    }
+`
 
 export const TitleItem = styled.h5`
     color:#E8ECF3;
@@ -114,6 +163,12 @@ export const TitleItem = styled.h5`
     font-family: Bandeins Sans;
     font-weight:400;
     margin-bottom:50px;
+    height:34px;
+    position:relative;
+    overflow:hidden;
+    p {
+        position:absolute;
+    }
 `
 
 export const ClockWrapper = styled.div`
@@ -172,3 +227,9 @@ export const RightsText = styled.p`
     font-family: Bandeins Sans;
     color:#E8ECF3;
 `
+
+export const TransformBorder = styled.div`
+    transform:rotate(180deg);
+
+`
+

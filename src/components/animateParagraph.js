@@ -23,7 +23,7 @@ const AnimParagraph = ({ children, delay, top }) => {
         visible: {
         y: 0,
         opacity:1,
-        transition: { duration: .8, delay:.5, ease: [0.6, 0.05, -0.01, 0.9] },
+        transition: { duration: .8, delay:.2, ease: [0.6, 0.05, -0.01, 0.9] },
         },
         hidden: {opacity:0,  y: 80 },
       }}

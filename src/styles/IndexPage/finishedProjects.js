@@ -7,6 +7,7 @@ export const FinishedProjectsWrapper = styled.div`
     padding-top:50px;
     max-width:1302px;
     margin:0 auto;
+    
 `
 
 export const WrapperBoard = styled.div`
@@ -34,7 +35,7 @@ export const TitleProjects  = styled.h2`
     position:relative;
     height:120px;
     overflow:hidden;
-    border-bottom:1px solid #191B1C;
+    
     padding-bottom:20px;
     p {
         position:absolute;
@@ -78,7 +79,6 @@ export const ProjectItem = styled.li`
     display:flex;
     flex-direction:row;
     align-items:center;
-    border-bottom:1px solid #191B1C;
     padding:41px 0;
     justify-content:space-between;
     height:48px;

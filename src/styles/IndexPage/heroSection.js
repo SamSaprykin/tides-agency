@@ -27,10 +27,12 @@ export const HeroNavWrapper = styled.div`
     align-items:center;
     justify-content:space-between;
     z-index:1000;
+    
 `
 
 export const HeroLogo = styled.div`
-
+    
+   
 `
 
 export const HeroMenuButtonWrapper = styled.div`
@@ -128,6 +130,7 @@ export const LogoImage = styled.img`
   width:50px;
   height:50px;
   margin-bottom:0;
+  
   filter: ${({ secondaryColor }) => {
     if (secondaryColor <= -2350 && -3500 <= secondaryColor ) return "invert(1);"
     if (secondaryColor <= -3500) return "invert(0);"

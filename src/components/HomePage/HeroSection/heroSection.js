@@ -87,7 +87,7 @@ const HeroSection = ({ }) => {
     <HeroLayout id="hero-section">
       <HeroNavWrapper>
         <HeroLogo>
-          <LogoImage src="/logo.png" secondaryColor={position} />
+          <LogoImage src="/logo_tides.svg" secondaryColor={position} />
         </HeroLogo>
         <HeroMenuButtonWrapper secondaryColor={position}>
           <ButtonMenu 

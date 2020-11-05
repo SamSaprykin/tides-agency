@@ -2,10 +2,10 @@ import React, { useEffect } from "react"
 import { useInView } from "react-intersection-observer"
 import { motion, useAnimation } from "framer-motion"
 
-const AnimSmall = ({ children, delay }) => {
+const AnimButton = ({ children, delay, top }) => {
   const controls = useAnimation()
   const [ref, inView] = useInView({
-    rootMargin: "-90px",
+    rootMargin: "50px",
   })
 
   useEffect(() => {
@@ -14,24 +14,22 @@ const AnimSmall = ({ children, delay }) => {
     }
     
   }, [controls, inView])
-  
   return (
-    <motion.p
+    <motion.div
       ref={ref}
       animate={controls}
       initial="hidden"
       variants={{
         visible: {
-        y: 0,
         opacity:1,
-        transition: { duration: .5, delay:delay, ease: [0.6, 0.05, -0.01, 0.9] },
+        transition: { duration: 1.6, delay:0.02, ease: [0.6, 0.05, -0.01, 0.9] },
         },
-        hidden: {opacity:0,  y: 22 },
+        hidden: { opacity:0 },
       }}
     >
       {children}
-    </motion.p>
+    </motion.div>
   )
 }
 
-export default AnimSmall
+export default AnimButton

@@ -6,8 +6,7 @@ export const InsightsSectionWrapper = styled.div`
     justify-content: center;
     align-items: flex-start;
     flex-direction:column;
-    padding:30px 0 50px;
-    border-top:1px solid #E8ECF3;
+    padding:0 0 50px;
     border-bottom:1px solid #E8ECF3;
     margin:0 auto;
     max-width:1002px;

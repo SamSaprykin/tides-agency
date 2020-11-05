@@ -107,9 +107,16 @@ export const MenuLinks = styled.div`
             color: #fff;
             font-family:Verona Serial;
             font-weight:400;
+            
             a {
                 color:#E8ECF3;
                 padding-left:8px;
+                transition: -webkit-text-stroke .2s ease-in-out;
+                transition: color .2s ease-in-out;
+                :hover {
+                    -webkit-text-stroke: 1px #E8ECF3;
+                    color:transparent;
+                }
             }
           }
         }
@@ -143,14 +150,32 @@ export const SocialLinksItem = styled.li`
     height:34px;
     overflow: hidden;
     position: relative;
+    :hover {
+        a {
+            color:#1A6AFF;
+        }
+        h3 {
+            margin-left:0px;
+        }
+    }
     h3 {
         position:absolute;
         height: 34px;
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        margin-left:-24px;
+        transition: margin-left .2s ease-in-out;
+        svg {
+            path {
+                fill: #1A6AFF !important;
+            }
+        }
         a {
             font-family:Bandeins Sans;
             font-weight:400;
             color:#E8ECF3;
-    
+            margin-left:8px;   
         }
     }
 `
@@ -162,6 +187,11 @@ export const EmailTides = styled.h5`
     color:#E8ECF3;
     font-family:Bandeins Sans;
     font-weight:400;
+    transition: color .2s ease-in-out;
+    
+    :hover {
+        color:#1A6AFF;
+    }
 `
 
 export const MenuHeader = styled.div`

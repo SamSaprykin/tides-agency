@@ -66,8 +66,9 @@ export const ImpactAreasTitle = styled.h4`
     position:relative;
     height:165px;
     overflow:hidden;
-    border-top:1px solid #E8ECF3;
-    padding:30px 0 19px;
+    
+    
+    margin-top:30px;
     p {
         position:absolute;
     }
@@ -84,7 +85,7 @@ export const ImpactAreasList = styled.ul`
             text-transform:uppercase;
             font-size:80px;
             line-height:116px;
-            border-top:1px solid #E8ECF3;
+            
             color:transparent;
             width:100%;
             padding:28px 0 14px !important;

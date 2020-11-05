@@ -19,6 +19,8 @@ import {
 } from "../../../styles/IndexPage/insightsSection"
 
 import AnimParagraph from "../../animateParagraph"
+import AnimBorder from "../../borderAnimation"
+import BorderElement from "../../DecorationElements/borderElement"
 
 const insights = [
     {
@@ -153,6 +155,9 @@ const InsightsSetion = ({ }) => {
     };
   return (
     <InsightsSectionWrapper>
+      <AnimBorder>
+        <BorderElement padding="0 0 30px"/>
+      </AnimBorder>
       <ContentWrapper>
         <InsightsTitle>
             <AnimParagraph>

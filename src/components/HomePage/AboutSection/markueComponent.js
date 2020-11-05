@@ -9,6 +9,8 @@ import {
 } from "../../../styles/IndexPage/aboutSection"
 
 import AnimParagraph from "../../animateParagraph"
+import BorderElement from "../../DecorationElements/borderElement"
+import AnimBorder from "../../borderAnimation"
 
 const plugins = [ CSSPlugin ];
 
@@ -66,7 +68,11 @@ class MarkueComponent extends React.Component {
     return (
       <>
         <li className="menu__item"  key={this.props.data.id} onMouseLeave={this.hideDescr} >
+           
             <h5 className="menu__item-link" onClick={this.showDescr} >
+              <AnimBorder>
+                <BorderElement padding="0 0 30px"/>
+              </AnimBorder>
               <AnimParagraph>
                 {this.props.data.title}
               </AnimParagraph>

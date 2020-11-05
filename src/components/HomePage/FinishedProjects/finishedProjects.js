@@ -16,9 +16,13 @@ import {
   IconItem,
   ArrowWork
 } from "../../../styles/IndexPage/finishedProjects"
+
 import AnimParagraph from "../../animateParagraph"
 import AnimHighParagraph from "../../animateHeight"
 import AnimSmall from "../../animSmall"
+import AnimBorder from "../../borderAnimation"
+import BorderElement from "../../DecorationElements/borderElement"
+
 const projectList = [
   {
     icon:"/advent.svg",
@@ -59,6 +63,9 @@ const FinishedProjects = ({ }) => {
                     Exrepience for dayysssss
                   </AnimParagraph>
                 </TitleProjects>
+                <AnimBorder>
+                  <BorderElement color="#191B1C"/>
+                </AnimBorder>
                 <DescriptionWrapper>
                     <Description>
                       <AnimHighParagraph>
@@ -81,31 +88,31 @@ const FinishedProjects = ({ }) => {
                 </DescriptionWrapper>
                 <ProjectsLinks>
                     {
-                      projectList.map(item => {
+                      projectList.map((item,index) => {
                         return (
-                          <ProjectItem key={item.year} >
-                            
-                              <AnimSmall delay={.1}>
-                                <IconItem 
-                                  src={item.icon}
-                                />
-                              </AnimSmall>
-                              
-                              <AnimSmall delay={.2}>
-                                <WorkType>{item.workTypes} </WorkType>
-                              </AnimSmall>
-                             
-                              <AnimSmall delay={.3}>
-                                <WorkYear>{item.year}</WorkYear>
-                              </AnimSmall>
-
-                              <AnimSmall delay={.4}>
-                                <Link to={item.linkTo}>
-                                  <ArrowWork src="/arrow-angle.svg" />
-                                </Link>
-                              </AnimSmall>
-                              
-                          </ProjectItem>
+                          <>
+                            <ProjectItem key={index}>
+                                <AnimSmall delay={.1}>
+                                  <IconItem 
+                                    src={item.icon}
+                                  />
+                                </AnimSmall>
+                                <AnimSmall delay={.2}>
+                                  <WorkType>{item.workTypes} </WorkType>
+                                </AnimSmall>
+                                <AnimSmall delay={.3}>
+                                  <WorkYear>{item.year}</WorkYear>
+                                </AnimSmall>
+                                <AnimSmall delay={.4}>
+                                  <Link to={item.linkTo}>
+                                    <ArrowWork src="/arrow-angle.svg" />
+                                  </Link>
+                                </AnimSmall>
+                            </ProjectItem>
+                            <AnimBorder delay={index/10 +.1}>
+                              <BorderElement color="#191B1C"/>
+                            </AnimBorder>
+                          </>
                         )
                       })
                     }

@@ -13,9 +13,10 @@ import {
     ImpactAreasList,
 } from "../../../styles/IndexPage/aboutSection"
 
-
 import AnimParagraph from "../../animateParagraph"
 import AnimHighParagraph from "../../animateHeight"
+import AnimBorder from "../../borderAnimation"
+import BorderElement from "../../DecorationElements/borderElement"
 
 const dataMarque = [
     {
@@ -77,13 +78,15 @@ const AboutSection = ({ }) => {
         </AboutDescription>
         <ImpactAreasAbout className="menu">
             <ImpactAreasTitle >
+                <AnimBorder>
+                    <BorderElement padding="0 0 30px"/>
+                </AnimBorder>
                 <AnimParagraph>
                   impact areas
                 </AnimParagraph>
             </ImpactAreasTitle>
             <ImpactAreasList>
                 {dataMarque.map((marque) => {
-                    
                     return (
                       <MarkueComponent data={marque} />
                     )

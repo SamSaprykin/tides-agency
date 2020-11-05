@@ -15,6 +15,7 @@ import {
 
 import AnimParagraph from "../../animateParagraph"
 
+
 const SubscribeSection = ({ }) => {
   
   return (

@@ -42,18 +42,7 @@ export const SubscribeForm = styled.form`
    
 `
 
-export const StyledInput = styled.input`
-    width:100%;
-    background-color:#1A6AFF;
-    border:none;
-    outline:none;
-    padding:45px 40px;
-    font-size:31px;
-    line-height:36px;
-    font-family: Bandeins Sans;
-    color:#E8ECF3;
-    font-weight:400;
-`
+
 
 export const FormCta = styled.div`
     padding:60px 40px;
@@ -78,13 +67,27 @@ export const FormCta = styled.div`
 export const InputContainer = styled.div`
     display:flex;
     flex-direction:row;
+    alig-items:center;
     width:100%;
     height:auto;
     background-color:#1A6AFF;
     position:relative;
+    height:126px;
+    :hover {
+        button {
+            svg {
+                path {
+                    fill: #FFCC00 !important;
+                    stroke: #FFCC00  !important;
+                }
+            }
+        }
+        
+    }
     button {
         margin-right:46px;
-        width:32px;
+        width:24px;
+        height:24px;
         position:absolute;
         top:50%;
         right:0px;
@@ -93,6 +96,25 @@ export const InputContainer = styled.div`
         outline:none;
         border:none;
     }
+`
+
+export const StyledInput = styled.input`
+    width:70%;
+    background-color:#1A6AFF;
+    border:none;
+    outline:none;
+    margin:45px 40px 40px;
+    font-size:31px;
+    line-height:36px;
+    font-family: Bandeins Sans;
+    color:#E8ECF3;
+    font-weight:400;
+    padding-bottom:4px;
+    box-sizing:border-box;
+    ${InputContainer} :hover & {
+        border-bottom:1px solid white;
+    }
+    
 `
 
 
