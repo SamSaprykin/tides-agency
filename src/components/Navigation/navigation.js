@@ -118,7 +118,6 @@ const Navigation = ({ state, setState }) => {
   
   return (
     <>
-    
     <HamburgerMenu ref={(el) => (menuWrapper = el)} className="hamburger-menu">
       <MenuSecondaryBackgroundColor
         ref={(el) => (show1 = el)}
@@ -191,7 +190,7 @@ const Navigation = ({ state, setState }) => {
                 <ul>
                   <li>
                     <h2 ref={(el) => (line3 = el)}>
-                      <Link to="/about-us">
+                      <Link to="/">
                         Home
                       </Link>
                     </h2>

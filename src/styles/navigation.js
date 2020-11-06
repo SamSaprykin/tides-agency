@@ -9,7 +9,7 @@ export const HamburgerMenu = styled.div`
     position: fixed;
     height: 100%;
     width: 100%;
-
+    
 `
 
 export const MenuSecondaryBackgroundColor = styled.div`

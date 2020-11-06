@@ -47,7 +47,7 @@ const SkillsSection = ({ }) => {
                 
                 
                   <AnimParagraph>
-                    <Link to="/about">
+                    <Link to="/about-us">
                       <SkillsSectionCtaWrapper>
                         <SkillsSectionCta>
                             Learn more about the skills of the team

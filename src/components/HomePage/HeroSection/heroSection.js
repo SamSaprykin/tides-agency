@@ -1,22 +1,12 @@
-import React, {useState, useRef, useEffect} from "react"
+import React, {useRef, useEffect} from "react"
 import TidesIcons from "../../DecorationElements/tidesIcons"
-import Navigation from "../../Navigation/navigation"
 import ShapeIndex from "../../DecorationElements/shapeIndex"
-import { useScrollPosition } from "../../../hooks/useScroll"
+import ScrollDown from "../../DecorationElements/scrollDown"
 
 import { 
     HeroLayout,
-    HeroNavWrapper,
-    HeroLogo,
-    HeroMenuButtonWrapper,
     HeroText,
-    HeroScrollDown,
-    LogoImage,
-    ButtonMenu,
-    IconWaveWrapper,
     WordsWrapper,
-    ScrollWrapper,
-    Centered,
 } from "../../../styles/IndexPage/heroSection"
 
 import {
@@ -24,60 +14,12 @@ import {
 } from '../../animate'
 
 const HeroSection = ({ }) => {
-  const [position, setPostition] = useState(null)
-
-  const [state, setState] = useState({
-    initial: false,
-    clicked: null,
-    menuName: "Menu"
-  });
-
   let text1 = useRef(null)
   let text2 = useRef(null)
   let text3 = useRef(null)
   let text4 = useRef(null)
-  // State of our button
-  const [hovered, setHovered] = useState(false);
+  
 
-  const onMouseEnterHandler = () => {
-    setHovered(true)
-  }
-  
-  useScrollPosition(({ prevPos, currPos }) => {
-      setPostition(currPos.y)
-    },
-    [position]
-  );
-  
-  
-  const onMouseLeaveHandler = () => {
-      const timeout = setTimeout(() => {
-        setHovered(false);
-      }, 400);
-  }
-
-  
-  //toggle menu
-  const handleMenu = () => {
-    
-    if (state.initial === false) {
-      setState({
-        initial: null,
-        clicked: true,
-        menuName: "Close"
-      });
-    } else if (state.clicked === true) {
-      setState({
-        clicked: !state.clicked,
-        menuName: "Menu"
-      });
-    } else if (state.clicked === false) {
-      setState({
-        clicked: !state.clicked,
-        menuName: "Close"
-      });
-    }
-  };
   useEffect(() => { 
     staggerLinksHero(text1, text2, text3, text4);
   },[])
@@ -85,31 +27,7 @@ const HeroSection = ({ }) => {
   return (
   <>
     <HeroLayout id="hero-section">
-      <HeroNavWrapper>
-        <HeroLogo>
-          <LogoImage src="/logo_tides.svg" secondaryColor={position} />
-        </HeroLogo>
-        <HeroMenuButtonWrapper secondaryColor={position}>
-          <ButtonMenu 
-            onClick={handleMenu}
-            onMouseOver={onMouseEnterHandler}
-            onMouseLeave={onMouseLeaveHandler}
-            
-          >
-            <span>Menu</span>
-            <IconWaveWrapper
-              
-              hovered={hovered}
-            >
-              <TidesIcons type="wavewMenuIcon" />
-            </IconWaveWrapper>
-           
-          </ButtonMenu>
-          
-        </HeroMenuButtonWrapper>
-      </HeroNavWrapper>
-      <HeroText>
-          
+      <HeroText> 
           <ul>
             <WordsWrapper >
               <li ref={(el) => (text1 = el)}>We help startups 	&amp;</li>
@@ -127,21 +45,11 @@ const HeroSection = ({ }) => {
               </li>
              
             </WordsWrapper>
-            
           </ul>
           <ShapeIndex />
       </HeroText>
-      <ScrollWrapper>
-        <Centered>
-         <TidesIcons type="arrowScroll" className="centered" />
-        </Centered>
-        <HeroScrollDown>
-          <TidesIcons type="scrollDown" />
-        </HeroScrollDown>
-      </ScrollWrapper>
-      
+      <ScrollDown margin='100px 0 0'/>
     </HeroLayout>
-    <Navigation state={state} setState={setState} />
   </>
   )
 }

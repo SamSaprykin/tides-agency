@@ -39,7 +39,7 @@ const BackWrapper = styled.div`
        width:100%;
        height: ${props => props.height};
    }
-   z-index:0;
+   z-index:-10;
 `
   
 export default StainsBackgrounds;

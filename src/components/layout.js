@@ -4,6 +4,7 @@ import { StaticQuery, graphql } from "gatsby"
 import { GlobalStyle } from "./globalStyle"
 
 import Footer from "./footer"
+import Header from "./header"
 
 import Preloading from "./Preloading/preloading"
 import CustomCursor from "../components/customCursor"
@@ -24,6 +25,7 @@ const Layout = ({ children }) => (
         <Preloading />
         <GlobalStyle />
         <CustomCursor />
+        <Header />
           <main>{children}</main>
         <Footer />
       </>
