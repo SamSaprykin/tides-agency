@@ -51,11 +51,9 @@ export const QuoteText = styled.div`
     padding-bottom:80px;
     svg {
         position:absolute;
-        top:150px;
+        top:158px;
         left:330px;
     }
-        
-    
     span {
         color:#1A6AFF;
         font-family: Stinger Fit;
