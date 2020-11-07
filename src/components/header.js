@@ -66,13 +66,13 @@ const Header = () => {
     };
     return (
      <>
-       <HeaderNavWrapper>
+       <HeaderNavWrapper  secondaryColor={position}>
         <Link to="/">
           <HeaderLogo>
-            <LogoImage src="/logo_tides.svg" secondaryColor={position} />
+            <LogoImage src="/logo_tides.svg"  />
           </HeaderLogo>
         </Link>
-        <HeaderMenuButtonWrapper secondaryColor={position}>
+        <HeaderMenuButtonWrapper>
           <ButtonMenu 
             onClick={handleMenu}
             onMouseOver={onMouseEnterHandler}

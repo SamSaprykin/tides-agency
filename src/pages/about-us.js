@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import SectionQuote from "../components/AboutUsPage/SectionQuote/sectionQuote"
 import SectionOurStory from "../components/AboutUsPage/SectionOurStory/sectionOurStory"
 import SectionForces from "../components/AboutUsPage/SectionForces/sectionForces"
+import SectionDifferent from "../components/AboutUsPage/SectionDifferent/sectionDifferent"
 
 const AboutUs = () => (
   <Layout>
@@ -13,6 +14,7 @@ const AboutUs = () => (
       <SectionQuote />
       <SectionOurStory />
       <SectionForces />
+      <SectionDifferent />
   </Layout>
 )
 

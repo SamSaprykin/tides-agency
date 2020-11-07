@@ -15,6 +15,9 @@ import {
     SliderForcesDescription,
     SliderForcesFiguresWrapper,
     WrapperForcesItem,
+    SliderContent,
+    FigureWrapper,
+    FigureImage,
 } from "../../../styles/AbouUsPage/sectionForces"
 
 
@@ -53,19 +56,25 @@ const SectionForces = ({ }) => {
                 <TidesIcons type="arrowButton"  />
             </SliderButton>
         </SliderButtonsWrapper>
-        <SliderForcesFiguresWrapper>
-
-        </SliderForcesFiguresWrapper>
-        <SliderForcesDescription>
-            <WrapperForcesItem>
-                <ul>
-                    <li>Strategists</li>
-                    <li>Designers</li>
-                    <li>Marketers</li>
-                </ul>
-                
-            </WrapperForcesItem>
-        </SliderForcesDescription>
+        <SliderContent>
+            <SliderForcesFiguresWrapper>
+                    <FigureWrapper>
+                        <FigureImage src="./shapes/1/Ellipse_45.svg" />
+                        <FigureImage src="./shapes/1/Group_915.svg" />
+                        <FigureImage src="./shapes/1/Polygon_1.svg" />
+                    </FigureWrapper>
+            </SliderForcesFiguresWrapper>
+            <SliderForcesDescription>
+                <WrapperForcesItem>
+                    <ul>
+                        <li>Strategists</li>
+                        <li>Designers</li>
+                        <li>Marketers</li>
+                    </ul>
+                    
+                </WrapperForcesItem>
+            </SliderForcesDescription>
+        </SliderContent>
        </SliderForces>
    </ContainerForces>
   </WrapperForces>

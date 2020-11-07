@@ -53,24 +53,28 @@ export const SliderForcesTitle = styled.h4`
 `
 
 export const SliderForcesDescription = styled.div`
-    width:46%;
+    width:50%;
     display:flex;
     flex-direction:column;
     justify-content:center;
+    
 `
 
 export const WrapperForcesItem = styled.div`
-    top:205px;
+    top:0;
+    right:0;
     height:140px;
     position:relative;
     overflow:hidden;
+    
+    width:100%;
     ul {
         position:absolute;
         transition:all 1.8s ease-in-out;
+        right:0;
         :hover {
             transform:translateY(-140px);
         }
-        
         li {
             -webkit-text-stroke: 2px #191B1C;
             font-weight:400;
@@ -87,6 +91,8 @@ export const WrapperForcesItem = styled.div`
 
 export const SliderForcesFiguresWrapper = styled.div`
     width:46%;
+    margin-top:80px;
+    height:100%;
 `
 
 export const SliderButtonsWrapper = styled.div`
@@ -128,4 +134,68 @@ export const SliderButton = styled.button`
       }
     }
 
+`
+
+const positionX1 = Math.floor(Math.random() * 10);
+const positionY1 = Math.floor(Math.random() * 30);
+const rotate1 = Math.floor(Math.random() * 30);
+const positionX2 = Math.floor(Math.random() * 10);
+const positionY2 = Math.floor(Math.random() * 25);
+const rotate2 = Math.floor(Math.random() * 45);
+const positionX3 = Math.floor(Math.random() * 10);
+const positionY3 = Math.floor(Math.random() * 20);
+const rotate3 = Math.floor(Math.random() * 90);
+export const FigureWrapper = styled.div`
+    position:relative;
+    width:100%;
+    height:auto;
+    
+`
+
+export const FigureImage = styled.img`
+    position:absolute;
+    top:0;
+    left:0;
+    transition:all .8s ease-in-out;
+    :nth-of-type(1) {
+        top:-${positionX1}px;
+        left:${positionY1}px;
+    }
+    :nth-of-type(2) {
+        top:-${positionX2}px;
+        left:${positionY2}px;
+    }
+    :nth-of-type(3) {
+        top:-${positionX3}px;
+        left:${positionY3}px;
+    }
+    ${SliderForcesFiguresWrapper} :hover & {
+        :nth-of-type(1) {
+            top:-${positionX1}vh;
+            left:${positionY1}vw;
+            transform:rotate(${rotate1}deg);
+            opacity:0;
+        }
+        :nth-of-type(2) {
+            top:${positionX2}vh;
+            left:-${positionY2}vw;
+            transform:rotate(-${rotate2}deg);
+            opacity:0;
+        }
+        :nth-of-type(3) {
+            top:${positionX3}vh;
+            left:${positionY3}vw;
+            transform:rotate(${rotate3}deg);
+            opacity:0;
+        }
+    }
+    
+`
+
+export const SliderContent = styled.div`
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    height:100%;
 `

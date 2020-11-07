@@ -20,9 +20,14 @@ export const QuoteHeader = styled.div`
     align-items:center;
     justify-content:center;
     border-bottom: 1px solid #E8ECF3;
-    margin-top:55px;
     padding-bottom:30px;
+    max-width:1302px;
+    margin:55px auto 0;
+    position:fixed;
+    z-index:1;
+    mix-blend-mode: difference;
 `
+
 
 export const QuoteTitle  = styled.h5`
     font-family:Bandeins Sans;
@@ -35,7 +40,7 @@ export const QuoteTitle  = styled.h5`
 `
 
 export const ContentContainer = styled.div`
-    padding-top:87px;
+    padding-top:183px;
     position:relative;
     max-width:1002px;
 `
@@ -51,7 +56,7 @@ export const QuoteText = styled.div`
     padding-bottom:80px;
     svg {
         position:absolute;
-        top:158px;
+        top:250px;
         left:330px;
     }
     span {
@@ -63,7 +68,7 @@ export const QuoteText = styled.div`
         svg {
             position:absolute;
             left:0;
-            top:40px;
+            top:140px;
             z-index:-1;
         }
     }

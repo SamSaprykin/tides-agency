@@ -10,21 +10,22 @@ export const HeaderNavWrapper = styled.div`
     flex-direction:row;
     align-items:center;
     justify-content:space-between;
-    z-index:1;
-    
+    z-index:2;
+    mix-blend-mode: ${({ secondaryColor }) => {
+      if (secondaryColor <= -550  ) return " difference;"
+    }};
+   
 `
 
 export const HeaderLogo = styled.div``
 
 export const HeaderMenuButtonWrapper = styled.div`
-  filter: ${({ secondaryColor }) => {
-    if (secondaryColor <= -2350 && -3500 <= secondaryColor ) return "invert(1);"
-    if (secondaryColor <= -3500) return "invert(0);"
-  }};
+  
   display:flex;
   flex-direction:row;
   align-items:center;
   justify-content:space-between;
+  
   span {
     margin-right:10px;
     color:#E8ECF3;
@@ -32,9 +33,11 @@ export const HeaderMenuButtonWrapper = styled.div`
     font-weight:400;
     font-size:20px;
     line-height:34px;
+    
   }
   svg {
     width:75px;
+    
   }
 `
 
@@ -43,10 +46,7 @@ export const LogoImage = styled.img`
   height:50px;
   margin-bottom:0;
   
-  filter: ${({ secondaryColor }) => {
-    if (secondaryColor <= -2350 && -3500 <= secondaryColor ) return "invert(1);"
-    if (secondaryColor <= -3500) return "invert(0);"
-  }};
+  
 `
 
 export const ButtonMenu  = styled.button`
@@ -58,13 +58,16 @@ export const ButtonMenu  = styled.button`
   display:flex;
   flex-direction:row;
   align-items:center;
+  
 `
 
 export const IconWaveWrapper = styled.div`
   width:29px;
   overflow:hidden;
+  
   svg {
     transition: transform 7s;
+    
     fill: ${({ hovered }) => {
       if (hovered === true) return "#FFCC00;"
       if (hovered === false) return "#E8ECF3;"
@@ -81,4 +84,5 @@ export const HeaderLayout = styled.div`
   z-index:1;
   left:0;
   top:0;
+  
 `
