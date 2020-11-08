@@ -20,28 +20,37 @@ import {
     FigureImage,
 } from "../../../styles/AbouUsPage/sectionForces"
 
-
-
+import AnimBorder from "../../borderAnimation"
+import AnimParagraph from "../../animateParagraph"
+import AnimHighParagraph from "../../animateHeight"
 const SectionForces = ({ }) => {
   return (
   <WrapperForces>
    <ContainerForces>
        <TitleForces>
-           One of the strongest forces on earth
+           <AnimParagraph>
+             One of the strongest forces on earth
+           </AnimParagraph>
        </TitleForces>
-       <BorderElement color="#191B1C" />
+       <AnimBorder>
+         <BorderElement color="#191B1C" />
+       </AnimBorder>
+       
        <TextForces>
-        We refuse to go with the flow of outdated but traditional schemes. To achieve
-        an excellent result, we seek out unorthodox ways of solving problems. <br /><br />
+        <AnimHighParagraph>
+            We refuse to go with the flow of outdated but traditional schemes. To achieve
+            an excellent result, we seek out unorthodox ways of solving problems. <br /><br />
 
-        We hunt for insights to better your business or product. But to find something incredible, 
-        we don't allow routine. Therefore, we value diversity. It can provide fertile ground for the 
-        cultivation of brilliant ideas. And we have seen this many times.  <br /><br />
-
-        But we are not only about business but also people. The team is extremely important to us. 
-        We value honesty, empathy, and creativity. Therefore,
-        the Tides team are not just competent, but special people who are determined
-        to improve the systems by which the business operates. <br /><br />
+            We hunt for insights to better your business or product. But to find something incredible, 
+            we don't allow routine. Therefore, we value diversity. It can provide fertile ground for the 
+            cultivation of brilliant ideas. And we have seen this many times.  <br /><br />
+        </AnimHighParagraph>
+        <AnimHighParagraph>
+            But we are not only about business but also people. The team is extremely important to us. 
+            We value honesty, empathy, and creativity. Therefore,
+            the Tides team are not just competent, but special people who are determined
+            to improve the systems by which the business operates. <br /><br />
+        </AnimHighParagraph>
        </TextForces> 
        <BorderElement color="#191B1C" />
        <SliderForces>

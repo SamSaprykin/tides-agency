@@ -1,5 +1,4 @@
 import React from "react"
-import GlitchClip from 'react-glitch-effect/core/Clip';
 import ScrollDown from "../../DecorationElements/scrollDown"
 import TidesIcons from "../../DecorationElements/tidesIcons"
 
@@ -14,6 +13,8 @@ import {
     QuoteAuthorIcon,
 } from "../../../styles/AbouUsPage/sectionQuote"
 
+import { GlitchEffect } from "../../../styles/glitchEffect"
+
 
 
 const SectionQuote = ({ }) => {
@@ -24,14 +25,16 @@ const SectionQuote = ({ }) => {
         <QuoteTitle>we make any digital dream come true</QuoteTitle>
     </QuoteHeader>
     <ContentContainer>
-      
-        <QuoteText>
-           <span>TIDES <TidesIcons type="bigQuote" /></span> was formed because
-           we saw too many companies  struggle
-           with marketing, design, 	&amp; development 
-           stragies.
-           <TidesIcons type="waveTextDecoration" className="wave"/>
-        </QuoteText>
+        
+        <GlitchEffect>
+          <QuoteText>
+            <span>TIDES <TidesIcons type="bigQuote" /></span> was formed because
+            we saw too many companies  struggle
+            with marketing, design, 	&amp; development 
+            stragies.
+            <TidesIcons type="waveTextDecoration" className="wave"/>
+          </QuoteText>
+        </GlitchEffect>
         <QuoteAuthorWrapper>
           <QuoteAuthorIcon>
             <img src="/Jonathan-icon.png" />

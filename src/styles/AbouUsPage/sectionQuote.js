@@ -56,7 +56,7 @@ export const QuoteText = styled.div`
     padding-bottom:80px;
     svg {
         position:absolute;
-        top:250px;
+        top:70px;
         left:330px;
     }
     span {
@@ -68,7 +68,7 @@ export const QuoteText = styled.div`
         svg {
             position:absolute;
             left:0;
-            top:140px;
+            top:0px;
             z-index:-1;
         }
     }
