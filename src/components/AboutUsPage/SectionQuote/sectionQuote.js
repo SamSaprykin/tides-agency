@@ -1,7 +1,9 @@
 import React from "react"
 import ScrollDown from "../../DecorationElements/scrollDown"
 import TidesIcons from "../../DecorationElements/tidesIcons"
-
+import { GlitchFilter } from '@pixi/filter-glitch';
+import { Container, withFilters} from '@inlet/react-pixi';
+ 
 import { 
     QuoteLayout,
     ContentContainer,
@@ -15,9 +17,12 @@ import {
 
 import { GlitchEffect } from "../../../styles/glitchEffect"
 
-
+const Filters = withFilters(Container, {
+  glitch: GlitchFilter
+});
 
 const SectionQuote = ({ }) => {
+  console.log(Filters)
   return (
   <QuoteLayout>
     <QuoteHeader>
@@ -25,19 +30,23 @@ const SectionQuote = ({ }) => {
         <QuoteTitle>we make any digital dream come true</QuoteTitle>
     </QuoteHeader>
     <ContentContainer>
-        
-        <GlitchEffect>
-          <QuoteText>
-            <span>TIDES <TidesIcons type="bigQuote" /></span> was formed because
-            we saw too many companies  struggle
-            with marketing, design, 	&amp; development 
-            stragies.
-            <TidesIcons type="waveTextDecoration" className="wave"/>
-          </QuoteText>
-        </GlitchEffect>
+        <Filters glitch={{ slices:5,offset:100 }}>
+          <GlitchEffect>
+            <QuoteText>
+              <span>TIDES <TidesIcons type="bigQuote" /></span> was formed because
+              we saw too many companies  struggle
+              with marketing, design, 	&amp; development 
+              stragies.
+              <TidesIcons type="waveTextDecoration" className="wave"/>
+            </QuoteText>
+          </GlitchEffect>
+        </Filters>
+       
         <QuoteAuthorWrapper>
           <QuoteAuthorIcon>
-            <img src="/Jonathan-icon.png" />
+            <Filters glitch={{ slices:5,offset:100 }}>
+              <img src="/Jonathan-icon.png" />
+            </Filters>
           </QuoteAuthorIcon>
           <QuoteAuthorName>
             <TidesIcons type="signatureJonathan" />

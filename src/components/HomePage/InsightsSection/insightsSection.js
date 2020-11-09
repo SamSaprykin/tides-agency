@@ -45,7 +45,7 @@ const InsightsSetion = ({ }) => {
       </ContentWrapper>
       <ImageContainer className="insights-container">
         <AnimParagraph>
-          <img src="/imageSlider.png" alt="gez z" />
+          <img src="/insights_image.png" alt="gez z" />
         </AnimParagraph>
       </ImageContainer>
       <InsightsContainerInformation >

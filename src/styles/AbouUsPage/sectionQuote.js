@@ -40,7 +40,7 @@ export const QuoteTitle  = styled.h5`
 `
 
 export const ContentContainer = styled.div`
-    padding-top:183px;
+    padding-top:100px;
     position:relative;
     max-width:1002px;
 `
@@ -54,9 +54,10 @@ export const QuoteText = styled.div`
     font-weight:800;
     color:#E8ECF3;
     padding-bottom:80px;
+    padding-top:83px;
     svg {
         position:absolute;
-        top:70px;
+        top:153px;
         left:330px;
     }
     span {
@@ -68,7 +69,7 @@ export const QuoteText = styled.div`
         svg {
             position:absolute;
             left:0;
-            top:0px;
+            top:50px;
             z-index:-1;
         }
     }
