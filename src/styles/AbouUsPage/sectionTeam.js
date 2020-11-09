@@ -43,7 +43,7 @@ export const TeamIconsSection = styled.div`
 `
 
 export const TeamIconsTitle = styled.h4`
-    width:18%;
+    width:20%;
     max-width:250px;
     font-size:34px;
     line-height:38px;
