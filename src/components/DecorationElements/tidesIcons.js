@@ -161,7 +161,111 @@ const TidesIcons = ({
                 <path d="M23.8969 70.504L21.0253 73.1574L19.09 81.5088L17.5044 79.8703C18.1536 77.706 18.8653 75.3583 19.7892 73.0351L19.7518 72.9862C17.3171 73.7565 14.9074 74.3434 12.6726 74.857L11.0869 73.2185L19.7143 71.7879L22.5859 69.1345L23.8969 70.504Z" fill="white"/>
                 <path d="M23.0234 37.6854C26.5443 27.4999 36.3953 20.1634 47.9817 20.1634C62.5271 20.1634 74.3258 31.7184 74.3258 45.9635C74.3258 50.1331 73.3145 54.0703 71.5291 57.5552" stroke="#1A6AFF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-        )  :  (
+        )  : type === 'analystsIcon' ? (
+            <svg width="54" height="61" viewBox="0 0 54 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="26.5744" cy="31.0102" r="23.3556" stroke="#1A6AFF" stroke-width="2"/>
+                <circle cx="26.6174" cy="6.65455" r="5.65455" fill="#E8ECF3" stroke="black" stroke-width="2"/>
+                <circle cx="26.6174" cy="54.3455" r="5.65455" fill="#E8ECF3" stroke="black" stroke-width="2"/>
+                <circle cx="26.6174" cy="31.0545" r="5.65455" stroke="#1A6AFF" stroke-width="2"/>
+                <circle cx="46.5823" cy="19.9636" r="5.65455" fill="#E8ECF3" stroke="black" stroke-width="2"/>
+                <circle cx="46.5823" cy="41.0364" r="5.65455" fill="#E8ECF3" stroke="black" stroke-width="2"/>
+                <circle cx="6.65455" cy="19.9636" r="5.65455" fill="#E8ECF3" stroke="black" stroke-width="2"/>
+                <circle cx="6.65455" cy="41.0364" r="5.65455" fill="#E8ECF3" stroke="black" stroke-width="2"/>
+            </svg>
+        )  : type === 'dataSientistIcon' ? (
+            <svg width="61" height="61" viewBox="0 0 61 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1" y="1" width="59" height="59" fill="#E8ECF3" stroke="black" stroke-width="2"/>
+                <circle cx="20" cy="41" r="11" stroke="black" stroke-width="2"/>
+                <circle cx="43" cy="24" r="9" stroke="#1A6AFF" stroke-width="2"/>
+                <circle cx="18" cy="14" r="5" stroke="black" stroke-width="2"/>
+            </svg>
+
+        )  : type === 'designersIcon' ? (
+            <svg width="68" height="66" viewBox="0 0 68 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="13" y="16" width="50" height="50">
+                <rect x="14" y="17" width="48" height="48" fill="#E8ECF3" stroke="black" stroke-width="2"/>
+                </mask>
+                <g mask="url(#mask0)">
+                <line x1="51.6495" y1="4.63698" x2="1.64689" y2="54.6396" stroke="black" stroke-width="2"/>
+                <line x1="45.9932" y1="-1.01987" x2="-4.00936" y2="48.9827" stroke="black" stroke-width="2"/>
+                <line x1="57.3067" y1="10.2938" x2="7.30411" y2="60.2964" stroke="black" stroke-width="2"/>
+                <line x1="62.9639" y1="15.9507" x2="12.9613" y2="65.9533" stroke="black" stroke-width="2"/>
+                <line x1="68.6212" y1="21.6076" x2="18.6186" y2="71.6101" stroke="black" stroke-width="2"/>
+                <line x1="74.2774" y1="27.2644" x2="24.2748" y2="77.267" stroke="black" stroke-width="2"/>
+                <line x1="79.9337" y1="32.9213" x2="29.9311" y2="82.9239" stroke="black" stroke-width="2"/>
+                </g>
+                <rect x="14" y="17" width="48" height="48" stroke="#1A6AFF" stroke-width="2"/>
+                <rect x="1" y="6" width="48" height="48" fill="#E8ECF3" stroke="black" stroke-width="2"/>
+                <path d="M63 5V0H61V5H56V7H61V12H63V7H68V5H63Z" fill="#1A6AFF"/>
+                <circle cx="13" cy="18" r="1" fill="#191B1C" stroke="black" stroke-width="0.5"/>
+                <circle cx="19" cy="18" r="1" fill="#191B1C" stroke="black" stroke-width="0.5"/>
+                <circle cx="25" cy="18" r="1" fill="#191B1C" stroke="black" stroke-width="0.5"/>
+                <circle cx="31" cy="18" r="1" fill="#191B1C" stroke="black" stroke-width="0.5"/>
+                <circle cx="37" cy="18" r="1" fill="#191B1C" stroke="black" stroke-width="0.5"/>
+                <circle cx="13" cy="24" r="1" fill="#191B1C" stroke="black" stroke-width="0.5"/>
+                <circle cx="19" cy="24" r="1" fill="#191B1C" stroke="black" stroke-width="0.5"/>
+                <circle cx="25" cy="24" r="1" fill="#191B1C" stroke="black" stroke-width="0.5"/>
+                <circle cx="31" cy="24" r="1" fill="#191B1C" stroke="black" stroke-width="0.5"/>
+                <circle cx="37" cy="24" r="1" fill="#191B1C" stroke="black" stroke-width="0.5"/>
+                <circle cx="13" cy="30" r="1" fill="#191B1C" stroke="black" stroke-width="0.5"/>
+                <circle cx="19" cy="30" r="1" fill="#191B1C" stroke="black" stroke-width="0.5"/>
+                <circle cx="25" cy="30" r="1" fill="#191B1C" stroke="black" stroke-width="0.5"/>
+                <circle cx="31" cy="30" r="1" fill="#191B1C" stroke="black" stroke-width="0.5"/>
+                <circle cx="37" cy="30" r="1" fill="#191B1C" stroke="black" stroke-width="0.5"/>
+                <circle cx="13" cy="36" r="1" fill="#191B1C" stroke="black" stroke-width="0.5"/>
+                <circle cx="19" cy="36" r="1" fill="#191B1C" stroke="black" stroke-width="0.5"/>
+                <circle cx="25" cy="36" r="1" fill="#191B1C" stroke="black" stroke-width="0.5"/>
+                <circle cx="31" cy="36" r="1" fill="#191B1C" stroke="black" stroke-width="0.5"/>
+                <circle cx="37" cy="36" r="1" fill="#191B1C" stroke="black" stroke-width="0.5"/>
+                <circle cx="13" cy="42" r="1" fill="#191B1C" stroke="black" stroke-width="0.5"/>
+                <circle cx="19" cy="42" r="1" fill="#191B1C" stroke="black" stroke-width="0.5"/>
+                <circle cx="25" cy="42" r="1" fill="#191B1C" stroke="black" stroke-width="0.5"/>
+                <circle cx="31" cy="42" r="1" fill="#191B1C" stroke="black" stroke-width="0.5"/>
+                <circle cx="37" cy="42" r="1" fill="#191B1C" stroke="black" stroke-width="0.5"/>
+            </svg>
+        )  : type === 'developersIcon' ? (
+            <svg width="92" height="61" viewBox="0 0 92 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M77.7728 25L76.0709 25C76.699 26.6854 78.4211 28.764 80.3256 29.2884L69 29.2884L69 30.7116L80.3256 30.7116C78.4211 31.236 76.699 33.3146 76.0709 35L77.7728 35C78.9074 32.9775 79.9001 32.0037 83 30.4682L83 29.5318C79.9001 27.9963 78.9074 27.0225 77.7728 25Z" fill="#1A6AFF" stroke="#1A6AFF" stroke-width="0.5"/>
+                <circle cx="30.5" cy="30.5" r="29.5" stroke="#1A6AFF" stroke-width="2"/>
+                <circle cx="61.5" cy="30.5" r="29.5" stroke="black" stroke-width="2"/>
+            </svg>
+        )  : type === 'entrepreneursIcon' ? (
+            <svg width="79" height="61" viewBox="0 0 79 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="9" y1="50" x2="70" y2="50" stroke="black" stroke-width="2"/>
+                <line x1="16" y1="38" x2="63" y2="38" stroke="#1A6AFF" stroke-width="2"/>
+                <line x1="24" y1="26" x2="55" y2="26" stroke="black" stroke-width="2"/>
+                <line x1="32" y1="14" x2="47" y2="14" stroke="black" stroke-width="2"/>
+                <path d="M1.83889 60L39.5 1.83981L77.1611 60L1.83889 60Z" stroke="#1A6AFF" stroke-width="2"/>
+            </svg>
+        )  : type === 'marketersIcon' ? (
+            <svg width="61" height="61" viewBox="0 0 61 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="30.5" cy="30.5" r="29.5" stroke="black" stroke-width="2"/>
+                <circle cx="24.96" cy="36.96" r="20.96" stroke="#1A6AFF" stroke-width="2"/>
+                <circle cx="19.2" cy="43.2" r="11.2" stroke="black" stroke-width="2"/>
+            </svg>
+        )  : type === 'producManagerIcon' ? (
+            <svg width="61" height="61" viewBox="0 0 61 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="30.5" cy="30.5" r="29.5" stroke="black" stroke-width="2"/>
+                <circle cx="30.5" cy="30.5" r="20.96" stroke="black" stroke-width="2"/>
+                <circle cx="30.4998" cy="30.5" r="11.2" stroke="#1A6AFF" stroke-width="2"/>
+            </svg>
+        )  : type === 'strategistIcon' ? (
+            <svg width="61" height="61" viewBox="0 0 61 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1" y="1" width="59" height="59" fill="#E8ECF3" stroke="black" stroke-width="2"/>
+                <path d="M44.3998 24C41.8511 24 40.5355 25.0011 39.3752 25.8842C38.3559 26.6598 37.5508 27.2727 35.7993 27.2727C34.0481 27.2727 33.243 26.6598 32.224 25.8842C31.0637 25.0011 29.7481 24 27.1994 24C24.651 24 23.3355 25.0011 22.1751 25.8842C21.1561 26.6598 20.3511 27.2727 18.5999 27.2727C16.8487 27.2727 16.0436 26.6598 15.0246 25.8842C13.8639 25.0011 12.5484 24 10 24V26.7273C11.7515 26.7273 12.5563 27.3398 13.5752 28.1154C14.7359 28.9989 16.0511 30 18.5999 30C21.1483 30 22.4638 28.9986 23.6242 28.1154C24.6431 27.3398 25.4482 26.7273 27.1994 26.7273C28.9509 26.7273 29.7557 27.3398 30.775 28.1154C31.9353 28.9989 33.2509 30 35.7993 30C38.348 30 39.6635 28.9986 40.8242 28.1154C41.8432 27.3398 42.6483 26.7273 44.3998 26.7273C46.1513 26.7273 46.9561 27.3398 47.9754 28.1154C49.1357 28.9989 50.4513 30 53 30V27.2727C51.2485 27.2727 50.4434 26.6598 49.4244 25.8842C48.2637 25.0011 46.9482 24 44.3998 24Z" fill="#191B1C"/>
+                <path d="M49.4244 13.8846C48.2637 13.0011 46.9482 12 44.3998 12C41.8511 12 40.5355 13.0011 39.3752 13.8846C38.3559 14.6602 37.5508 15.2727 35.7993 15.2727C34.0481 15.2727 33.243 14.6602 32.224 13.8846C31.0637 13.0011 29.7481 12 27.1994 12C24.651 12 23.3355 13.0011 22.1751 13.8846C21.1561 14.6602 20.3511 15.2727 18.5999 15.2727C16.8487 15.2727 16.0436 14.6602 15.0246 13.8846C13.8639 13.0011 12.5484 12 10 12V14.7273C11.7515 14.7273 12.5563 15.3398 13.5752 16.1154C14.7359 16.9989 16.0511 18 18.5999 18C21.1483 18 22.4638 16.9989 23.6242 16.1154C24.6431 15.3398 25.4482 14.7273 27.1994 14.7273C28.9509 14.7273 29.7557 15.3398 30.775 16.1154C31.9353 16.9989 33.2509 18 35.7993 18C38.348 18 39.6635 16.9989 40.8242 16.1154C41.8432 15.3398 42.6483 14.7273 44.3998 14.7273C46.1513 14.7273 46.9561 15.3398 47.9754 16.1154C49.1357 16.9989 50.4513 18 53 18V15.2727C51.2485 15.2727 50.4434 14.6602 49.4244 13.8846Z" fill="#1A6AFF"/>
+                <path d="M39 41.2272L39 42.9291C40.6854 42.301 42.764 40.5789 43.2884 38.6744L43.2884 50L44.7116 50L44.7116 38.6744C45.236 40.5789 47.3146 42.301 49 42.9291L49 41.2272C46.9775 40.0926 46.0037 39.0999 44.4682 36L43.5318 36C41.9963 39.0999 41.0225 40.0926 39 41.2272Z" fill="#1A6AFF" stroke="#1A6AFF" stroke-width="0.5"/>
+            </svg>
+
+        )  : type === 'technologistIcon' ? (
+            <svg width="79" height="61" viewBox="0 0 79 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.79846 60L20.5 29.8951L39.2015 60H1.79846Z" stroke="#1A6AFF" stroke-width="2"/>
+                <path d="M39.1718 1L20.5 30.1462L1.82823 1L39.1718 1Z" stroke="black" stroke-width="2"/>
+                <path d="M40.7754 60L59 29.9294L77.2246 60H40.7754Z" stroke="black" stroke-width="2"/>
+                <path d="M77.1958 1L59 30.1132L40.8042 1L77.1958 1Z" stroke="black" stroke-width="2"/>
+            </svg>
+
+        )  : (
             <></>
         )
 };
