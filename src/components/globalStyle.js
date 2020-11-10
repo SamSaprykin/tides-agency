@@ -1,11 +1,7 @@
 import { createGlobalStyle } from "styled-components"
 
 export const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Karla|Lato');
-  :root {
-    --primary-color: rebeccapurple;
-    --white: #FFFAFF;
-  }
+  
   * {
     box-sizing: border-box;
   }
@@ -14,7 +10,6 @@ export const GlobalStyle = createGlobalStyle`
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     touch-action: manipulation;
-    over-flow: hidden;
     font-size:0;
   }
   body {
