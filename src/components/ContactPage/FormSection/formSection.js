@@ -205,27 +205,27 @@ const FormSection = ({ }) => {
             <ServiceInputs>
               <TitleInputs>Service you need</TitleInputs>
               <StyledCheckBox id="interface" />
-                <CheckLabel for="interface" class="checkbox-label">
+                <CheckLabel for="interface">
                   <CheckBoxText>Interface Design</CheckBoxText>
                 </CheckLabel>
               
               <StyledCheckBox id="illustrations" />
-                <CheckLabel for="illustrations" class="checkbox-label">
+                <CheckLabel for="illustrations" >
                   <CheckBoxText>Illustrations</CheckBoxText>
                 </CheckLabel>
               
               <StyledCheckBox id="development" />
-                <CheckLabel for="development" class="checkbox-label">
+                <CheckLabel for="development" >
                   <CheckBoxText>Development</CheckBoxText>
                 </CheckLabel>
               
               <StyledCheckBox id="branding" />
-                <CheckLabel for="branding" class="checkbox-label">
+                <CheckLabel for="branding" >
                   <CheckBoxText>Branding</CheckBoxText>
                 </CheckLabel>
               
               <StyledCheckBox id="animation" />
-                <CheckLabel for="animation" class="checkbox-label">
+                <CheckLabel for="animation">
                   <CheckBoxText>Animation</CheckBoxText>
                 </CheckLabel>
               

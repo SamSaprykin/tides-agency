@@ -103,6 +103,7 @@ export const SubmitWrapper = styled.div`
 
 `
 
+
 export const CheckLabel = styled.label`
     display:flex;
     flex-direction:column;
@@ -115,6 +116,7 @@ export const CheckLabel = styled.label`
     border-radius:27.5px !important;
     margin:0 20px 40px 0;
     transition: all .2s ease-in-out;
+    
     :hover {
         opacity:0.4;
     }
@@ -123,7 +125,6 @@ export const CheckLabel = styled.label`
 export const StyledCheckBox = styled.input.attrs({ type: 'checkbox' })`
     margin-right:20px;
     display: none;
-    
     &:checked + ${CheckLabel} {
         background: #1A6AFF;
         border:1px solid #1A6AFF;
@@ -132,6 +133,7 @@ export const StyledCheckBox = styled.input.attrs({ type: 'checkbox' })`
         }
     }
 `
+
 
 export const ServiceInputs = styled.div`
     width:100%;
