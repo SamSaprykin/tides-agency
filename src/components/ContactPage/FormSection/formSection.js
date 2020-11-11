@@ -29,11 +29,11 @@ const FormSection = ({ }) => {
     email: "",
     details: "",
     services: [
-      {id: 1,value:"interface",isChecked:false},
-      {id: 2,value:"illustrations",isChecked:false},
-      {id: 3,value:"development",isChecked:false},
-      {id: 4,value:"branding",isChecked:false},
-      {id: 5,value:"animation",isChecked:false},
+      {value:"interface",isChecked:false},
+      {value:"illustrations",isChecked:false},
+      {value:"development",isChecked:false},
+      {value:"branding",isChecked:false},
+      {value:"animation",isChecked:false},
     ],
     language: "ENG",
   })
@@ -54,8 +54,6 @@ const FormSection = ({ }) => {
 
   const handleCheckChieldElement = (event) => {
     let servicesNew = inputs.services
-    console.log(servicesNew)
-    console.log(event.target.checked)
     servicesNew.map(service => {
        if (service.value === event.target.value)
        service.isChecked = event.target.checked

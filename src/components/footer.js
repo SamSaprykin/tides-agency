@@ -19,6 +19,7 @@ import {
    RightsText,
    TransformBorder,
    AdressWrapper,
+   ButtonContainer,
   } from "../styles/footer"
 
 import AnimBorder from "./borderAnimation"
@@ -111,11 +112,15 @@ const Footer = () => {
                     </AnimSmall>
                     
                 </FooterAdress>
-                <AnimButton>
-                    <FooterButton>
-                        say hello
-                    </FooterButton>
-                </AnimButton>
+                <ButtonContainer>
+                    <AnimButton>
+                        <FooterButton>
+                            say hello
+                            <TidesIcons type="blobButton" /> 
+                        </FooterButton>
+                    
+                    </AnimButton>
+                </ButtonContainer>
                 
             </FooterContentWrapper>
             <TransformBorder>

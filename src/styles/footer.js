@@ -22,12 +22,52 @@ export const FooterTitle = styled.h3`
         position:absolute;
     }
 `
+const from360to0 = keyframes`
+    from{transform:rotate(360deg)};
+    to{transform:rotate(0deg)};
+`;
+
+const from0to360 = keyframes `
+    from{transform:rotate(0)};
+    to{transform:rotate(360deg)};
+` 
+    
 
 export const FooterContentWrapper = styled.div`
     display:flex;
     flex-direction:row;
     justify-content:space-between;
     padding-bottom:72px;
+    #Circle1 {
+        animation: ${from0to360} 1s linear infinite;
+        cx: 140;
+        cy: 145;
+        r: 100;
+        transform-origin: 145px 150px;
+    }
+    #Circle2 {
+        animation: ${from360to0} 2s linear infinite;
+        cx: 150;
+        cy: 155;
+        r: 100;
+        transform-origin: 155px 150px;
+      }
+      
+      #Circle3 {
+        animation: ${from360to0} 2.5s linear infinite;
+        cx: 145;
+        cy: 150;
+        r: 100;
+        transform-origin: 150px 145px;
+      }
+      
+      #Circle4 {
+        animation: ${from360to0} 2.5s linear infinite;
+        cx: 160;
+        cy: 150;
+        r: 100;
+        transform-origin: 150px 155px;
+      }
 `
 
 export const FooterSocial = styled.ul`
@@ -80,26 +120,7 @@ export const FooterAdress = styled.div`
         line-height:36px;
     }
 `
-const fill = keyframes`
-  from {
-    top:0;
-    left:50%;
-    top:50%;
-    background-size:100%;
-    background-image:none;
-    transform:  translate(-50%,-50%) rotate(0deg);
-    z-index:10;
-  }
-  to {
-    top:0;
-    left:50%;
-    top:50%;
-    background-image:url('/blot4.svg');
-    background-size:0%;
-    transform: translate(-50%,-50%) rotate(-960deg);
-    z-index:-1;
-  }
-`;
+
 
 
 export const FooterButton = styled.button`
@@ -122,29 +143,23 @@ export const FooterButton = styled.button`
     overflow:hidden;
     outline:none;
     transition: all .2s ease-in-out;
-    
+    svg {
+        position:absolute;
+        z-index:-10;
+        opacity:0;
+        transition: all .2s ease-in-out;
+    }
     :hover {
         color:#191B1C;
         font-size:22px;
-        transition-delay:.4s;
-        :before {
-            content:"";
-            position:absolute;
-            z-index:-1;
-            width:472px;
-            height:472px;
-            background-position:center center;
-            background-repeat:no-repeat;
-            background-color:#FFCC00;
-            left:50%;
-            top:50%;
-            transform:translate(-50%,-50%);
-            border-radius:38%;
-            animation: ${fill} .4s linear;
+        width:300px;
+        height:300px;
+        border:none;
+        transition: all .2s ease-in-out;
+        svg {
+            opacity:1;
         }
     }
-    
-    
 `
 
 export const AdressWrapper = styled.div`
@@ -231,6 +246,15 @@ export const RightsText = styled.p`
 export const TransformBorder = styled.div`
     transform:rotate(180deg);
 
+`
+
+export const ButtonContainer = styled.div`
+    width:300px;
+    height:300px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
 `
 
 
