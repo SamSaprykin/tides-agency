@@ -180,40 +180,9 @@ export const ButtonSubmit = styled.input.attrs({ type: 'submit' })`
     margin-top:68px;
 `
 
-export const SuccessForm = styled.h4`
-  color: #219653;
-  font-family: FreightSans;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 24px;
-  width: 100%;
-  height: 100%;
-  padding: 60% 10% 0;
-  background-color: ${props => props.successBg};
-  z-index: ${({ successBg }) => {
-    if (successBg === "") return "-20"
-    if (successBg !== "") return "501"
-  }};
-  position: absolute;
-  top: 0;
-  right: 0;
-  ::before {
-    content: "";
-    position: absolute;
-    transform: rotate(45deg);
-    width: 48px;
-    height: 72px;
-    top: 20%;
-    display: ${({ successBg }) => {
-      if (successBg === "") return "none"
-      if (successBg !== "") return " inline-block"
-    }};
-    border-bottom: 9px solid #219653;
-    border-right: 9px solid #219653;
-    left: 50%;
-    margin-left: -20px;
-  }
-`
+
+
+
 
 export const FormTextError = styled.div`
   height:40px;

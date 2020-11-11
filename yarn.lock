@@ -5734,6 +5734,11 @@ gatsby-plugin-anchor-links@^1.1.1:
   dependencies:
     scroll-to-element "^2.0.3"
 
+gatsby-plugin-env-variables@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-env-variables/-/gatsby-plugin-env-variables-2.0.0.tgz#a5641eb61f00490a4043fb64646ab7a631491712"
+  integrity sha512-3scVhM0B6uicDXkf9liLY31DEaRD0UCrYlAgaGuyda4bFDFa7TRN35+sVr1iVIj39ALe4bEc/nu812B82Irjrw==
+
 gatsby-plugin-manifest@^2.1.1:
   version "2.2.26"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.2.26.tgz#040a7dc2ab54e64cc97481adfb498e5dc8caade4"

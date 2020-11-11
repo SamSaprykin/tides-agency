@@ -77,10 +77,10 @@ const Navigation = ({ state, setState }) => {
         duration: 0,
         opacity: 1,
         height: "100%",
-        y:"100%"
+        y:"90%",
       })
       gsap.to(show2, {
-        delay:0.9,
+        
         duration: 0,
         opacity: 1,
         height: "100%",

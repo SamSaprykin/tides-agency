@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import styled from "styled-components"
+import { navigate } from 'gatsby'
 import axios from "axios"
 
 import { 
@@ -18,21 +18,23 @@ import {
   CheckBoxText,
   CheckLabel,
   ButtonSubmit,
-  SuccessForm,
   FormTextError,
 } from "../../../styles/ContactPage/sectionForm"
 import BorderElement from "../../DecorationElements/borderElement"
 import StainsBackgrounds from "../../DecorationElements/stainsBackgrounds"
 const FormSection = ({ }) => {
-  const [successForm, setSuccessForm] = useState("")
-  const [successBg, setSuccessBg] = useState("")
-  const [errorForm, setErrorForm] = useState("")
-  const [errorBg, setErrorBg] = useState("")
   const [inputs, setInputs] = useState({
     name: "",
     company: "",
     email: "",
     details: "",
+    services: [
+      {id: 1,value:"interface",isChecked:false},
+      {id: 2,value:"illustrations",isChecked:false},
+      {id: 3,value:"development",isChecked:false},
+      {id: 4,value:"branding",isChecked:false},
+      {id: 5,value:"animation",isChecked:false},
+    ],
     language: "ENG",
   })
   const [errors, setErrors] = useState({
@@ -42,14 +44,23 @@ const FormSection = ({ }) => {
   })
   const handleOnChange = event => {
     event.persist()
-    setSuccessForm("")
-    setErrorForm("")
+    
     setInputs(prev => ({
       ...prev,
       [event.target.id]: event.target.value,
-      
     }))
     
+  }
+
+  const handleCheckChieldElement = (event) => {
+    let servicesNew = inputs.services
+    console.log(servicesNew)
+    console.log(event.target.checked)
+    servicesNew.map(service => {
+       if (service.value === event.target.value)
+       service.isChecked = event.target.checked
+    })
+    setInputs({services: servicesNew})
   }
   const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   
@@ -117,9 +128,24 @@ const FormSection = ({ }) => {
       }, 500)
     }
   }
-  const onFinish = (values,event) => {
+  const handleOnSubmit = event => {
     event.preventDefault();
-  }
+    setServerState({ submitting: true });
+    axios({
+      method: "POST",
+      url: `https://formspree.io/f/${process.env.GATSBY_FORMSPREE_CONTACT_FORM_ID}`,
+      data: inputs
+    })
+      .then(r => {
+        handleServerResponse(true, "Thanks!");
+        navigate('/thank-you');
+        console.log(inputs)
+      })
+      .catch(r => {
+        handleServerResponse(false, r.response.data.error);
+        console.log(r.response.data.error)
+      });
+  };
 
   const [serverState, setServerState] = useState({
     submitting: false,
@@ -136,6 +162,7 @@ const FormSection = ({ }) => {
         company: "",
         email: "",
         details: "",
+        services: ["","","",""]
       })
     }
   }
@@ -147,7 +174,7 @@ const FormSection = ({ }) => {
       <ContainerForm>
         <TitleForm>Contact us</TitleForm>
         <StyledForm 
-          onFinish={onFinish}
+          onSubmit={handleOnSubmit}
           method="post" 
         >
           <StyledLabel>
@@ -204,27 +231,27 @@ const FormSection = ({ }) => {
           <FooterForm>
             <ServiceInputs>
               <TitleInputs>Service you need</TitleInputs>
-              <StyledCheckBox id="interface" />
+              <StyledCheckBox id="interface" value="interface" onClick={handleCheckChieldElement}/>
                 <CheckLabel for="interface">
                   <CheckBoxText>Interface Design</CheckBoxText>
                 </CheckLabel>
               
-              <StyledCheckBox id="illustrations" />
+              <StyledCheckBox id="illustrations" value="illustrations"onClick={handleCheckChieldElement}/>
                 <CheckLabel for="illustrations" >
                   <CheckBoxText>Illustrations</CheckBoxText>
                 </CheckLabel>
               
-              <StyledCheckBox id="development" />
+              <StyledCheckBox id="development" value="development" onClick={handleCheckChieldElement} />
                 <CheckLabel for="development" >
                   <CheckBoxText>Development</CheckBoxText>
                 </CheckLabel>
               
-              <StyledCheckBox id="branding" />
+              <StyledCheckBox id="branding" value="branding" onClick={handleCheckChieldElement}/>
                 <CheckLabel for="branding" >
                   <CheckBoxText>Branding</CheckBoxText>
                 </CheckLabel>
               
-              <StyledCheckBox id="animation" />
+              <StyledCheckBox id="animation" value="animation" onClick={handleCheckChieldElement}/>
                 <CheckLabel for="animation">
                   <CheckBoxText>Animation</CheckBoxText>
                 </CheckLabel>
@@ -238,7 +265,6 @@ const FormSection = ({ }) => {
         </StyledForm>
       </ContainerForm>
       <StainsBackgrounds  rotate="10%" top="70%" left="-20%" height="600px"/>
-      <SuccessForm successBg={successBg}>{successForm}</SuccessForm>
     </WrapperFormSection>
     </>
   )
@@ -250,112 +276,4 @@ export default FormSection
 
 
 
-/*
- setServerState({ submitting: true })
-    axios({
-      method: "POST",
-      url: `https://formspree.io/....`,
-      data: inputs,
-    })
-      .then(r => {
-        handleServerResponse(true, "Thanks!")
-        
-        setSuccessForm(
-          "Thank you for your request. We will get back to you as soon as possible to answer your question!"
-        )
-        
-        setTimeout(() => {
-          setSuccessForm("")
-          setSuccessBg("")
-        }, 4000)
-      })
-      .catch(r => {
-        handleServerResponse(false, r.response.data.error)
-        setErrorForm(
-          "Oops! Something went wrong with your submission, please try again."
-        )
-        
-        setTimeout(() => {
-          setErrorForm("")
-          setErrorBg("")
-        }, 2000)
-      })
 
-  const [successForm, setSuccessForm] = useState("")
-  const [successBg, setSuccessBg] = useState("")
-  const [errorForm, setErrorForm] = useState("")
-  const [errorBg, setErrorBg] = useState("")
-  // Input Change Handling
-  const [inputs, setInputs] = useState({
-    name: "",
-    company: "",
-    email: "",
-    moreAboutProject: "",
-    language: "ENG",
-  })
-  const handleOnChange = event => {
-    event.persist()
-    setSuccessForm("")
-    setErrorForm("")
-    setInputs(prev => ({
-      ...prev,
-      [event.target.id]: event.target.value,
-    }))
-  }
-  const onFinish = values => {
-    event.preventDefault()
-
-    setServerState({ submitting: true })
-    axios({
-      method: "POST",
-      url: `https://formspree.io/....`,
-      data: inputs,
-    })
-      .then(r => {
-        handleServerResponse(true, "Thanks!")
-        
-        setSuccessForm(
-          "Thank you for your request. We will get back to you as soon as possible to answer your question!"
-        )
-        setSuccessBg("rgba(221,238,229, 0.9)")
-        setTimeout(() => {
-          setSuccessForm("")
-          setSuccessBg("")
-        }, 4000)
-      })
-      .catch(r => {
-        handleServerResponse(false, r.response.data.error)
-        setErrorForm(
-          "Oops! Something went wrong with your submission, please try again."
-        )
-        setErrorBg("rgba(238,220,226, 0.9)")
-        setTimeout(() => {
-          setErrorForm("")
-          setErrorBg("")
-        }, 4000)
-      })
-  }
-  // Server State Handling
-  const [serverState, setServerState] = useState({
-    submitting: false,
-    status: null,
-  })
-  const handleServerResponse = (ok, msg) => {
-    setServerState({
-      submitting: false,
-      status: { ok, msg },
-    })
-    if (ok) {
-      setInputs({
-        name: "",
-        company: "",
-        email: "",
-        moreAboutProject: "",
-      })
-    }
-  }
-
-
-
-
-*/

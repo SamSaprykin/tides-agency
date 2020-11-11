@@ -88,6 +88,7 @@ export const InputContainer = styled.div`
     }
 `
 
+
 export const StyledInput = styled.input`
     width:70%;
     background-color:#1A6AFF;
@@ -116,6 +117,29 @@ export const InputBorder = styled.div`
     ${InputContainer} :hover & {
         width:100%;
     }
+`
+
+export const FormTextError = styled.div`
+  height:40px;
+  position:relative;
+  overflow:hidden;
+  margin-top:12px;
+  span {
+      color:#FA4E4E;
+      bottom: ${({ error }) => {
+        if (error === "") return "26px"
+        if (error !== "") return "0"
+      }};
+      opacity: ${({ error }) => {
+        if (error === "") return "0"
+        if (error !== "") return "1"
+      }};
+      display:block;
+      position:absolute;
+      transition: all 1s ease-in-out;
+
+      font-size:22px;
+  }
 `
 
 

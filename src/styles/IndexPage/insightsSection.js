@@ -102,6 +102,13 @@ export const ImageContainer = styled.div`
   max-width:1002px;
   height: auto;
   position: relative;
+  width:100%;
+  p {
+    width:100%;
+    img {
+      width:100%;
+    }
+  }
 `
 
 export const PostTitle = styled.h5`

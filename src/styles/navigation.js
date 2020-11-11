@@ -13,7 +13,7 @@ export const HamburgerMenu = styled.div`
 `
 
 export const MenuSecondaryBackgroundColor = styled.div`
-    background:#191B1C;
+    background:transparent;
     top: 0;
     left: 0;
     right: 0;
@@ -23,24 +23,24 @@ export const MenuSecondaryBackgroundColor = styled.div`
     width: 100%;
     z-index: 10;
     .first {
-        height:80%;
+        height:90%;
     }
     .second {
-        height:80%;
-        bottom:0;
+        height:90%;
+        top:0;
     }
     .third {
-        height:60%;
-        bottom:0;
+        height:70%;
+        top:0;
     }
     .four {
-        height:40%;
-        bottom:0;
+        height:50%;
+        top:0;
     }
     div {
         z-index:100;
         position:absolute;
-        
+        transform:rotate(180deg);
     }
 `
 
@@ -49,21 +49,6 @@ export const MenuLayer = styled.div`
     background: #191B1C;
     height: 100%;
     overflow: hidden;
-    .menu-city-background {
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        opacity: 0;
-        background-size: cover;
-        background-repeat: no-repeat;
-        animation-name: backgroundEffect;
-        animation-duration: 30s;
-        animation-iteration-count: infinite;
-    }
 `
 
 export const MenuContainer = styled.div`

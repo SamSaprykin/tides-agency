@@ -1,3 +1,5 @@
+require("dotenv").config({ path: ".env" })
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Starter w/ styled-components`,
@@ -28,6 +30,15 @@ module.exports = {
       },
     },
     `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-plugin-env-variables`,
+      options: {
+        allowList: [
+          "GATSBY_FORMSPREE_CONTACT_FORM_ID",
+          "GATSBY_FORMSPREE_SUBSCRIBE_FORM_ID",
+        ],
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',

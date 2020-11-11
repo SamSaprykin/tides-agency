@@ -12,7 +12,7 @@ export const menuShow = (elem1, elem2) => {
     transformOrigin: "right top",
     ease: "power1.inOut",
     stagger: {
-      amount: -0.1,
+      amount: .2,
     },
     y:"-100%"
   })
@@ -25,7 +25,7 @@ export const menuHide = (elem1, elem2) => {
     opacity: 0,
     ease: "power4.inOut",
     stagger: {
-      amount: 0.07,
+      amount: 0.5,
     },
   });
 };
