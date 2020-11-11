@@ -266,18 +266,20 @@ const TidesIcons = ({
             </svg>
 
         )  : type === 'blobButton' ? (
-            <svg id="organic-blob" width="300" height="300" xmlns="http://www.w3.org/2000/svg" filter="url(#goo)" fill="#FFCC00">
-            <defs>
-                <filter id="goo">
-                    <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />
-                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 10 0 0 0  0 0 5 0 0  0 0 0 19 -9" result="goo" />
-                    <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+            <svg id="organic-blob" width="300" height="300" xmlns="http://www.w3.org/2000/svg" filter="url(#animate)" fill="#FFCC00">
+           
+                <filter id="animate">
+                <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="1" result="warpper"/>
+                <feColorMatrix in="warpper" type="hueRotate">
+                <animate attributeType="XML" attributeName="values" values="0;110;150;210;360" dur="5s" repeatCount="indefinite"/>
+                </feColorMatrix>
+                <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="70" in="SourceGraphic"/>
                 </filter>
-            </defs>
-            <circle id="Circle1"></circle>
-            <circle id="Circle2"></circle>
-            <circle id="Circle3"></circle>
-            <circle id="Circle4"></circle>
+            
+            <circle id="Circle1" ></circle>
+            <circle id="Circle2" ></circle>
+            <circle id="Circle3" ></circle>
+            <circle id="Circle4" ></circle>
             </svg>
         )  : (
             <></>

@@ -25,12 +25,10 @@
     <feDisplacementMap in="SourceGraphic" scale="15" 
                        xChannelSelector="R" yChannelSelector="B" />
  
-    <feBlend mode="soft-light" in2="SourceGraphic"/> -->
-     <feComposite operator="in" in2="SourceGraphic"/> -->
+    
   </filter>
   
   <circle filter="url(#animate)" fill="#FFCC00" 
           cx="100" cy="30" r="25" />
-  <rect filter="url(#animate)" fill="#202020" 
-             x="50" y="10" width="100" height="100" /> -->
+  
 </svg>
