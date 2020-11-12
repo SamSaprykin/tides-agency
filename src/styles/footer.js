@@ -22,15 +22,7 @@ export const FooterTitle = styled.h3`
         position:absolute;
     }
 `
-const from360to0 = keyframes`
-    from{transform:rotate(360deg)};
-    to{transform:rotate(0deg)};
-`;
 
-const from0to360 = keyframes `
-    from{transform:rotate(0)};
-    to{transform:rotate(360deg)};
-` 
     
 
 export const FooterContentWrapper = styled.div`
@@ -38,36 +30,7 @@ export const FooterContentWrapper = styled.div`
     flex-direction:row;
     justify-content:space-between;
     padding-bottom:72px;
-    #Circle1 {
-        animation: ${from0to360} 1s linear infinite;
-        cx: 140;
-        cy: 145;
-        r: 100;
-        transform-origin: 145px 150px;
-    }
-    #Circle2 {
-        animation: ${from360to0} 2s linear infinite;
-        cx: 150;
-        cy: 155;
-        r: 100;
-        transform-origin: 155px 150px;
-      }
-      
-      #Circle3 {
-        animation: ${from360to0} 2.5s linear infinite;
-        cx: 145;
-        cy: 150;
-        r: 100;
-        transform-origin: 150px 145px;
-      }
-      
-      #Circle4 {
-        animation: ${from360to0} 2.5s linear infinite;
-        cx: 160;
-        cy: 150;
-        r: 100;
-        transform-origin: 150px 155px;
-      }
+    
 `
 
 export const FooterSocial = styled.ul`

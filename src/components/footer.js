@@ -4,7 +4,7 @@ import { AnchorLink } from "gatsby-plugin-anchor-links"
 import StainsBackground from "./DecorationElements/stainsBackgrounds"
 
 import TidesIcons from "../components/DecorationElements/tidesIcons"
-
+import TidesButton from "../components/DecorationElements/tidesButton"
 import { 
    FooterWrapper,
    FooterTitle,
@@ -112,15 +112,7 @@ const Footer = () => {
                     </AnimSmall>
                     
                 </FooterAdress>
-                <ButtonContainer>
-                    <AnimButton>
-                        <FooterButton>
-                            say hello
-                            <TidesIcons type="blobButton" /> 
-                        </FooterButton>
-                    
-                    </AnimButton>
-                </ButtonContainer>
+                <TidesButton callToAction="say hello" small="false"/>
                 
             </FooterContentWrapper>
             <TransformBorder>

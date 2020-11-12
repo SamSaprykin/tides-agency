@@ -37,6 +37,7 @@ const BackWrapper = styled.div`
    transform: rotate(${props => props.rotate});
    img {
        width:100%;
+       max-width:800px;
        height: ${props => props.height};
    }
    z-index:-10;

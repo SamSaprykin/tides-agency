@@ -204,7 +204,7 @@ const Navigation = ({ state, setState }) => {
                   </li>
                   <li>
                     <h2 ref={(el) => (line5 = el)}>
-                      <Link to="/about-us">
+                      <Link to="/case-study">
                         Case study
                       </Link>
                     </h2>
