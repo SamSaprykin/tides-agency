@@ -6,6 +6,8 @@ import SEO from "../components/seo"
 import ProjectNameSection from "../components/CaseStudyPage/ProjectNameSection/projectNameSection"
 import AboutProjectSection from "../components/CaseStudyPage/AboutProjectSection/aboutProjectSection"
 import ServicesProjectSection from "../components/CaseStudyPage/ServicesProjectSection/servicesProjectSection"
+import GalleryProjectSection from "../components/CaseStudyPage/GalleryProjectSection/galleryProjectSection"
+import AuthorsProjectSection from "../components/CaseStudyPage/AuthorsProjectSection/authorsProjectSection"
 
 const CaseStudy = () => (
   <Layout>
@@ -13,6 +15,8 @@ const CaseStudy = () => (
       <ProjectNameSection />
       <AboutProjectSection />
       <ServicesProjectSection />
+      <GalleryProjectSection />
+      <AuthorsProjectSection />
   </Layout>
 )
 
