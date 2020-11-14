@@ -1,5 +1,5 @@
 import styled from "styled-components"
-
+import { device } from "./constants"
 export const HeaderNavWrapper = styled.div`
     position:fixed;
     top:0;
@@ -14,7 +14,9 @@ export const HeaderNavWrapper = styled.div`
     mix-blend-mode: ${({ secondaryColor }) => {
       if (secondaryColor <= -550  ) return " difference;"
     }};
-   
+    @media ${device.tablet} {
+      padding: 0 32px;
+    }
 `
 
 export const HeaderLogo = styled.div``

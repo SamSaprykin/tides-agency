@@ -1,5 +1,5 @@
 import styled from "styled-components"
-
+import { device } from "./constants"
 export const HamburgerMenu = styled.div`
     display: none;
     z-index: 9;
@@ -8,7 +8,7 @@ export const HamburgerMenu = styled.div`
     right: 0;
     position: fixed;
     height: 100%;
-    width: 100%;
+    width: 100%; 
     
 `
 
@@ -52,15 +52,19 @@ export const MenuLayer = styled.div`
 `
 
 export const MenuContainer = styled.div`
-    width: 1280px;
-    min-width: 1280px;
+    width: 100%;
+    max-width: 1280px;
     margin: 0 auto;
+    
 `
 
 
 export const MenuWrapper = styled.div`
     position: relative;
     padding: 0 24px;
+    @media ${device.mobileL} {
+        padding: 0 32px;
+    }
 `
 
 export const MenuLinks = styled.div`
@@ -69,18 +73,55 @@ export const MenuLinks = styled.div`
     align-items: flex-start;
     position: relative;
     top: 10vh;
+    width:100%;
+    margin:0 auto;
+    
+    @media ${device.tablet} {
+        max-width:755px;
+    }
+    @media ${device.mobileL} {
+        flex-direction:column;
+    }
     nav {
     display: block;
+    width:100%;
+    max-width:800px;
+    @media ${device.desktop} {
+        max-width:600px;
+    }
+    @media ${device.laptop} {
+        max-width:500px;
+    }
+    @media ${device.tablet} {
+        max-width:400px;
+    }
+    
     ul {
         margin: 0;
         padding: 0;
+        width:100%;
+        @media ${device.tablet} {
+            max-width:400px;
+        }
         li {
             list-style: none;
             overflow: hidden;
             position: relative;
-            width: 700px;
+            width:100%;
+            max-width: 700px;
+            @media ${device.tablet} {
+                max-width: 400px;
+                width:100%;
+            }
+            @media ${device.tablet} {
+                max-width:588px;
+            }
             height: 82px;
             margin-bottom:38px;
+            @media ${device.mobileL} {
+                height: 60px;
+                margin-bottom:0;
+            }
         h2 {
             position:absolute;
             height: 82px;
@@ -93,12 +134,21 @@ export const MenuLinks = styled.div`
             color: #fff;
             font-family:Verona Serial;
             font-weight:400;
-            
+            @media ${device.tablet} {
+                font-size: 36px;
+            }
+            @media ${device.mobileL} {
+                line-height:60px;
+                height: 60px;
+            }
             a {
                 color:#E8ECF3;
                 padding-left:8px;
                 transition: -webkit-text-stroke .2s ease-in-out;
                 transition: color .2s ease-in-out;
+                @media ${device.mobileL} {
+                    padding-left:0;
+                }
                 :hover {
                     -webkit-text-stroke: 1px #E8ECF3;
                     color:transparent;
@@ -119,6 +169,7 @@ export const MenuInfo = styled.div`
     p {
         font-size: 20px;
         line-height:34px;
+        
     }
 `
 
@@ -136,6 +187,13 @@ export const SocialLinksItem = styled.li`
     height:34px;
     overflow: hidden;
     position: relative;
+    @media ${device.tablet} {
+        font-size:22px;
+    }
+    @media ${device.mobileL} {
+        font-size:22px;
+        line-height:28.93px;
+    }
     :hover {
         a {
             color:#1A6AFF;
@@ -174,7 +232,9 @@ export const EmailTides = styled.h5`
     font-family:Bandeins Sans;
     font-weight:400;
     transition: color .2s ease-in-out;
-    
+    @media ${device.tablet} {
+        font-size:22px !important; 
+    }
     :hover {
         color:#1A6AFF;
     }
@@ -190,6 +250,7 @@ export const MenuHeader = styled.div`
     position:relative;
     height:50px;
     overflow:hidden;
+    
 `
 
 export const LogoWrapper = styled.div`

@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { device } from "../constants"
 
 export const AuthorsWrapper = styled.div`
     width:100%;
@@ -8,11 +9,17 @@ export const AuthorsWrapper = styled.div`
     flex-direction:row;
     justify-content:flex-end;
     position:relative;
+    @media ${device.tablet} {
+        max-width:588px;
+    }
 `
 
 export const AuthorsContainer = styled.div`
     width:100%;
     max-width:731px;
+    @media ${device.tablet} {
+        max-width:375px;
+    }
 `
 
 export const AuthorsListTitle = styled.h5`
@@ -23,6 +30,7 @@ export const AuthorsListTitle = styled.h5`
     color:#E8ECF3;
     padding-bottom:16px;
     border-bottom:1px solid #E8ECF3;
+    
 `
 
 export const AuthorsList = styled.ul`
@@ -35,5 +43,8 @@ export const AuthorsList = styled.ul`
         color:#E8ECF3;
         padding:13px 0 11px;
         border-bottom:1px solid #E8ECF3;
+        @media ${device.tablet} {
+            font-size:22px;
+        }
     }
 `

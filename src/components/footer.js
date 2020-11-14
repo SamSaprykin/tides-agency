@@ -11,7 +11,6 @@ import {
    FooterContentWrapper,
    FooterSocial,
    FooterAdress,
-   FooterButton,
    TitleItem,
    ClockWrapper,
    FooterFooter,
@@ -19,7 +18,7 @@ import {
    RightsText,
    TransformBorder,
    AdressWrapper,
-   ButtonContainer,
+   FooterInformation,
   } from "../styles/footer"
 
 import AnimBorder from "./borderAnimation"
@@ -40,78 +39,81 @@ const Footer = () => {
                 </AnimParagraph>
             </FooterTitle>
             <FooterContentWrapper>
-                <FooterSocial>
-                    <TitleItem>
-                        <AnimSmall delay={0}>
-                        Social Media
-                        </AnimSmall>
-                    </TitleItem>
-                    <li>
-                        <AnimSmall delay={.1}>
-                            <a href="https://dribbble.com/" target="_blank">
-                            <TidesIcons type="arrowButton"  />
-                            Dribbble
-                            </a>    
-                        </AnimSmall>
-                    </li>
-                    <li>
-                        <AnimSmall delay={.2}>
-                            <a href="https://dribbble.com/" target="_blank">
-                            <TidesIcons type="arrowButton"  />
-                            Behance
-                            </a>
-                        </AnimSmall>
-                    </li>
-                    <li>
-                        <AnimSmall delay={.3}>
-                            <a href="https://dribbble.com/" target="_blank">
-                            <TidesIcons type="arrowButton"  />
-                            Instagram
-                            </a>
-                        </AnimSmall>
-                    </li>
-                    <li>
-                        <AnimSmall delay={.4}>
-                            <a href="https://dribbble.com/" target="_blank">
-                            <TidesIcons type="arrowButton"  />
-                            Facebook
-                            </a>
-                        </AnimSmall>
-                    </li>
-                    <li>
-                        <AnimSmall delay={.5}>
-                            <a href="https://dribbble.com/" target="_blank">
-                            <TidesIcons type="arrowButton"  />
-                            Twitter
-                            </a>
-                        </AnimSmall>
-                    </li>
-                </FooterSocial>
-                <FooterAdress>
-                    <TitleItem>
-                        <AnimSmall delay={0}>
-                            Address
-                        </AnimSmall>
-                    </TitleItem>
+                <FooterInformation>
+                    <FooterSocial>
+                        <TitleItem>
+                            <AnimSmall delay={0}>
+                            Social Media
+                            </AnimSmall>
+                        </TitleItem>
+                        <li>
+                            <AnimSmall delay={.1}>
+                                <a href="https://dribbble.com/" target="_blank">
+                                <TidesIcons type="arrowButton"  />
+                                Dribbble
+                                </a>    
+                            </AnimSmall>
+                        </li>
+                        <li>
+                            <AnimSmall delay={.2}>
+                                <a href="https://dribbble.com/" target="_blank">
+                                <TidesIcons type="arrowButton"  />
+                                Behance
+                                </a>
+                            </AnimSmall>
+                        </li>
+                        <li>
+                            <AnimSmall delay={.3}>
+                                <a href="https://dribbble.com/" target="_blank">
+                                <TidesIcons type="arrowButton"  />
+                                Instagram
+                                </a>
+                            </AnimSmall>
+                        </li>
+                        <li>
+                            <AnimSmall delay={.4}>
+                                <a href="https://dribbble.com/" target="_blank">
+                                <TidesIcons type="arrowButton"  />
+                                Facebook
+                                </a>
+                            </AnimSmall>
+                        </li>
+                        <li>
+                            <AnimSmall delay={.5}>
+                                <a href="https://dribbble.com/" target="_blank">
+                                <TidesIcons type="arrowButton"  />
+                                Twitter
+                                </a>
+                            </AnimSmall>
+                        </li>
+                    </FooterSocial>
+                    <FooterAdress>
+                        <TitleItem>
+                            <AnimSmall delay={0}>
+                                Address
+                            </AnimSmall>
+                        </TitleItem>
 
-                    <AdressWrapper>
-                        <AnimParagraph>
-                            <span>
-                                260 N.Orange Ave
-                                Orlando, Fl 32801
-                            </span>
-                        </AnimParagraph>
-                    </AdressWrapper>
-                    <AnimSmall delay={.2}>
-                        <ClockWrapper>
-                            <div>
-                                <Clock format={'HH:mm:ss'} ticking={true} timezone={'US/Pacific'} />
-                            </div>
-                            <span>local time</span>
-                        </ClockWrapper>
-                    </AnimSmall>
-                    
-                </FooterAdress>
+                        <AdressWrapper>
+                            <AnimParagraph>
+                                <span>
+                                    260 N.Orange Ave
+                                    Orlando, Fl 32801
+                                </span>
+                            </AnimParagraph>
+                        </AdressWrapper>
+                        <AnimSmall delay={.2}>
+                            <ClockWrapper>
+                                <div>
+                                    <Clock format={'HH:mm:ss'} ticking={true} timezone={'US/Pacific'} />
+                                </div>
+                                <span>local time</span>
+                            </ClockWrapper>
+                        </AnimSmall>
+                        
+                    </FooterAdress>
+                </FooterInformation>
+                
                 <TidesButton callToAction="say hello" small="false"/>
                 
             </FooterContentWrapper>

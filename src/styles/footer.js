@@ -1,7 +1,13 @@
-import styled, {keyframes} from "styled-components"
-
+import styled from "styled-components"
+import { device } from "./constants"
 export const FooterWrapper = styled.div`
     max-width:1002px;
+    @media ${device.laptop} {
+        max-width:755px;
+    }
+    @media ${device.tablet} {
+        max-width:588px;
+    }
     margin:0 auto;
     padding:17px 0 0;
     position:relative;
@@ -18,6 +24,14 @@ export const FooterTitle = styled.h3`
     height:140px;
     position:relative;
     overflow:hidden;
+    @media ${device.laptop} {
+        margin-bottom:38px;
+    }
+    @media ${device.tablet} {
+        font-size:38px;
+        line-height:116px;
+        height:116px;
+    }
     p {
         position:absolute;
     }
@@ -30,7 +44,9 @@ export const FooterContentWrapper = styled.div`
     flex-direction:row;
     justify-content:space-between;
     padding-bottom:72px;
-    
+    @media ${device.laptop} {
+        padding-bottom:69px;
+    }
 `
 
 export const FooterSocial = styled.ul`
@@ -38,6 +54,12 @@ export const FooterSocial = styled.ul`
     overflow: hidden;
     position: relative;
     width:160px;
+    @media ${device.laptop} {
+        width:206px;
+    }
+    @media ${device.tablet} {
+        width:160px;
+    }
     li {
         margin-left:-24px;
         transition: margin-left .2s ease-in-out;
@@ -65,6 +87,10 @@ export const FooterSocial = styled.ul`
             font-family: Bandeins Sans;
             font-weight:400;
             margin-bottom:4px;
+            @media ${device.laptop} {
+                font-size:20px;
+                line-height:34px;
+            }
         }
         
     }
@@ -81,6 +107,9 @@ export const FooterAdress = styled.div`
         max-width:254px;
         margin-top:-11px;
         line-height:36px;
+        @media ${device.tablet} {
+            font-size:22px;
+        }
     }
 `
 
@@ -144,6 +173,10 @@ export const TitleItem = styled.h5`
     height:34px;
     position:relative;
     overflow:hidden;
+    @media ${device.tablet} {
+        font-size:18px;
+        line-height:34px;
+    }
     p {
         position:absolute;
     }
@@ -155,13 +188,25 @@ export const ClockWrapper = styled.div`
     display:flex;
     flex-direction:row;
     align-items:flex-end;
+    @media ${device.tablet} {
+        margin-top:74px;
+    }
     span {
         font-size:20px;
         line-height:34px;
+        @media ${device.tablet} {
+            font-size:18px;
+        }
     }
     
     div {
         width:200px;
+        @media ${device.laptop} {
+            width:160px;
+        }
+        @media ${device.tablet} {
+            width:110px;
+        }
         text-align:left;
         display:flex;
         
@@ -170,6 +215,9 @@ export const ClockWrapper = styled.div`
             font-size:31px;
             line-height:36px;
             font-family: Bandeins Sans;
+            @media ${device.tablet} {
+                font-size:22px;
+            }
         }
     }
     
@@ -184,6 +232,12 @@ export const FooterFooter = styled.div`
     display:flex;
     flex-direction:row;
     justify-content:space-between;
+    @media ${device.laptop} {
+        max-width:755px;
+    }
+    @media ${device.tablet} {
+        max-width:588px;
+    }
 `
 
 export const BackToTop = styled.div`
@@ -193,6 +247,9 @@ export const BackToTop = styled.div`
         font-family: Bandeins Sans;
         color:#E8ECF3;
         margin-left:10px;
+        @media ${device.tablet} {
+            font-size:18px;
+        }
     }
     svg {
         transform: rotate(-90deg);
@@ -204,6 +261,9 @@ export const RightsText = styled.p`
     line-height:34px;
     font-family: Bandeins Sans;
     color:#E8ECF3;
+    @media ${device.tablet} {
+        font-size:18px;
+    }
 `
 
 export const TransformBorder = styled.div`
@@ -211,14 +271,16 @@ export const TransformBorder = styled.div`
 
 `
 
-export const ButtonContainer = styled.div`
-    width:300px;
-    height:300px;
+export const FooterInformation = styled.div`
+    width:100%;
     display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
+    flex-direction:row;
+    @media ${device.mobileL} {
+        flex-direction:column;
+    }
 `
+
+
 
 
 

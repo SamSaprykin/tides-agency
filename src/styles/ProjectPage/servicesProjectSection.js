@@ -1,10 +1,14 @@
 import styled from "styled-components"
-
+import { device } from "../constants"
 export const ServicesProjectWrapper = styled.div`
     width:100%;
     max-width:1002px;
     margin:0 auto 230px;
     position:relative;
+    @media ${device.tablet} {
+        max-width:588px;
+        margin:0 auto 130px;
+    }
 `
 
 export const TitleImage = styled.div`
@@ -30,7 +34,9 @@ export const InformationWrapper = styled.div`
             color:#E8ECF3;
             padding:13px 0 11px;
             border-bottom:1px solid #E8ECF3;
-           
+            @media ${device.tablet} {
+                font-size:22px;
+            }
         }
     }
 `
@@ -57,4 +63,7 @@ export const ListTitle = styled.h5`
     line-height:34px;
     font-weight:400;
     color:#E8ECF3;
+    @media ${device.tablet} {
+        font-size:18px;
+    }
 `

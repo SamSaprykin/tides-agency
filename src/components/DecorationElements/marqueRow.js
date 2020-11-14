@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, {keyframes} from "styled-components"
-
+import { device } from "../../styles/constants"
 
 const MarqueRow = ({textMarque}) => {
   return  (
@@ -39,7 +39,11 @@ const StyledMarque = styled.h5`
     z-index:1;
     top:60px;
     animation: ${marquee} 30s linear infinite;
-    
+    @media ${device.tablet} {
+      font-size:60px;
+      width:500vw;
+      -webkit-text-stroke: 1px #E8ECF3;
+    }
 `
 
   

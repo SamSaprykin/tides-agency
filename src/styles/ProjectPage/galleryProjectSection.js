@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { device } from "../constants"
 
 export const ProjectGalleryWrapper = styled.div`
     width:100%;
@@ -6,6 +7,7 @@ export const ProjectGalleryWrapper = styled.div`
     flex-direction:column;
     position:relative;
     height:auto;
+
     
 `
 
@@ -25,7 +27,9 @@ export const GalleryImagesWrapper = styled.div`
     max-width:1002px;
     width:100%;
     padding-top:80px;
-    
+    @media ${device.tablet} {
+        max-width:588px;
+    }
 `
 
 export const GalleryImageContainer = styled.div`
@@ -35,5 +39,9 @@ export const GalleryImageContainer = styled.div`
     margin-bottom:60px;
     img {
         width:100%;
+    }
+    @media ${device.tablet} {
+        padding:35px;
+        margin:0 auto 60px;
     }
 `

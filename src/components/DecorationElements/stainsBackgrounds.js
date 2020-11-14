@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types"
-
+import { device } from "../../styles/constants"
 
 const StainsBackgrounds = ({
    top,left,height,rotate
@@ -39,6 +39,10 @@ const BackWrapper = styled.div`
        width:100%;
        max-width:800px;
        height: ${props => props.height};
+       @media ${device.tablet} {
+        max-width:600px;
+        height:auto;
+       }
    }
    z-index:-10;
 `
