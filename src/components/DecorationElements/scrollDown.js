@@ -38,7 +38,7 @@ const HeroScrollDown = styled.div`
   svg {
       animation: ${rotation} 10s linear infinite;
   }
-  
+  top:-50%;
 `
 
 const ScrollWrapper = styled.div`
@@ -50,14 +50,13 @@ const ScrollWrapper = styled.div`
   flex-direction:column;
   align-items:center;
   jusfify-content:center;
-  @media ${device.tablet} {
-    display:none;
-  }
 `
 
 const Centered  = styled.div`
   position:absolute;
-
+  @media ${device.tablet} {
+    display:none;
+  }
   top:-50%;
 `
 
