@@ -49,7 +49,6 @@ const ButtonContainer = styled.div`
     flex-direction:column;
     align-items:center;
     justify-content:center;
-    margin-right:-32px;
     #Circle1 {
       animation: ${from0to360} 1s linear infinite;
       

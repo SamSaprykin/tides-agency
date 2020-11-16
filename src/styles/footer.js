@@ -273,8 +273,10 @@ export const TransformBorder = styled.div`
 
 export const FooterInformation = styled.div`
     width:100%;
+    max-width:600px;
     display:flex;
     flex-direction:row;
+    justify-content:space-between;
     @media ${device.mobileL} {
         flex-direction:column;
     }

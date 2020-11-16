@@ -32,7 +32,7 @@ const SectionQuote = ({ }) => {
               <span>TIDES <TidesIcons type="bigQuote" /></span> was formed because
               we saw too many companies  struggle
               with marketing, design, 	&amp; development 
-              stragies.
+              strategies.
               <TidesIcons type="waveTextDecoration" className="wave"/>
             </QuoteText>
           </GlitchEffect>

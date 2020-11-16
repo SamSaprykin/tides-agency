@@ -39,12 +39,9 @@ const HeroSection = ({ }) => {
               <li ref={(el) => (text3 = el)}>backed companies</li>
             </WordsWrapper>
             <WordsWrapper >
-              <li ref={(el) => (text4 = el)}>
-                grow their revenue
-                <TidesIcons type="waveTextDecoration" />
-              </li>
-             
+              <li ref={(el) => (text4 = el)}>grow their revenue</li>
             </WordsWrapper>
+            <TidesIcons type="waveTextDecoration" />
           </ul>
           <ShapeIndex />
       </HeroText>

@@ -28,6 +28,9 @@ class MarkueComponent extends React.Component {
     this.refPar3 = React.createRef();
     this.refPar4 = React.createRef();
     this.refPar5 = React.createRef();
+    this.refPar6 = React.createRef();
+    this.refPar7 = React.createRef();
+    this.refPar8 = React.createRef();
   }
   showDescr = () => {
      
@@ -37,7 +40,7 @@ class MarkueComponent extends React.Component {
     if(this.descrRef && this.descrRef.current !== null) {
       TweenLite.to(this.descrRef.current, 0.05, {opacity:1})  
     }
-    let arr = [this.refPar0.current,this.refPar1.current,this.refPar2.current,this.refPar3.current,this.refPar4.current,this.refPar5.current]
+    let arr = [this.refPar0.current,this.refPar1.current,this.refPar2.current,this.refPar3.current,this.refPar4.current,this.refPar5.current,this.refPar6.current, this.refPar7.current, this.refPar8.current ]
     let amount = arr.length;
     
     for(var i = 0; i < amount; i++)
