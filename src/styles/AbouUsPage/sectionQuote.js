@@ -55,6 +55,11 @@ export const QuoteText = styled.div`
     color:#E8ECF3;
     padding-bottom:80px;
     padding-top:83px;
+    .quote {
+        left:0;
+        top:50px;
+        z-index:-1;
+    }
     svg {
         position:absolute;
         top:153px;
@@ -66,12 +71,7 @@ export const QuoteText = styled.div`
         font-weight:400;
         font-size:60px;
         line-height:123.8%;
-        svg {
-            position:absolute;
-            left:0;
-            top:50px;
-            z-index:-1;
-        }
+        
     }
 `
 

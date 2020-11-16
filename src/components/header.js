@@ -37,7 +37,7 @@ const Header = () => {
     
     
     const onMouseLeaveHandler = () => {
-        const timeout = setTimeout(() => {
+        setTimeout(() => {
             setHovered(false);
         }, 400);
     }

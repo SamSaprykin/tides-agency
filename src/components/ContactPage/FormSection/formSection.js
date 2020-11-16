@@ -22,7 +22,8 @@ import {
 } from "../../../styles/ContactPage/sectionForm"
 import BorderElement from "../../DecorationElements/borderElement"
 import StainsBackgrounds from "../../DecorationElements/stainsBackgrounds"
-const FormSection = ({ }) => {
+const FormSection = ({data}) => {
+  console.log(data)
   const [inputs, setInputs] = useState({
     name: "",
     company: "",
@@ -175,86 +176,108 @@ const FormSection = ({ }) => {
           onSubmit={handleOnSubmit}
           method="post" 
         >
-          <StyledLabel>
-            Your name*
-            <StyledInput 
-              onChange={handleOnChange}
-              onBlur={checkNameInput}
-              type="text" 
-              name=""
-              id="name" 
-              placeholder="Your name..." 
-              required 
+          {
+            data.inputCompany == true && (
+            <StyledLabel>
+              Your name*
+              <StyledInput 
+                onChange={handleOnChange}
+                onBlur={checkNameInput}
+                type="text" 
+                name=""
+                id="name" 
+                placeholder="Your name..." 
+                required 
+              />
+              <BorderElement opacity=".4"/>
+              <FormTextError error={errors.nameError}><span>{errors.nameError}</span></FormTextError>
+            </StyledLabel>
+            )
+          }
+          {
+            data.inputCompany == true && (
+            <StyledLabel>
+              Your company
+              <StyledInput 
+                onChange={handleOnChange}
+                type="text" 
+                id="company" 
+                name="" 
+                placeholder="Your company..." 
             />
-            <BorderElement opacity=".4"/>
-            <FormTextError error={errors.nameError}><span>{errors.nameError}</span></FormTextError>
-          </StyledLabel>
-          <StyledLabel>
-            Your company
-            <StyledInput 
-              onChange={handleOnChange}
-              type="text" 
-              id="company" 
-              name="" 
-              placeholder="Your company..." 
-            />
-            <BorderElement opacity=".4"/>
-            
-          </StyledLabel>
-          <StyledLabel>
-            Your email*
-            <StyledInput 
-              onChange={handleOnChange}
-              onBlur={checkEmailInput}
-              type="email" 
-              id="email" 
-              name="" 
-              placeholder="Your email..." 
-              required 
-            />
-            <BorderElement opacity=".4"/>
-            <FormTextError error={errors.emailError}><span>{errors.emailError}</span></FormTextError>
-          </StyledLabel>
-          <StyledLabel >
-            Tell us about the project*
-            <StyledTextArea 
-              placeholder="Details.." 
-              id="details" 
-              onChange={handleOnChange}
-              onBlur={checkDetailsInput}
-            />
-            <BorderElement opacity=".4"/>
-            <FormTextError error={errors.detailsError}><span>{errors.detailsError}</span></FormTextError>
-          </StyledLabel>
+              <BorderElement opacity=".4"/>
+            </StyledLabel>
+            )
+          }
+          
+          {
+            data.inputEmail == true && (
+              <StyledLabel>
+                Your email*
+                <StyledInput 
+                  onChange={handleOnChange}
+                  onBlur={checkEmailInput}
+                  type="email" 
+                  id="email" 
+                  name="" 
+                  placeholder="Your email..." 
+                  required 
+                />
+                <BorderElement opacity=".4"/>
+                <FormTextError error={errors.emailError}><span>{errors.emailError}</span></FormTextError>
+              </StyledLabel>
+            )
+          }
+          {
+            data.detailsTextArea == true && (
+              <StyledLabel >
+                Tell us about the project*
+                <StyledTextArea 
+                  placeholder="Details.." 
+                  id="details" 
+                  onChange={handleOnChange}
+                  onBlur={checkDetailsInput}
+                />
+                <BorderElement opacity=".4"/>
+                <FormTextError error={errors.detailsError}><span>{errors.detailsError}</span></FormTextError>
+              </StyledLabel>
+            )
+          }
+         
+          
           <FooterForm>
-            <ServiceInputs>
-              <TitleInputs>Service you need</TitleInputs>
-              <StyledCheckBox id="interface" value="interface" onClick={handleCheckChieldElement}/>
-                <CheckLabel for="interface">
-                  <CheckBoxText>Interface Design</CheckBoxText>
-                </CheckLabel>
-              
-              <StyledCheckBox id="illustrations" value="illustrations"onClick={handleCheckChieldElement}/>
-                <CheckLabel for="illustrations" >
-                  <CheckBoxText>Illustrations</CheckBoxText>
-                </CheckLabel>
-              
-              <StyledCheckBox id="development" value="development" onClick={handleCheckChieldElement} />
-                <CheckLabel for="development" >
-                  <CheckBoxText>Development</CheckBoxText>
-                </CheckLabel>
-              
-              <StyledCheckBox id="branding" value="branding" onClick={handleCheckChieldElement}/>
-                <CheckLabel for="branding" >
-                  <CheckBoxText>Branding</CheckBoxText>
-                </CheckLabel>
-              
-              <StyledCheckBox id="animation" value="animation" onClick={handleCheckChieldElement}/>
-                <CheckLabel for="animation">
-                  <CheckBoxText>Animation</CheckBoxText>
-                </CheckLabel>
-              
-            </ServiceInputs>
+            {
+              data.servicesCheboxes == true && (
+                <ServiceInputs>
+                  <TitleInputs>Service you need</TitleInputs>
+                  <StyledCheckBox id="interface" value="interface" onClick={handleCheckChieldElement}/>
+                    <CheckLabel for="interface">
+                      <CheckBoxText>Interface Design</CheckBoxText>
+                    </CheckLabel>
+                  
+                  <StyledCheckBox id="illustrations" value="illustrations"onClick={handleCheckChieldElement}/>
+                    <CheckLabel for="illustrations" >
+                      <CheckBoxText>Illustrations</CheckBoxText>
+                    </CheckLabel>
+                  
+                  <StyledCheckBox id="development" value="development" onClick={handleCheckChieldElement} />
+                    <CheckLabel for="development" >
+                      <CheckBoxText>Development</CheckBoxText>
+                    </CheckLabel>
+                  
+                  <StyledCheckBox id="branding" value="branding" onClick={handleCheckChieldElement}/>
+                    <CheckLabel for="branding" >
+                      <CheckBoxText>Branding</CheckBoxText>
+                    </CheckLabel>
+                  
+                  <StyledCheckBox id="animation" value="animation" onClick={handleCheckChieldElement}/>
+                    <CheckLabel for="animation">
+                      <CheckBoxText>Animation</CheckBoxText>
+                    </CheckLabel>
+                </ServiceInputs>
+              )
+            }
+           
             <SubmitWrapper>
                 <ButtonSubmit value="send"/>
             </SubmitWrapper>

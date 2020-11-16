@@ -169,7 +169,7 @@ const Navigation = ({ state, setState }) => {
           <MenuWrapper className="wrapper">
             <MenuHeader>
               <LogoWrapper ref={(el) => (line1 = el)}>
-                <img src="/logo.png" />
+                <img src="/logo.png" alt="tides logo" />
                 <h5>
                   tides agency
                 </h5>
@@ -246,6 +246,7 @@ const Navigation = ({ state, setState }) => {
                           <a 
                             href="https://dribbble.com/" 
                             target="_blank"
+                            rel="noopener noreferrer"
                           >
                             Behance
                           </a>
@@ -261,6 +262,7 @@ const Navigation = ({ state, setState }) => {
                           <a 
                             href="https://dribbble.com/" 
                             target="_blank"
+                            rel="noopener noreferrer"
                           >
                             Instagram
                           </a>
@@ -276,6 +278,7 @@ const Navigation = ({ state, setState }) => {
                           <a 
                             href="https://dribbble.com/"
                             target="_blank"
+                            rel="noopener noreferrer"
                           >
                             Facebook
                           </a>
@@ -291,6 +294,7 @@ const Navigation = ({ state, setState }) => {
                           <a 
                             href="https://dribbble.com/" 
                             target="_blank"
+                            rel="noopener noreferrer"
                           >
                             Twitter
                           </a>

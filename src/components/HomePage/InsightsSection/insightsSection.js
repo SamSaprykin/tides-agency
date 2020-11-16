@@ -1,7 +1,5 @@
 import React from "react";
 
-import TidesIcons from "../../DecorationElements/tidesIcons"
-
 import { 
     InsightsSectionWrapper,
     ContentWrapper,
@@ -20,8 +18,6 @@ import AnimParagraph from "../../animateParagraph"
 import AnimBorder from "../../borderAnimation"
 import AnimSmall from "../../animSmall"
 import BorderElement from "../../DecorationElements/borderElement"
-
-
 
 const InsightsSetion = ({ }) => {
     

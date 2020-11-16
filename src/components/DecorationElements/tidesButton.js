@@ -1,6 +1,5 @@
 import React from 'react'
 import styled, {keyframes} from "styled-components"
-import PropTypes from "prop-types"
 import TidesIcons from "./tidesIcons"
 import AnimButton from "../animateButton"
 

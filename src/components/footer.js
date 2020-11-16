@@ -25,7 +25,7 @@ import AnimBorder from "./borderAnimation"
 import BorderElement from "./DecorationElements/borderElement"
 import AnimParagraph from "./animateParagraph"
 import AnimSmall from "./animSmall"
-import AnimButton from "./animateButton"
+
 const Footer = () => {
     return (
         <>
@@ -48,7 +48,7 @@ const Footer = () => {
                         </TitleItem>
                         <li>
                             <AnimSmall delay={.1}>
-                                <a href="https://dribbble.com/" target="_blank">
+                                <a href="https://dribbble.com/" target="_blank" rel="noopener noreferrer">
                                 <TidesIcons type="arrowButton"  />
                                 Dribbble
                                 </a>    
@@ -56,7 +56,7 @@ const Footer = () => {
                         </li>
                         <li>
                             <AnimSmall delay={.2}>
-                                <a href="https://dribbble.com/" target="_blank">
+                                <a href="https://dribbble.com/" target="_blank" rel="noopener noreferrer">
                                 <TidesIcons type="arrowButton"  />
                                 Behance
                                 </a>
@@ -64,7 +64,7 @@ const Footer = () => {
                         </li>
                         <li>
                             <AnimSmall delay={.3}>
-                                <a href="https://dribbble.com/" target="_blank">
+                                <a href="https://dribbble.com/" target="_blank" rel="noopener noreferrer">
                                 <TidesIcons type="arrowButton"  />
                                 Instagram
                                 </a>
@@ -72,7 +72,7 @@ const Footer = () => {
                         </li>
                         <li>
                             <AnimSmall delay={.4}>
-                                <a href="https://dribbble.com/" target="_blank">
+                                <a href="https://dribbble.com/" target="_blank" rel="noopener noreferrer">
                                 <TidesIcons type="arrowButton"  />
                                 Facebook
                                 </a>
@@ -80,7 +80,7 @@ const Footer = () => {
                         </li>
                         <li>
                             <AnimSmall delay={.5}>
-                                <a href="https://dribbble.com/" target="_blank">
+                                <a href="https://dribbble.com/" target="_blank" rel="noopener noreferrer">
                                 <TidesIcons type="arrowButton"  />
                                 Twitter
                                 </a>

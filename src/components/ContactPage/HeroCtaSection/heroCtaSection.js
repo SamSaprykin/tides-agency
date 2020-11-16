@@ -7,17 +7,27 @@ import {
     HeroCtaWrapper,
     HeroCtaTitle,
     HeroCtaCta,
-    TextBlue,
 } from "../../../styles/ContactPage/sectionHeroCta"
 
-const HeroCtaSection = ({ }) => {
-  
+const HeroCtaSection = ({data}) => {
+
   return (
   <>
   <HeroCtaWrapper>
-      <HeroCtaTitle>Let's start <TextBlue><span>Your</span> <TidesIcons type="waveTextDecoration" className="wave"/></TextBlue> project <h5>together!</h5></HeroCtaTitle>
+      {
+          data.heroTitleContactPage && (
+            <HeroCtaTitle>
+              <div dangerouslySetInnerHTML={{ __html: `<div> ${data.heroTitleContactPage} </div>` }} />
+              <TidesIcons type="waveTextDecoration" className="wave"/>
+            </HeroCtaTitle>
+          )
+      }
       <ScrollDown margin="64px 0 0"/>
-      <HeroCtaCta>Fill in the form, or, if you prefer, send us an email</HeroCtaCta>
+      {
+        data.heroCta && (
+          <HeroCtaCta>{data.heroCta}</HeroCtaCta>
+        )
+      }
   </HeroCtaWrapper>
   <StainsBackground rotate="10deg" top="20%" left="-14%" height="600px"/>
   </>

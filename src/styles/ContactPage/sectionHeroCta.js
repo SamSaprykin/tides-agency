@@ -17,6 +17,10 @@ export const HeroCtaTitle = styled.div`
     letter-spacing:0.05em;
     color:#E8ECF3;
     text-transform:uppercase;
+    position:relative;
+    span {
+        color:#1A6AFF;
+    }
     h5 {
         padding-left:250px;
         font-size:96px;
@@ -25,6 +29,11 @@ export const HeroCtaTitle = styled.div`
         letter-spacing:0.05em;
         color:#E8ECF3;
         font-family:Verona Serial;
+    }
+    svg {
+        position:absolute;
+        right:30px;
+        top:100px;
     }
 `
 
@@ -40,13 +49,3 @@ export const HeroCtaCta = styled.span`
     padding:0 0 40px 20px;
 `  
 
-export const TextBlue = styled.span`
-    color:#1A6AFF;
-    position:relative;
-    svg {
-        position:absolute;
-        left:0;
-        top:80px;
-    }
-    
-`

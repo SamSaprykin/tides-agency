@@ -1,11 +1,7 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-
 import SEO from "../components/seo"
-import ShapeIndex from "../components/DecorationElements/shapeIndex"
-
 import HeroSection from "../components/HomePage/HeroSection/heroSection"
 import AboutSection from "../components/HomePage/AboutSection/aboutSection"
 import FinishedProjects from "../components/HomePage/FinishedProjects/finishedProjects"

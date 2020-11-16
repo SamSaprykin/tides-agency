@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from "react"
+import React, {useEffect, useRef} from "react"
 import { ListPreloading, ListItem, WrapperPreloading,  } from "../../styles/preloading"
 import { TimelineMax , TweenLite, CSSPlugin } from "gsap";
 
@@ -29,7 +29,7 @@ const Preloading = () => {
       tl.from(app,.1,{y:"0"})
       tl.to(app,.1,{y:"-100%"})
 
-    },[])
+    },[tl])
 
     const addToRefs = (el) => {
       if (el && !listRefs.current.includes(el)) {

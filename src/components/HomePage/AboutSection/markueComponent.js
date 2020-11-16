@@ -1,5 +1,5 @@
 import React from "react"
-import { TimelineMax , TweenLite, CSSPlugin } from "gsap";
+import { TweenLite, CSSPlugin } from "gsap";
 import "./aboutSection.css"
 import { 
     DescriptionArea,

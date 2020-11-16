@@ -18,7 +18,7 @@ import { GlitchEffect } from "../../../styles/glitchEffect"
 
 
 
-const SectionQuote = ({ }) => {
+const SectionQuote = ({data}) => {
   
   return (
   <QuoteLayout>
@@ -28,25 +28,34 @@ const SectionQuote = ({ }) => {
     </QuoteHeader>
     <ContentContainer>
           <GlitchEffect>
-            <QuoteText>
-              <span>TIDES <TidesIcons type="bigQuote" /></span> was formed because
-              we saw too many companies  struggle
-              with marketing, design, 	&amp; development 
-              strategies.
-              <TidesIcons type="waveTextDecoration" className="wave"/>
-            </QuoteText>
+              {
+                data.quoteText && (
+                  <QuoteText>
+                    <div dangerouslySetInnerHTML={{ __html: `<div> ${data.quoteText.quoteText} </div>` }} />
+                    <TidesIcons type="waveTextDecoration" className="wave"/>
+                    <TidesIcons type="bigQuote" />
+                  </QuoteText>
+                )
+              }
           </GlitchEffect>
         <QuoteAuthorWrapper>
-          <QuoteAuthorIcon>
-              <img src="/Jonathan-icon.png" />
-          </QuoteAuthorIcon>
-          <QuoteAuthorName>
-            <TidesIcons type="signatureJonathan" />
-          </QuoteAuthorName>
+              {
+                data.quoteAuthorIcon && (
+                  <QuoteAuthorIcon>
+                    <img src="/Jonathan-icon.png" />
+                  </QuoteAuthorIcon>
+                )
+              }
+              {
+                data.quoteAuthorName && (
+                  <QuoteAuthorName>
+                    <TidesIcons type="signatureJonathan" />
+                  </QuoteAuthorName>
+                )
+              }
         </QuoteAuthorWrapper>
     </ContentContainer>
     <ScrollDown margin='70px 0 0'/>
-    
   </QuoteLayout>
   )
 }
