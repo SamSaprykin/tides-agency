@@ -13,42 +13,51 @@ import {
   staggerLinksHero
 } from '../../animate'
 
-const HeroSection = ({ }) => {
-  let text1 = useRef(null)
-  let text2 = useRef(null)
-  let text3 = useRef(null)
-  let text4 = useRef(null)
+class HeroSection extends React.Component {
+  constructor(props) {
+    super(props);
+    this.text = [];
+    this.refPar0 = React.createRef();
+    this.refPar1 = React.createRef();
+    this.refPar2 = React.createRef();
+    this.refPar3 = React.createRef();
+  }
   
+  componentDidMount = () => {
+    staggerLinksHero(this.refPar0.current,this.refPar1.current,this.refPar2.current,this.refPar3.current)
+  }
 
-  useEffect(() => { 
-    staggerLinksHero(text1, text2, text3, text4);
-  },[])
-  
-  return (
-  <>
-    <HeroLayout id="hero-section">
-      <HeroText> 
-          <ul>
-            <WordsWrapper >
-              <li ref={(el) => (text1 = el)}>We help startups 	&amp;</li>
-            </WordsWrapper >
-            <WordsWrapper >
-              <li ref={(el) => (text2 = el)}>private equity</li>
-            </WordsWrapper>
-            <WordsWrapper >
-              <li ref={(el) => (text3 = el)}>backed companies</li>
-            </WordsWrapper>
-            <WordsWrapper >
-              <li ref={(el) => (text4 = el)}>grow their revenue</li>
-            </WordsWrapper>
-            <TidesIcons type="waveTextDecoration" />
-          </ul>
-          <ShapeIndex />
-      </HeroText>
-      <ScrollDown margin='100px 0 0'/>
-    </HeroLayout>
-  </>
-  )
+  render() {
+    return (
+      <>
+        <HeroLayout id="hero-section">
+          <HeroText> 
+              <ul>
+                {
+                  this.props.data.textIndexHero.map((textRow,index)=>{
+                    return (
+                      <WordsWrapper key={index}>
+                        <li ref={this[`refPar${index}`]}>{textRow}
+                        {
+                          index === 3 && (
+                              <TidesIcons type="waveTextDecoration" />
+                          )
+                        }
+                        </li>
+                      </WordsWrapper >
+                    )
+                    
+                  })
+                }
+                
+              </ul>
+              <ShapeIndex />
+          </HeroText>
+          <ScrollDown margin='100px 0 0'/>
+        </HeroLayout>
+      </>
+    )
+  }
 }
   
 

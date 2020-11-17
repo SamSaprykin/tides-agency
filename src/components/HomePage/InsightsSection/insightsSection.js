@@ -19,7 +19,7 @@ import AnimBorder from "../../borderAnimation"
 import AnimSmall from "../../animSmall"
 import BorderElement from "../../DecorationElements/borderElement"
 
-const InsightsSetion = ({ }) => {
+const InsightsSetion = ({data}) => {
     
   return (
     <InsightsSectionWrapper>
@@ -29,7 +29,7 @@ const InsightsSetion = ({ }) => {
       <ContentWrapper>
         <InsightsTitle>
             <AnimParagraph>
-              Insights
+              {data.title}
             </AnimParagraph>
         </InsightsTitle>
         <AnimSmall delay=".7">

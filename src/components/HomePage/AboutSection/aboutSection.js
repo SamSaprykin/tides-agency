@@ -1,6 +1,6 @@
 import React from "react"
 import StainsBackground from "../../DecorationElements/stainsBackgrounds"
-import MarkueComponent from "./markueComponent"
+import MarqueeComponent from "./marqueeComponent"
 
 import "./aboutSection.css"
 
@@ -18,62 +18,15 @@ import AnimHighParagraph from "../../animateHeight"
 import AnimBorder from "../../borderAnimation"
 import BorderElement from "../../DecorationElements/borderElement"
 
-const dataMarque = [
-    {
-        title:"strategy",
-        innersElem: [
-            "strategy -","strategy -","strategy -","strategy -","strategy -","strategy -","strategy -","strategy -","strategy -",
-        ],
-        descrItems: [
-            "Research","Remote Design Sprints","Roadmaps","Insights","Brand Positioning","Processess"
-        ],
-        id: 0,
-    },
-    {
-        title:"design",
-        innersElem: [
-            "design -","design -","design -","design -","design -","design -","design -","design -","design -",
-        ],
-        descrItems: [
-            "Research","Remote Design Sprints","Roadmaps","Insights","Brand Positioning","Processess"
-        ],
-        id: 1,
-    },
-    {
-        title:"marketing",
-        innersElem: [
-            "marketing -","marketing -","marketing -","marketing -","marketing -","marketing -","marketing -","marketing -","marketing -",
-        ],
-        descrItems: [
-            "Research","Remote Design Sprints","Roadmaps","Insights","Brand Positioning","Processess"
-        ],
-        id: 2,
-    },
-    {
-        title:"development",
-        innersElem: [
-            "development -","development -","development -","development -","development -","development -","development -","development -","strategy -",
-        ],
-        descrItems: [
-            "Research","Remote Design Sprints","Roadmaps","Insights","Brand Positioning","Processess"
-        ],
-        id: 3,
-    }
-]
 
-const AboutSection = ({ }) => {
-    
 
-    
-  
+const AboutSection = ({data}) => {
   return (
   <WrapperAbout>
     <TextSectionAbout>
         <AboutDescription>
                 <AnimHighParagraph>
-                    <span>TIDES</span> is a boutique digital solutions agency with an innate ability to grasp complex 
-                    problems and build value through technology, creativity, and good ole’ fashion hard work. 
-                    Let’s disrupt and impact change for the better.
+                    <div dangerouslySetInnerHTML={{ __html: `<div> ${data.textAboutTides.textAboutTides} </div>` }} />
                 </AnimHighParagraph>
         </AboutDescription>
         <ImpactAreasAbout className="menu">
@@ -86,9 +39,9 @@ const AboutSection = ({ }) => {
                 </AnimParagraph>
             </ImpactAreasTitle>
             <ImpactAreasList>
-                {dataMarque.map((marque) => {
+                {data.marqueeAbout.map((marque,index) => {
                     return (
-                      <MarkueComponent data={marque} />
+                      <MarqueeComponent data={marque} id={index} />
                     )
                 })}
             </ImpactAreasList>

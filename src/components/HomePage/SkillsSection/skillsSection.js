@@ -22,56 +22,52 @@ import {
 
 import AnimParagraph from "../../animateParagraph"
 
-const SkillsSection = ({ }) => {
-    const [position, setPostition] = useState(null)
-    useScrollPosition(({ prevPos, currPos }) => {
-        setPostition(currPos.y)
-      },
-      [position]
-    );
-    
+const SkillsSection = ({ data}) => {
+  const [position, setPostition] = useState(null)
+  useScrollPosition(({ prevPos, currPos }) => {
+      setPostition(currPos.y)
+    },
+    [position]
+  );
+  
   return (
     <SkillsSectionContainer >
         <SkillsSectionWrapper>
-                <SkillsSectionTitle>
-                  <AnimParagraph>
-                      Did you know?
-                  </AnimParagraph>
-                </SkillsSectionTitle>
-                <SkillsSectionDescription>
-                    <AnimParagraph>
-                      Tides is a documented world phenonomen. Similarly, <br />
-                      the people of <span> Tides </span> are a force to be weckonend with.
-                   </AnimParagraph>
-                </SkillsSectionDescription>
+          <SkillsSectionTitle>
+            <AnimParagraph>
+                {data.tItle}
+            </AnimParagraph>
+          </SkillsSectionTitle>
+          <SkillsSectionDescription>
+              <AnimParagraph>
+                <div dangerouslySetInnerHTML={{ __html: `<div> ${data.descriptionText.descriptionText} </div>` }} />
+              </AnimParagraph>
+          </SkillsSectionDescription>
+          
+          <AnimParagraph>
+            <Link to="/about-us">
+              <SkillsSectionCtaWrapper>
+                <SkillsSectionCta>
+                    {data.callToAction}
+                </SkillsSectionCta>
+                <SkillsSectionCtaButton>
+                  
+                    <TidesIcons type="arrowButton" fill="#FFCC00"/>
+                  
+                </SkillsSectionCtaButton>
+              </SkillsSectionCtaWrapper>
+            </Link>  
+          </AnimParagraph>
                 
-                
-                  <AnimParagraph>
-                    <Link to="/about-us">
-                      <SkillsSectionCtaWrapper>
-                        <SkillsSectionCta>
-                            Learn more about the skills of the team
-                        </SkillsSectionCta>
-                        <SkillsSectionCtaButton>
-                          
-                            <TidesIcons type="arrowButton" fill="#FFCC00"/>
-                          
-                        </SkillsSectionCtaButton>
-                      </SkillsSectionCtaWrapper>
-                    </Link>  
-                  </AnimParagraph>
-                
-                
-               
-                <SkillSectionPlanetsWrapper>
-                        <SkillSectionSunWrapper>
-                            <SkillSectionSun src="/sun.svg"/>
-                        </SkillSectionSunWrapper>
-                        <SkillSectionMoonWrapper>
-                            <SkillSectionMoon  src="/moon.svg"/>
-                            <SmallPlanet  position={position} src="/planet.svg" />
-                        </SkillSectionMoonWrapper>
-                </SkillSectionPlanetsWrapper>
+          <SkillSectionPlanetsWrapper>
+                  <SkillSectionSunWrapper>
+                      <SkillSectionSun src="/sun.svg"/>
+                  </SkillSectionSunWrapper>
+                  <SkillSectionMoonWrapper>
+                      <SkillSectionMoon  src="/moon.svg"/>
+                      <SmallPlanet  position={position} src="/planet.svg" />
+                  </SkillSectionMoonWrapper>
+          </SkillSectionPlanetsWrapper>
         </SkillsSectionWrapper>
     </SkillsSectionContainer>
 

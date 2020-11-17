@@ -28,11 +28,22 @@ const SitePage = props => {
       <SEO title="Home" />
       {components?.map(ele => {
           const type = ele.__typename;
-          
-          if (type === 'ContentfulHeroAboutPage') {
+          if (type === 'ContentfulHeroIndexPage') {
             return (
-              <SectionQuote data={ele}/>
-            );
+              <HeroSection data={ele} />
+            )
+          } else if (type === 'ContentfulAboutIndexPage') {
+            return <AboutSection data={ele}/> ;
+          } else if (type === 'ContentfulFinishedProjectsIndexPage') {
+            return <FinishedProjects data={ele}/> ;
+          } else if (type === 'ContentfulSkillsIndexPage') {
+            return <SkillsSection data={ele}/> ;
+          } else if (type === 'ContentfulLatestInsight') {
+            return <InsightsSetion data={ele}/> ;
+          } else if (type === 'ContentfulSubscribeIndexPage') {
+            return <SubscribeSection data={ele}/> ;
+          } else if (type === 'ContentfulHeroAboutPage') {
+            return <SectionQuote data={ele}/> ;
           } else if (type === 'ContentfulOurStoryAboutPage') {
             return <SectionOurStory data={ele} />;
           } else if (type === 'ContentfulTeamAboutPage') {
@@ -122,67 +133,57 @@ query WebsitePageQuery($slug: String!) {
         detailsTextArea
         servicesCheboxes
       }
-    }
-  }
-}
-`
-
-
-/*
-
-export const WebsitePageQuery = graphql`
-query WebsitePageQuery($slug: String!) {
-  contentfulContentfulPage(slug: { eq: $slug }) {
-    id
-    slug
-    components {
-      ... on ContentfulHeroSection {
-        id
-        heroDescription
-            heroTitle
-            heroSubhead
-            heroImage {
-              fluid(maxWidth: 700) {
-                ...GatsbyContentfulFluid_withWebp
-            }
+      ... on ContentfulHeroIndexPage {
+        textIndexHero
+      }
+      ... on ContentfulAboutIndexPage {
+        textAboutTides {
+          textAboutTides
+        }
+        marqueeAbout {
+          marqueeList
+          marqueeRunnerText
+          titleMarquee
         }
       }
-      ... on ContentfulFeaturesSection {
-        id
-        featuresTitle
-        featuresDescription
-        featuresSectionItem {
-          featuresItemDescription
-          featuresItemIconName
-          featuresItemTitle
-          features_section {
-            featuresTitle
-            featuresDescription
+      ... on ContentfulFinishedProjectsIndexPage {
+        tItle
+        description {
+          description
+        }
+        information {
+          information
+        }
+        projectsItem {
+          workTypes
+          year
+          linkTo
+          icon {
+            file {
+              url
+            }
           }
         }
       }
-     
+      ... on ContentfulSkillsIndexPage {
+        callToAction
+        tItle
+        descriptionText {
+          descriptionText
+        }
+      }
+      ... on ContentfulLatestInsight {
+        id
+        title
+      }
+      ... on ContentfulSubscribeIndexPage { 
+        runnerText
+        titleSubscribeForm {
+          titleSubscribeForm
+        }
+      }
     }
   }
 }
 `
-{components?.map(ele => {
-          const type = ele.__typename;
-          console.log(ele)
-          if (type === 'ContentfulHeroSection') {
-            return (
-              <HeroSection data={ele}/>
-            );
-          } else if (type === 'ContentfulFeaturesSection') {
-            return <FeaturesSection leftSide="true" data={ele} />;
-          } 
-        })} 
-      <CounterSection />
-      <ContentSection />
-      <PricingSection />
-      <TestimonialSection />
-      <CtaSection />
-      <BlogIndex />
-      <SponsorSection />
-    
-*/
+

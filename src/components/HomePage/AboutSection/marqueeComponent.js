@@ -14,7 +14,7 @@ import AnimBorder from "../../borderAnimation"
 
 const plugins = [ CSSPlugin ];
 
-class MarkueComponent extends React.Component {
+class MarqueeComponent extends React.Component {
   
   constructor(props) {
     super(props);
@@ -77,23 +77,19 @@ class MarkueComponent extends React.Component {
                 <BorderElement padding="0 0 30px"/>
               </AnimBorder>
               <AnimParagraph>
-                {this.props.data.title}
+                {this.props.data.titleMarquee}
               </AnimParagraph>
                 <button className="button-expand">+</button>
             </h5>
             <Marque className="marquee"  ref={this.marqueRef}>
                 <button className="button-expand" ref={this.buttonRef}>+</button>
                 <div className="marquee__inner" ref={this.itemRef} aria-hidden="true">   
-                  {
-                      this.props.data.innersElem.map(elem => (
-                          <span>{elem}</span>
-                      ))
-                  }
+                  <span>{this.props.data.marqueeRunnerText}</span> 
                 </div>
                 <DescriptionArea ref={this.descrRef}>
                     <DescriptionItems>
                         {
-                          this.props.data.descrItems.map((descrEl, index) => (
+                          this.props.data.marqueeList.map((descrEl, index) => (
                               <li key={index}>
                                 <p ref={this[`refPar${index}`]}>
                                   {descrEl}
@@ -112,4 +108,4 @@ class MarkueComponent extends React.Component {
 
 
 
-export default MarkueComponent
+export default MarqueeComponent

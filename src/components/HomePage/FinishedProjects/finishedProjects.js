@@ -52,15 +52,15 @@ const projectList = [
   
 ]
 
-const FinishedProjects = ({ }) => {
-  
+const FinishedProjects = ({data}) => {
+  console.log(data)
   return (
     <FinishedProjectsWrapper>
         <WrapperBoard>
             <WrapperContent>
                 <TitleProjects>
                   <AnimParagraph>
-                    Exrepience for dayysssss
+                    {data.tItle}
                   </AnimParagraph>
                 </TitleProjects>
                 <AnimBorder>
@@ -69,32 +69,24 @@ const FinishedProjects = ({ }) => {
                 <DescriptionWrapper>
                     <Description>
                       <AnimHighParagraph>
-                        Leverage the eons of experience Tides has in 
-                        strategy, design, marketing, &amp; development 
-                        initiatives.
+                        <div dangerouslySetInnerHTML={{ __html: `<div> ${data.description.description} </div>` }} />
                       </AnimHighParagraph>
                     </Description>
                     <Information>
                       <AnimHighParagraph>
-                        We can help guide you through all the minesia and distractions of growing your company. 
-                        Let us hunt down game-changing insights to help inform stakeholders on key decisions, 
-                        build your brand that connects with customers, architect solutions that empower your 
-                        team to focus on the things that matter, collect structured data that can be leveraged, 
-                        embed design in your organization, product, team, and brand. <br />
-                        <br />
-                        We've helped these companies
+                        <div dangerouslySetInnerHTML={{ __html: `<div> ${data.information.information} </div>` }} />
                       </AnimHighParagraph>
                     </Information>
                 </DescriptionWrapper>
                 <ProjectsLinks>
                     {
-                      projectList.map((item,index) => {
+                      data.projectsItem.map((item,index) => {
                         return (
                           <>
                             <ProjectItem key={index}>
                                 <AnimSmall delay={.1}>
                                   <IconItem 
-                                    src={item.icon}
+                                    src={item.icon.file.url}
                                   />
                                 </AnimSmall>
                                 <AnimSmall delay={.2}>

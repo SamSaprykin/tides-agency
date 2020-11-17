@@ -17,7 +17,7 @@ import {
 import AnimParagraph from "../../animateParagraph"
 
 
-const SubscribeSection = ({ }) => {
+const SubscribeSection = ({data}) => {
   console.log(process.env.GATSBY_FORMSPREE_SUBSCRIBE_FORM_ID)
   const [inputs, setInputs] = useState({
     email: "",
@@ -93,9 +93,7 @@ const SubscribeSection = ({ }) => {
   return (
     <SubscribeWrapper>
         <SubscribeMarque>
-          Insights - Insights - Insights - Insights - 
-          Insights - Insights - Insights - 
-          Insights - Insights - Insights
+          {data.runnerText}
         </SubscribeMarque>
         <SubscribeForm 
           onSubmit={handleOnSubmit}
@@ -104,11 +102,9 @@ const SubscribeSection = ({ }) => {
           <FormCta>
             <h5>
               <AnimParagraph>
-                Don't miss out and join  <br />
-                our monthly insights
+                <div dangerouslySetInnerHTML={{ __html: `<div> ${data.titleSubscribeForm.titleSubscribeForm} </div>` }} />
               </AnimParagraph>
             </h5>
-            
           </FormCta>
           <InputContainer>
             <StyledInput 
