@@ -1,6 +1,5 @@
 import React from "react"
-
-import ScrollDown from "../../DecorationElements/scrollDown"
+import Image from "gatsby-image"
 
 import StainsBackground from "../../DecorationElements/stainsBackgrounds"
 import { 
@@ -14,13 +13,13 @@ import {
     AwardsList,
 } from "../../../styles/ProjectPage/servicesProjectSection"
 
-const ServicesProjectSection = ({ }) => {
+const ServicesProjectSection = ({data}) => {
   
   return (
   <>
   <ServicesProjectWrapper>
     <TitleImage>
-        <img src="/case_study/Title.png" alt="title_project" />
+        <Image fluid={data.mainImage.fluid} />
     </TitleImage>
     <InformationWrapper>
         <ServicesListWrapper>
@@ -28,12 +27,13 @@ const ServicesProjectSection = ({ }) => {
                 Services
             </ListTitle>
             <ServicesList>
-                <li>Branding</li>
-                <li>Concept</li>
-                <li>Webdesign</li>
-                <li>UI/UX</li>
-                <li>Interaction Design</li>
-                <li>Development</li>
+                {
+                    data.services.map((service,index) =>{
+                        return (
+                            <li key={index}>{service}</li>
+                        )
+                    })
+                }
             </ServicesList>
         </ServicesListWrapper>
         <AwardsListWrapper>
@@ -41,10 +41,13 @@ const ServicesProjectSection = ({ }) => {
                 Project Awwards
             </ListTitle>
             <AwardsList>
-                <li>Awwwards - Site of the Day</li>
-                <li>CSSDA - Special Kudos</li>
-                <li>CSSLight - Site of the Day</li>
-                <li>Awwards - Honorable Mention</li>
+                {
+                    data.projectAwwards.map((award, index) => {
+                        return (
+                            <li key={index}>{award}</li>
+                        )
+                    })
+                }
             </AwardsList>
         </AwardsListWrapper>
        
@@ -60,3 +63,7 @@ const ServicesProjectSection = ({ }) => {
 
 
 export default ServicesProjectSection
+
+
+
+

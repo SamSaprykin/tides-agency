@@ -8,17 +8,16 @@ import {
     ProjectNameTitle,
 } from "../../../styles/ProjectPage/projectNameSection"
 
-const ProjectNameSection = ({ }) => {
+const ProjectNameSection = ({data}) => {
   
   return (
   <>
   <ProjectNameWrapper>
-      <ProjectNameTitle>Clearview capital</ProjectNameTitle>
+      <ProjectNameTitle>{data.tItle}</ProjectNameTitle>
       <ScrollDown margin="160px 0 0"/>
       <StainsBackground rotate="10deg" top="20%" left="-18%" height="600px"/>
       <StainsBackground rotate="-12deg" top="10%" left="10%" height="800px"/>
   </ProjectNameWrapper>
- 
   </>
   )
 }

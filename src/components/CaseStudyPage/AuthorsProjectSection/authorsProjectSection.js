@@ -33,7 +33,7 @@ const authorsList  = [
     }
 ]
 
-const AuthorsProjectSection = ({ }) => {
+const AuthorsProjectSection = ({data}) => {
   return (
   <>
     <AuthorsWrapper>
@@ -41,9 +41,9 @@ const AuthorsProjectSection = ({ }) => {
             <AuthorsListTitle>Project Team</AuthorsListTitle>
             <AuthorsList>
                 {
-                    authorsList.map((author,i)=>{
+                    data.teamMember.map((author,index) => {
                         return (
-                            <li key={i}>{author.position} - {author.name}</li>
+                            <li key={index}>{author}</li>
                         )
                     })
                 }

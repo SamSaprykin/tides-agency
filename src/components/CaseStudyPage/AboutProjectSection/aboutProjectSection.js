@@ -10,7 +10,7 @@ import {
     AboutProjectDescription,
 } from "../../../styles/ProjectPage/aboutProjectSection"
 
-const AboutProjectSection = ({ }) => {
+const AboutProjectSection = ({data}) => {
   
   return (
   <AboutProjectWrapper>
@@ -20,16 +20,13 @@ const AboutProjectSection = ({ }) => {
       <AboutProjectInfo>
         <TitleContent>
           <h5>Launch Date</h5>
-          <span>2020</span>
+          <span>{data.launchDate}</span>
         </TitleContent>
         <TidesButton callToAction="visit website" small="true"/>    
       </AboutProjectInfo>
       <AboutProjectDescription>
           <p>
-            Clearview Capital is a private investment firm specializing in control and non-control 
-            investments of North American companies with operating profits of $3-$20 million. 
-            The firm's investment professionals have a long track record of completing transactions 
-            and of working collaboratively with management to create and realize value.
+            {data.description.description}
           </p>
       </AboutProjectDescription>
     </AboutProjectContent>

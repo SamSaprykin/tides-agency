@@ -3,6 +3,35 @@ const path = require('path')
 exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions
 
+    const caseStudyPage = new Promise((resolve, reject) => {
+      graphql(`
+        query {
+          allContentfulCaseStudyPage {
+            edges {
+              node {
+                slug
+              }
+            }
+          }
+        }
+      `).then(result => {
+        if (result.errors) {
+          reject(result.errors)
+        }
+        
+        
+        result.data.allContentfulCaseStudyPage.edges.forEach((edge, index) => {
+          createPage({
+            path: `/case-study/${edge.node.slug}`,
+            component: path.resolve(`./src/templates/case-study.js`),
+            context: {
+              slug: `${edge.node.slug}`,
+            },
+          })
+        })
+        resolve()
+      })
+    })
 
     const contenfulPage = new Promise((resolve, reject) => {
       graphql(`
@@ -36,6 +65,7 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   
     return Promise.all([
-      contenfulPage
+      contenfulPage,
+      caseStudyPage
     ])
   }

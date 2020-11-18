@@ -1,5 +1,6 @@
 import React from "react"
 import MarqueRow from "../../DecorationElements/marqueRow"
+import Image from "gatsby-image"
 import { 
     ProjectGalleryWrapper,
     GalleryImageContainer,
@@ -49,7 +50,7 @@ const  GalleryData = [
         ],
     },
     {
-        MarqueText:"branding - branding - branding - branding - branding - branding - branding - branding - branding",
+        MarqueText:"mobile - mobile - mobile - mobile - mobile - mobile - mobile - mobile - mobile - mobile - mobile",
         Images: [
             {
                 image:"/case_study/mobile_1.png",
@@ -64,23 +65,23 @@ const  GalleryData = [
 ]
 
 
-const GalleryProjectSection = ({ }) => {
-  
+const GalleryProjectSection = ({data}) => {
+  console.log(data.galleryItem)
   return (
   <>
     <ProjectGalleryWrapper>
         {
-            GalleryData.map((item,i)=>{
-                console.log(item)
+            data.galleryItem.map((item,i)=>{
                 return (
                     <GalleryTypeItem key={i}>
-                        <MarqueRow textMarque={item.MarqueText} />
+                        <MarqueRow textMarque={item.marqueeText} />
                         <GalleryImagesWrapper>
                             {
-                                item.Images.map((image,i)=>{
+                                item.workTypeImages.map((image,i)=>{
+                                    console.log(image)
                                     return (
-                                        <GalleryImageContainer key={i} paddingItem={image.paddingItem} >
-                                            <img src={image.image} />
+                                        <GalleryImageContainer key={i} paddingItem={image.description} >
+                                            <img src={image.file.url} />
                                         </GalleryImageContainer>
                                     )
                                   

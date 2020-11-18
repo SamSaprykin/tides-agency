@@ -7,7 +7,7 @@ export const ProjectGalleryWrapper = styled.div`
     flex-direction:column;
     position:relative;
     height:auto;
-
+    align-items:center;
     
 `
 
