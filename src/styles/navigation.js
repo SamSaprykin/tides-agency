@@ -81,6 +81,7 @@ export const MenuLinks = styled.div`
     }
     @media ${device.mobileL} {
         flex-direction:column;
+        top: 3vh;
     }
     nav {
     display: block;
@@ -119,7 +120,7 @@ export const MenuLinks = styled.div`
             height: 82px;
             margin-bottom:38px;
             @media ${device.mobileL} {
-                height: 60px;
+                height: 48px;
                 margin-bottom:0;
             }
         h2 {
@@ -138,8 +139,9 @@ export const MenuLinks = styled.div`
                 font-size: 36px;
             }
             @media ${device.mobileL} {
-                line-height:60px;
-                height: 60px;
+                font-size: 32px;
+                line-height:40px;
+                height: 40px;
             }
             a {
                 color:#E8ECF3;
@@ -178,6 +180,9 @@ export const SocialLinks = styled.ul`
     display:flex;
     flex-direction:column;
     margin: 45px auto;
+    @media ${device.mobileL} {
+        margin: 24px auto;
+    }
 `
 
 export const SocialLinksItem = styled.li`
@@ -210,6 +215,9 @@ export const SocialLinksItem = styled.li`
         align-items:center;
         margin-left:-24px;
         transition: margin-left .2s ease-in-out;
+        @media ${device.mobileL} {
+            height: 28px;
+        }
         svg {
             path {
                 fill: #1A6AFF !important;
@@ -250,7 +258,9 @@ export const MenuHeader = styled.div`
     position:relative;
     height:50px;
     overflow:hidden;
-    
+    @media ${device.mobileL} {
+        margin-top:18px;
+    }
 `
 
 export const LogoWrapper = styled.div`
@@ -266,6 +276,10 @@ export const LogoWrapper = styled.div`
         width:50px;
         height:50px;
         margin-bottom:0 !important;
+        @media ${device.mobileL} {
+            width:27px;
+            height:27px;
+        }
     }
     h5 {
         margin-left:8px;
@@ -277,7 +291,10 @@ export const LogoWrapper = styled.div`
         max-width:80px;
         margin-bottom:0 !important;
         font-family:Bandeins Sans;
-        
+        @media ${device.mobileL} {
+            font-size:10px;
+            max-width:40px;
+        }
     }
 `
 
@@ -299,7 +316,9 @@ export const CloseButtonWrapper = styled.div`
         color:#E8ECF3;
         font-family:Bandeins Sans;
         font-weight:400;
-        
+        @media ${device.mobileL} {
+            display:none;
+        }
     }
     button {
         width:24px;
@@ -316,6 +335,9 @@ export const WrapperText = styled.div`
    overflow:hidden;
    :nth-of-type(3) {
     margin-top:40px !important;
+    @media ${device.mobileL} {
+        margin-top:16px !important;
+    }
    }
    h5 {
        height:34px;
@@ -325,6 +347,9 @@ export const WrapperText = styled.div`
        font-weight:400;
        font-size:20px;
        color:#E8ECF3;
+       @media ${device.mobileL} {
+        font-size:14px;
+       }
    }
 `
 
