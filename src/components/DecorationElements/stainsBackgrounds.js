@@ -40,7 +40,10 @@ const BackWrapper = styled.div`
        width:100%;
        max-width:800px;
        height: ${props => props.height};
-       
+       @media ${device.desktop} {
+        max-width:600px;
+        height:auto;
+       }
        @media ${device.laptop} {
         max-width:600px;
         height:auto;
@@ -52,9 +55,9 @@ const BackWrapper = styled.div`
        @media ${device.mobileL} {
         max-width:280px;
        }
-       @media ${device.mobile} {
-        max-width:200px;
-      }
+       @media ${device.mobileM} {
+        max-width:280px;
+       }
    }
    z-index:-10;
 `
