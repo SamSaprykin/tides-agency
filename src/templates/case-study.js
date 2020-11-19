@@ -45,6 +45,7 @@ export const CaseStudyPageQuery = graphql`
       slug
         components {
           ... on ContentfulAboutSectionCaseStudy {
+            siteLink
             id
             launchDate(formatString: "")
             description {

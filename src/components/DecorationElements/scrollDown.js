@@ -1,8 +1,8 @@
 import React from 'react'
 import styled, {keyframes} from "styled-components"
-import PropTypes from "prop-types"
 import TidesIcons from "./tidesIcons"
 import { device } from "../../styles/constants"
+
 const ScrollDown = ({margin}) => {
   return  (
     <ScrollWrapper margin={margin}>
@@ -50,13 +50,14 @@ const ScrollWrapper = styled.div`
   flex-direction:column;
   align-items:center;
   jusfify-content:center;
+  @media ${device.tablet} {
+    display:none;
+  }
 `
 
 const Centered  = styled.div`
   position:absolute;
-  @media ${device.tablet} {
-    display:none;
-  }
+  
   top:-50%;
 `
 

@@ -11,7 +11,7 @@ import {
 } from "../../../styles/ProjectPage/aboutProjectSection"
 
 const AboutProjectSection = ({data}) => {
-  
+  console.log(data.siteLink)
   return (
   <AboutProjectWrapper>
     <AboutProjectTitle>About</AboutProjectTitle>
@@ -22,13 +22,26 @@ const AboutProjectSection = ({data}) => {
           <h5>Launch Date</h5>
           <span>{data.launchDate}</span>
         </TitleContent>
-        <TidesButton callToAction="visit website" small="true"/>    
+        {
+            data.siteLink !== null && (
+              <a href={data.siteLink} target="_blank" rel="noopener noreferrer" className="big-sizes-button">
+                  <TidesButton callToAction="visit website" small="true"/>   
+              </a> 
+            )
+        }
       </AboutProjectInfo>
       <AboutProjectDescription>
           <p>
             {data.description.description}
           </p>
       </AboutProjectDescription>
+        {
+            data.siteLink !== null && (
+              <a href={data.siteLink} target="_blank" rel="noopener noreferrer" className="small-sizes-button">
+                  <TidesButton callToAction="visit website" small="true"/>   
+              </a> 
+            )
+        }
     </AboutProjectContent>
   </AboutProjectWrapper>
   )

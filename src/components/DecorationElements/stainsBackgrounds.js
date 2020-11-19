@@ -35,14 +35,26 @@ const BackWrapper = styled.div`
    left:${props => props.left};
    top:${props => props.top}; 
    transform: rotate(${props => props.rotate});
+   
    img {
        width:100%;
        max-width:800px;
        height: ${props => props.height};
-       @media ${device.tablet} {
+       
+       @media ${device.laptop} {
         max-width:600px;
         height:auto;
        }
+       @media ${device.tablet} {
+        max-width:400px;
+        height:auto;
+       }
+       @media ${device.mobileL} {
+        max-width:280px;
+       }
+       @media ${device.mobile} {
+        max-width:200px;
+      }
    }
    z-index:-10;
 `

@@ -17,9 +17,16 @@ export const HeaderNavWrapper = styled.div`
     @media ${device.tablet} {
       padding: 0 32px;
     }
+    @media ${device.mobileL} {
+      padding: 0 20px;
+    }
 `
 
-export const HeaderLogo = styled.div``
+export const HeaderLogo = styled.div`
+  @media ${device.mobileL} {
+    width:37px;
+  }
+`
 
 export const HeaderMenuButtonWrapper = styled.div`
   
@@ -35,7 +42,9 @@ export const HeaderMenuButtonWrapper = styled.div`
     font-weight:400;
     font-size:20px;
     line-height:34px;
-    
+    @media ${device.mobileL} {
+      display:none;
+    }
   }
   svg {
     width:75px;

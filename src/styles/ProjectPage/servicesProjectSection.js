@@ -5,9 +5,19 @@ export const ServicesProjectWrapper = styled.div`
     max-width:1002px;
     margin:0 auto 230px;
     position:relative;
+    @media ${device.laptopL} {
+        max-width:960px;
+    }
+    @media ${device.laptop} {
+        max-width:744px;
+    }
     @media ${device.tablet} {
         max-width:588px;
         margin:0 auto 130px;
+    }
+    @media ${device.mobileL} {
+        padding:0 20px;
+        margin:0 auto 32px;
     }
 `
 
@@ -24,6 +34,10 @@ export const InformationWrapper = styled.div`
     display:flex;
     flex-direction:row;
     justify-content:space-between;
+    @media ${device.mobileL} {
+        margin-top:20px;
+        flex-direction:column;
+    }
     ul {
         
         li {
@@ -37,16 +51,26 @@ export const InformationWrapper = styled.div`
             @media ${device.tablet} {
                 font-size:22px;
             }
+            @media ${device.mobileL} {
+                line-height:28px;
+            }
         }
     }
 `
 
 export const ServicesListWrapper = styled.div`
     width:47%;
+    @media ${device.mobileL} {
+        width:100%;
+    }
 `
 
 export const AwardsListWrapper = styled.div`
     width:47%;
+    @media ${device.mobileL} {
+        width:100%;
+        margin-top:24px;
+    }
 `
 
 export const ServicesList = styled.ul`
@@ -65,5 +89,8 @@ export const ListTitle = styled.h5`
     color:#E8ECF3;
     @media ${device.tablet} {
         font-size:18px;
+    }
+    @media ${device.mobileL} {
+        font-size:14px;
     }
 `

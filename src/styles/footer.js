@@ -2,11 +2,18 @@ import styled from "styled-components"
 import { device } from "./constants"
 export const FooterWrapper = styled.div`
     max-width:1002px;
+    @media ${device.laptopL} {
+        max-width:960px;
+    }
     @media ${device.laptop} {
-        max-width:755px;
+        max-width:744px;
     }
     @media ${device.tablet} {
         max-width:588px;
+    }
+    @media ${device.mobileL} {
+        padding:0 20px;
+        margin-top:0;
     }
     margin:0 auto;
     padding:17px 0 0;
@@ -32,6 +39,12 @@ export const FooterTitle = styled.h3`
         line-height:116px;
         height:116px;
     }
+    @media ${device.mobileL} {
+        font-size:28px;
+        line-height:32px;
+        height:40px;
+        margin-top:16px;
+    }
     p {
         position:absolute;
     }
@@ -47,6 +60,9 @@ export const FooterContentWrapper = styled.div`
     @media ${device.laptop} {
         padding-bottom:69px;
     }
+    @media ${device.mobileL} {
+        padding-bottom:22px;
+    }
 `
 
 export const FooterSocial = styled.ul`
@@ -59,6 +75,9 @@ export const FooterSocial = styled.ul`
     }
     @media ${device.tablet} {
         width:160px;
+    }
+    @media ${device.mobileL} {
+        margin-bottom:16px;
     }
     li {
         margin-left:-24px;
@@ -91,6 +110,11 @@ export const FooterSocial = styled.ul`
                 font-size:20px;
                 line-height:34px;
             }
+            @media ${device.mobileL} {
+                font-size:22px;
+                line-height:28.93px;
+            }
+            
         }
         
     }
@@ -161,6 +185,12 @@ export const AdressWrapper = styled.div`
     p {
         position:absolute;
     }
+    @media ${device.laptop} {
+        height:120px;
+    }
+    @media ${device.mobileL} {
+        height:62px;
+    }
 `
 
 export const TitleItem = styled.h5`
@@ -177,6 +207,9 @@ export const TitleItem = styled.h5`
         font-size:18px;
         line-height:34px;
     }
+    @media ${device.mobileL} {
+        margin-bottom:20px;
+    }
     p {
         position:absolute;
     }
@@ -188,8 +221,11 @@ export const ClockWrapper = styled.div`
     display:flex;
     flex-direction:row;
     align-items:flex-end;
+    @media ${device.laptop} {
+        margin-top:40px;
+    }
     @media ${device.tablet} {
-        margin-top:74px;
+        margin-top:32px;
     }
     span {
         font-size:20px;
@@ -202,7 +238,7 @@ export const ClockWrapper = styled.div`
     div {
         width:200px;
         @media ${device.laptop} {
-            width:160px;
+            width:140px;
         }
         @media ${device.tablet} {
             width:110px;
@@ -238,6 +274,10 @@ export const FooterFooter = styled.div`
     @media ${device.tablet} {
         max-width:588px;
     }
+    @media ${device.mobileL} {
+        padding:18px 20px;
+        margin-top:0;
+    }
 `
 
 export const BackToTop = styled.div`
@@ -249,6 +289,9 @@ export const BackToTop = styled.div`
         margin-left:10px;
         @media ${device.tablet} {
             font-size:18px;
+        }
+        @media ${device.mobileL} {
+            display:none;
         }
     }
     svg {
@@ -264,6 +307,10 @@ export const RightsText = styled.p`
     @media ${device.tablet} {
         font-size:18px;
     }
+    @media ${device.mobileL} {
+        font-size:14px;
+        line-height:22px;
+    }
 `
 
 export const TransformBorder = styled.div`
@@ -277,8 +324,15 @@ export const FooterInformation = styled.div`
     display:flex;
     flex-direction:row;
     justify-content:space-between;
+    @media ${device.laptopL} {
+        padding-right:64px;
+    }
+    @media ${device.tablet} {
+        padding-right:75px;
+    }
     @media ${device.mobileL} {
         flex-direction:column;
+        padding-right:24px;
     }
 `
 

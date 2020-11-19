@@ -36,13 +36,26 @@ const StyledMarque = styled.h5`
     text-align:left;
     box-sizing: border-box;
     position:absolute;
-    z-index:1;
+    z-index:-1;
     top:60px;
     animation: ${marquee} 30s linear infinite;
+    @media ${device.laptopL} {
+      font-size:80px;
+      line-height:58.5px;
+      -webkit-text-stroke: 1.5px #E8ECF3;
+    }
+    @media ${device.laptop} {
+        font-size:56px;
+        line-height:58.5px;
+    }
     @media ${device.tablet} {
-      font-size:60px;
+      font-size:50px;
       width:500vw;
       -webkit-text-stroke: 1px #E8ECF3;
+    }
+    @media ${device.mobileL} {
+      font-size:32px;
+      top:6px;
     }
 `
 

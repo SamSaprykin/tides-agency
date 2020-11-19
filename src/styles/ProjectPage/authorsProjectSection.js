@@ -9,14 +9,29 @@ export const AuthorsWrapper = styled.div`
     flex-direction:row;
     justify-content:flex-end;
     position:relative;
+    @media ${device.laptopL} {
+        max-width:960px;
+    }
+    @media ${device.laptop} {
+        max-width:744px;
+        margin:100px auto 70px;
+    }
     @media ${device.tablet} {
         max-width:588px;
+        margin:70px auto 53px;
+    }
+    @media ${device.mobileL} {
+        padding:0 20px;
+        margin-top:0;
     }
 `
 
 export const AuthorsContainer = styled.div`
     width:100%;
     max-width:731px;
+    @media ${device.laptop} {
+        max-width:500px;
+    }
     @media ${device.tablet} {
         max-width:375px;
     }
@@ -43,6 +58,9 @@ export const AuthorsList = styled.ul`
         color:#E8ECF3;
         padding:13px 0 11px;
         border-bottom:1px solid #E8ECF3;
+        @media ${device.laptop} {
+            font-size:24px;
+        }
         @media ${device.tablet} {
             font-size:22px;
         }

@@ -6,8 +6,17 @@ export const AboutProjectWrapper = styled.div`
     margin:0 auto;
     display:flex;
     flex-direction:column;
+    @media ${device.laptopL} {
+        max-width:960px;
+    }
+    @media ${device.laptop} {
+        max-width:744px;
+    }
     @media ${device.tablet} {
         max-width:588px;
+    }
+    @media ${device.mobileL} {
+        padding:0 20px;
     }
 `
 
@@ -24,6 +33,10 @@ export const AboutProjectTitle = styled.h4`
     @media ${device.tablet} {
         font-size:38px;
     }
+    @media ${device.mobileL} {
+        font-size:28px;
+        line-height:32.2px;
+    }
 `
 
 export const AboutProjectContent = styled.div`
@@ -34,6 +47,22 @@ export const AboutProjectContent = styled.div`
     @media ${device.tablet} {
         padding:50px 0 100px;
     }
+    @media ${device.mobileL} {
+        flex-direction:column;
+        padding:22px 0 30px;
+    }
+    .big-sizes-button {
+        @media ${device.mobileL} {
+           display:none;
+        }
+    }
+    .small-sizes-button {
+        display:none;
+        @media ${device.mobileL} {
+           display:block;
+           margin:30px auto;
+        }
+    }
 `
 
 export const AboutProjectInfo = styled.div`
@@ -41,10 +70,19 @@ export const AboutProjectInfo = styled.div`
     flex-direction:column;
     justify-content:space-between;
     height:100%;
+    @media ${device.mobileL} {
+        flex-direction:row;
+        flex-wrap:wrap;
+        text-align:center;
+    }
+    
 `
 
 export const AboutProjectDescription = styled.div`
     max-width:731px;
+    @media ${device.laptop} {
+        max-width:500px;
+    }
     @media ${device.tablet} {
         max-width:375px;
     }
@@ -54,9 +92,16 @@ export const AboutProjectDescription = styled.div`
         font-size:38px;
         line-height:50px;
         color:#E8ECF3;
+        @media ${device.laptop} {
+            font-size:28px;
+        }
         @media ${device.tablet} {
             font-size:18px;
             line-height:27.5px;
+        }
+        @media ${device.mobileL} {
+            font-size:22px;
+            line-height:28.93px;
         }
     }
 `
@@ -66,6 +111,12 @@ export const TitleContent = styled.h5`
     flex-direction:column;
     margin-bottom:120px;
     @media ${device.tablet} {
+        margin-bottom:32px;
+    }
+    @media ${device.mobileL} {
+        flex-direction:row;
+        width:100%;
+        justify-content:space-between;
         margin-bottom:0px;
     }
     h5 {

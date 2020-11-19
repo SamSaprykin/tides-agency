@@ -2,6 +2,7 @@ import React from 'react'
 import styled, {keyframes} from "styled-components"
 import TidesIcons from "./tidesIcons"
 import AnimButton from "../animateButton"
+import { device } from "../../styles/constants"
 
 const TidesButton = ({callToAction, small}) => {
   return  (
@@ -44,6 +45,10 @@ const ButtonContainer = styled.div`
         if (small === "false") return "300px"
         if (small === "true") return "200px"
     }};
+    @media ${device.tablet} {
+      width:122px;
+      height:122px;
+    }
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -67,6 +72,12 @@ const ButtonContainer = styled.div`
         if (small === "false") return "145px 150px;"
         if (small === "true") return "96.6px 100px;"
       }};
+      @media ${device.tablet} {
+        cx:70px;
+        cy:72.5px;
+        r:50px;
+        transform-origin:72.5px 75px;
+      }
   }
     #Circle2 {
         animation: ${from360to0} 2s linear infinite;
@@ -88,6 +99,12 @@ const ButtonContainer = styled.div`
             if (small === "false") return "155px 150px;"
             if (small === "true") return "103.3px 100px;"
         }};
+        @media ${device.tablet} {
+          cx:75px;
+          cy:77.5px;
+          r:60px;
+          transform-origin:77.5px 75px;
+        }
     }
     
     #Circle3 {
@@ -110,6 +127,12 @@ const ButtonContainer = styled.div`
         if (small === "false") return "150px 145px;"
         if (small === "true") return "100px 96.6px;"
       }};
+      @media ${device.tablet} {
+        cx:72.5px;
+        cy:75.5px;
+        r:50px;
+        transform-origin:75px 72.5px;
+      }
     }
     
     #Circle4 {
@@ -132,6 +155,12 @@ const ButtonContainer = styled.div`
         if (small === "false") return "150px 155px;"
         if (small === "true") return "100px 103.3px;"
       }};
+      @media ${device.tablet} {
+        cx:80px;
+        cy:77.25px;
+        r:50px;
+        transform-origin:75px 77.5px;
+      }
     }
 `
 
@@ -144,6 +173,7 @@ const Button = styled.button`
         if (small === "false") return "236px"
         if (small === "true") return "163px"
     }};
+    
     background-color:transparent;
     border-radius: 100%;
     border:1px solid #FFCC00;
@@ -168,6 +198,11 @@ const Button = styled.button`
     overflow:hidden;
     outline:none;
     transition: all .2s ease-in-out;
+    @media ${device.tablet} {
+      width:122px;
+      height:122px;
+      font-size:14px;
+    }
     svg {
         position:absolute;
         z-index:-10;
@@ -182,6 +217,11 @@ const Button = styled.button`
             if (small === "false") return "300px"
             if (small === "true") return "200px"
         }};
+        @media ${device.tablet} {
+          width:150px;
+          height:150px;
+          
+        }
     }
     :hover {
         color:#191B1C;
@@ -201,6 +241,15 @@ const Button = styled.button`
         transition: all .2s ease-in-out;
         svg {
             opacity:1;
+        }
+        @media ${device.laptopL} {
+          width:236px;
+          height:236px;
+        }
+        @media ${device.tablet} {
+          width:150px;
+          height:150px;
+          font-size:14px;
         }
     }
 `

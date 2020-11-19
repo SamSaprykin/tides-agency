@@ -5,7 +5,7 @@ import { motion, useAnimation } from "framer-motion"
 const AnimBorder = ({ children, delay }) => {
   const controls = useAnimation()
   const [ref, inView] = useInView({
-    rootMargin: "-100px",
+    rootMargin: "100px",
   })
 
   useEffect(() => {
