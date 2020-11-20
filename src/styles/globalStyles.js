@@ -1,5 +1,5 @@
 import styled from "styled-components"
-
+import { device } from "./constants"
 
 export const Cursor = styled.div`
   position: fixed;
@@ -31,5 +31,8 @@ export const Cursor = styled.div`
   &.nav-open,
   &.locked {
     border: 4px solid red !important;
+  }
+  @media ${device.tablet} {
+    display:none;
   }
 `

@@ -17,7 +17,7 @@ import AnimHighParagraph from "../../animateHeight"
 import AnimBorder from "../../borderAnimation"
 
 const SectionDifferent = ({data}) => {
-  console.log(data)
+  
   return (
     <WrapperDifferent>
         {

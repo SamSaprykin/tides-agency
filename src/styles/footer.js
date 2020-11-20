@@ -268,6 +268,9 @@ export const FooterFooter = styled.div`
     display:flex;
     flex-direction:row;
     justify-content:space-between;
+    @media ${device.laptopL} {
+        max-width:960px;
+    }
     @media ${device.laptop} {
         max-width:755px;
     }

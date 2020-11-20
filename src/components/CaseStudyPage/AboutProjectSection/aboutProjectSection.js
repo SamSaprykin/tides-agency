@@ -11,7 +11,7 @@ import {
 } from "../../../styles/ProjectPage/aboutProjectSection"
 
 const AboutProjectSection = ({data}) => {
-  console.log(data.siteLink)
+  
   return (
   <AboutProjectWrapper>
     <AboutProjectTitle>About</AboutProjectTitle>

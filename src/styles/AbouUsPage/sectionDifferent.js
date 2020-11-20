@@ -1,5 +1,5 @@
 import styled from "styled-components"
-
+import { device } from "../constants"
 export const WrapperDifferent = styled.div`
     width:100%;
     max-width:1002px;
@@ -7,6 +7,19 @@ export const WrapperDifferent = styled.div`
     margin:0 auto;
     display:flex;
     flex-direction:column;
+    @media ${device.laptopL} {
+        max-width:960px;
+    }
+    @media ${device.laptop} {
+        max-width:744px;
+        padding:59px 0 50px;
+    }
+    @media ${device.tablet} {
+        max-width:588px;
+    }
+    @media ${device.mobileL} {
+        padding:47px 20px;
+    }
 `
 
 export const TitleDifferent = styled.h2`
@@ -18,6 +31,14 @@ export const TitleDifferent = styled.h2`
     margin-bottom:19px;
     text-transform:uppercase;
     font-weight:400;
+    @media ${device.tablet} {
+        font-size:38px;
+        line-height:116px;
+    }
+    @media ${device.mobileL} {
+        font-size:28px;
+        line-height:32px;
+    }
 `
 
 export const ContentDifferent = styled.div`
@@ -35,6 +56,9 @@ export const ContentHeader = styled.div`
     justify-content:space-between;
     svg {
         margin-right:50px;
+        @media ${device.tablet} {
+            margin-right:0px;
+        }
     }
     p {
         font-family: Bandeins Sans;
@@ -44,6 +68,11 @@ export const ContentHeader = styled.div`
         font-weight:400;
         text-transform:uppercase;
         max-width:756px;
+        @media ${device.tablet} {
+            font-size:18px;
+            line-height:27.45px;
+            max-width:420px;
+        }
     }
 `
 
@@ -62,6 +91,15 @@ export const ContentItem = styled.div`
     font-weight:400;
     margin-bottom:30px;
     width:45%;
+    @media ${device.tablet} {
+        width:100%;
+        font-size:18px;
+        line-height:27.45px;
+    }
+    @media ${device.mobileL} {
+        font-size:14px;
+        margin-bottom:20px;
+    }
     span {
         text-decoration:underline;
         margin-right:8px;

@@ -3,6 +3,7 @@ import { device } from "./constants"
 export const HeaderNavWrapper = styled.div`
     position:fixed;
     top:0;
+    margin:0 auto;
     width:100%;
     height:100px;
     padding:50px 69px 0;
@@ -14,17 +15,18 @@ export const HeaderNavWrapper = styled.div`
     mix-blend-mode: ${({ secondaryColor }) => {
       if (secondaryColor <= -550  ) return " difference;"
     }};
+    
     @media ${device.tablet} {
-      padding: 0 32px;
-    }
-    @media ${device.mobileL} {
       padding: 0 20px;
     }
 `
 
 export const HeaderLogo = styled.div`
+  @media ${device.tablet} {
+    width:40px;
+  }
   @media ${device.mobileL} {
-    width:37px;
+    width:27px;
   }
 `
 
@@ -42,7 +44,7 @@ export const HeaderMenuButtonWrapper = styled.div`
     font-weight:400;
     font-size:20px;
     line-height:34px;
-    @media ${device.mobileL} {
+    @media ${device.tablet} {
       display:none;
     }
   }

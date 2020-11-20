@@ -33,7 +33,7 @@ const SectionQuote = ({data}) => {
                   <QuoteText>
                     <div dangerouslySetInnerHTML={{ __html: `<div> ${data.quoteText.quoteText} </div>` }} />
                     <TidesIcons type="waveTextDecoration" className="wave"/>
-                    <TidesIcons type="bigQuote" />
+                    <TidesIcons type="bigQuote" className="quote"/>
                   </QuoteText>
                 )
               }

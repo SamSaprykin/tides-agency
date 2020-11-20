@@ -15,7 +15,7 @@ const GalleryProjectSection = ({data}) => {
     <ProjectGalleryWrapper>
         {
             data.galleryItem.map((item,i)=>{
-                console.log(item)
+                
                 return (
                     <GalleryTypeItem key={i}>
                         {
