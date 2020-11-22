@@ -1,5 +1,5 @@
 import styled from "styled-components"
-
+import { device } from "../constants"
 
 
 export const FinishedProjectsWrapper = styled.div`
@@ -7,7 +7,18 @@ export const FinishedProjectsWrapper = styled.div`
     padding-top:50px;
     max-width:1302px;
     margin:0 auto;
-    
+    @media ${device.laptopL} {
+        max-width:960px;
+    }
+    @media ${device.laptop} {
+        max-width:744px;
+    }
+    @media ${device.tablet} {
+        max-width:728px;
+    }
+    @media ${device.mobileL} {
+        padding:0 20px;
+    }
 `
 
 export const WrapperBoard = styled.div`
@@ -18,7 +29,18 @@ export const WrapperContent = styled.div`
     padding:50px 145px 80px;
     display:flex;
     flex-direction:column;
-
+    @media ${device.laptopL} {
+        padding:50px 100px 80px;
+    }
+    @media ${device.laptop} {
+        padding:50px 80px 80px;
+    }
+    @media ${device.tablet} {
+        padding:70px;
+    }
+    @media ${device.mobileL} {
+        padding:50px 145px 80px;
+    }
 `
 
 export const TitleProjects  = styled.h2`
@@ -35,8 +57,11 @@ export const TitleProjects  = styled.h2`
     position:relative;
     height:120px;
     overflow:hidden;
-    
     padding-bottom:20px;
+    @media ${device.tablet} {
+        font-size:39px;
+        line-height:50px;
+    }
     p {
         position:absolute;
     }
@@ -50,6 +75,9 @@ export const DescriptionWrapper = styled.div`
     flex-drection:column;
     justify-content:space-between;
     align-items:flex-start;
+    @media ${device.tablet} {
+        padding-bottom:50px;
+    }
 `
 
 export const Description = styled.h5`
@@ -58,6 +86,11 @@ export const Description = styled.h5`
     font-size:28px;
     line-height:36px;
     font-family: Bandeins Sans;
+    @media ${device.tablet} {
+        font-size:18px;
+        line-height:27.45px;
+        width:33%;
+    }
 `
 
 export const Information = styled.p`
@@ -66,6 +99,11 @@ export const Information = styled.p`
     font-size:24px;
     line-height:36px;
     text-align:justify;
+    @media ${device.tablet} {
+        max-width:300px;
+        font-size:16px;
+        line-height:26.88px;
+    }
 `
 
 export const ProjectsLinks  = styled.ul`
@@ -122,6 +160,10 @@ export const WorkType = styled.span `
     ${ProjectItem} : hover & {
         color:#E8ECF3;
     }
+    @media ${device.tablet} {
+        font-size:16px;
+        width:260px;
+    }
 `
 
 export const IconItem = styled.img`
@@ -141,6 +183,9 @@ export const WorkYear = styled.h5`
     font-weight:400;
     ${ProjectItem} : hover & {
         color:#E8ECF3;
+    }
+    @media ${device.tablet} {
+        font-size:16px;
     }
 `
 

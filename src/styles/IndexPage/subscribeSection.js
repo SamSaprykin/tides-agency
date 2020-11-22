@@ -7,6 +7,7 @@ export const SubscribeWrapper = styled.div`
     width:100%;
     overflow:hidden;
     position:relative;
+   
 `
 
 const marquee = keyframes`

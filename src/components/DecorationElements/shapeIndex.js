@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Wave from 'react-wavify'
-
+import { device } from "../../styles/constants"
 const ShapeIndex = () => {
   return  (
     <ShapeContainer>
@@ -33,12 +33,19 @@ const ShapeIndex = () => {
 
 const ShapeContainer = styled.div`
     position:absolute;
-    width:100%;
+    width:110%;
     height:100vh;
     z-index:-100;
     top:0;
     left:0;
     overflow:hidden;
+    @media ${device.laptop} {
+      width:200%;
+      height:80vh;
+    }
+    @media ${device.tablet} {
+      height:50vh;
+    }
     div {
       position:absolute;
       z-index:-100;
@@ -47,12 +54,18 @@ const ShapeContainer = styled.div`
       height:90%;
       bottom:10px;
       transform:rotate(-15deg) scale(1.15);
-      
+      @media ${device.tablet} {
+        height:100%;
+        bottom:100px;
+      }
     }
     .second {
         height:35%;
         bottom:0;
         transform:rotate(-5deg) scale(1.15);
+        @media ${device.tablet} {
+          height:45%;
+        }
     }    
 `
   

@@ -1,5 +1,5 @@
 import styled from "styled-components"
-
+import { device } from "../constants"
 
 export const SkillsSectionContainer = styled.div`
     width:100%;
@@ -18,6 +18,18 @@ export const SkillsSectionWrapper = styled.div`
     display:flex;
     flex-direction:column;
     justify-content:flex-start;
+    @media ${device.laptopL} {
+        max-width:960px;
+    }
+    @media ${device.laptop} {
+        max-width:744px;
+    }
+    @media ${device.tablet} {
+        max-width:588px;
+    }
+    @media ${device.mobileL} {
+        padding:0 20px;
+    }
 `
 
 export const SkillsSectionTitle = styled.h4`
@@ -33,6 +45,9 @@ export const SkillsSectionTitle = styled.h4`
     position:relative;
     overflow:hidden;
     margin-bottom:9px;
+    @media ${device.tablet} {
+        font-size:38px;
+    }
     p {
         position:absolute;
     }
@@ -47,6 +62,11 @@ export const SkillsSectionDescription = styled.p`
     position:relative;
     overflow:hidden;
     height:100px;
+    @media ${device.tablet} {
+        font-size:28px;
+        line-height:42.7px;
+        height:120px;
+    }
     p {
         position:absolute;
     }
@@ -62,6 +82,9 @@ export const SkillsSectionCta = styled.span`
     font-size:24px;
     line-height:36px;
     font-weight:400;
+    @media ${device.tablet} {
+       font-size:20px;
+    }
 `
 
 export const SkillsSectionCtaWrapper = styled.div`
@@ -103,6 +126,9 @@ export const SkillSectionPlanetsWrapper = styled.div`
     justify-content:flex-start;
     margin-top:146.5px;
     justify-content:space-between;
+    @media ${device.tablet} {
+        margin-top:50px;
+    }
 `
 
 export const SkillSectionSunWrapper = styled.div`
@@ -131,6 +157,10 @@ export const SmallPlanet = styled.img`
         if (position) return `rotate(${position/5}deg) translateX(120px) rotate(${position/5}deg);`
     }};
     transition: all .5s linear;
+    @media ${device.tablet} {
+        width:35px;
+        height:35px;
+    }
 `
 
 
