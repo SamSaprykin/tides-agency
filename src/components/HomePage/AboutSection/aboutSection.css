@@ -78,6 +78,11 @@
       transition: opacity 1s;
       transition-delay: 0.1s;
   }
+  @media screen and (max-width: 768px) {
+    .button-expand { 
+      height:0;
+    }
+  }
   .button-expand {
     opacity: 0;
     position: absolute;
@@ -94,6 +99,7 @@
     outline: none;
     border:none;
     transition: opacity .2s;
+    
   }
   .menu__item-link:hover ~ .marquee .button-expand {
     opacity: 1;

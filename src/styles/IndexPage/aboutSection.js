@@ -129,7 +129,9 @@ export const ImpactAreasList = styled.ul`
             box-sizing: border-box;
             position:relative;
             z-index:2;
-            
+            @media ${device.tablet} {
+                line-height: 100px;
+            }
             :hover {
                 @media ${device.tablet} {
                     opacity: 1 !important;
@@ -232,6 +234,7 @@ export const Marque = styled.div`
     button {
         @media ${device.tablet} {
            display:none;
+           height:0 !important;
         }
     }
     
