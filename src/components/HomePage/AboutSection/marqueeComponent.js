@@ -11,7 +11,7 @@ import {
 import AnimParagraph from "../../animateParagraph"
 import BorderElement from "../../DecorationElements/borderElement"
 import AnimBorder from "../../borderAnimation"
-
+import useWindowSize from "../../../hooks/useWindowSize"
 const plugins = [ CSSPlugin ];
 
 class MarqueeComponent extends React.Component {
@@ -33,9 +33,16 @@ class MarqueeComponent extends React.Component {
     this.refPar8 = React.createRef();
   }
   showDescr = () => {
-     
+    let heightAnimation
+    
+    if(this.props.size > 768) {
+      heightAnimation = `400px`
+    } else {
+      heightAnimation = `221px`
+    }
+    
     if(this.marqueRef && this.marqueRef.current !== null) {
-      TweenLite.to(this.marqueRef.current, 1, {height:"400px"})
+      TweenLite.to(this.marqueRef.current, 1, {height:heightAnimation})
     }
     if(this.descrRef && this.descrRef.current !== null) {
       TweenLite.to(this.descrRef.current, 0.05, {opacity:1})  
@@ -51,8 +58,14 @@ class MarqueeComponent extends React.Component {
     
   }
   hideDescr = () => {
+    let heightAnimationStart
+    if(this.props.size > 768) {
+      heightAnimationStart = `188px`
+    } else {
+      heightAnimationStart = `0`
+    }
     if(this.marqueRef && this.marqueRef.current !== null) {
-      TweenLite.to(this.marqueRef.current, 0.8, {height:"188px"})
+      TweenLite.to(this.marqueRef.current, 0.8, {height:heightAnimationStart})
       
     }
     if(this.descrRef && this.descrRef.current !== null) {
@@ -68,10 +81,10 @@ class MarqueeComponent extends React.Component {
     }
   }
   render() {
+    
     return (
       <>
         <li className="menu__item"  key={this.props.data.id} onMouseLeave={this.hideDescr} >
-           
             <h5 className="menu__item-link" onClick={this.showDescr} >
               <AnimBorder>
                 <BorderElement padding="0 0 30px"/>
@@ -84,7 +97,7 @@ class MarqueeComponent extends React.Component {
             <Marque className="marquee"  ref={this.marqueRef}>
                 <button className="button-expand" ref={this.buttonRef}>+</button>
                 <div className="marquee__inner" ref={this.itemRef} aria-hidden="true">   
-                  <span>{this.props.data.marqueeRunnerText}</span> 
+                  <span className="runner">{this.props.data.marqueeRunnerText}</span> 
                 </div>
                 <DescriptionArea ref={this.descrRef}>
                     <DescriptionItems>

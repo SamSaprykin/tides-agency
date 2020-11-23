@@ -23,37 +23,7 @@ import AnimSmall from "../../animSmall"
 import AnimBorder from "../../borderAnimation"
 import BorderElement from "../../DecorationElements/borderElement"
 
-const projectList = [
-  {
-    icon:"/advent.svg",
-    workTypes:"Strategy,Design, Development",
-    year:"2020",
-    linkTo:"/",
-  },
-  {
-    icon:"/amtt.svg",
-    workTypes:"Strategy, Design",
-    year:"2019",
-    linkTo:"/",
-  },
-  {
-    icon:"/healthcare.svg",
-    workTypes:"Strategy, Design, Marketing",
-    year:"2020",
-    linkTo:"/",
-  },
-  {
-    icon:"/amn.svg",
-    workTypes:"Strategy, Design, Development",
-    year:"2018",
-    linkTo:"/",
-  },
-  
-  
-]
-
 const FinishedProjects = ({data}) => {
-  console.log(data)
   return (
     <FinishedProjectsWrapper>
         <WrapperBoard>

@@ -18,7 +18,7 @@ import AnimParagraph from "../../animateParagraph"
 
 
 const SubscribeSection = ({data}) => {
-  console.log(process.env.GATSBY_FORMSPREE_SUBSCRIBE_FORM_ID)
+  
   const [inputs, setInputs] = useState({
     email: "",
   })
@@ -59,7 +59,7 @@ const SubscribeSection = ({data}) => {
   const handleOnSubmit = event => {
     event.preventDefault();
     setServerState({ submitting: true });
-    console.log(inputs)
+    
     axios({
       method: "POST",
       url: `https://formspree.io/f/${process.env.GATSBY_FORMSPREE_SUBSCRIBE_FORM_ID}`,
@@ -68,11 +68,9 @@ const SubscribeSection = ({data}) => {
       .then(r => {
         handleServerResponse(true, "Thanks!");
         navigate('/thank-you');
-        console.log(inputs)
       })
       .catch(r => {
         handleServerResponse(false, r.response.data.error);
-        console.log(r.response.data.error)
       });
   };
   const [serverState, setServerState] = useState({

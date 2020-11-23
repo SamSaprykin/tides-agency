@@ -129,6 +129,14 @@ export const ImpactAreasList = styled.ul`
             box-sizing: border-box;
             position:relative;
             z-index:2;
+            
+            :hover {
+                @media ${device.tablet} {
+                    opacity: 1 !important;
+                }
+            }
+                
+            
             p {
                 @media ${device.tablet} {
                     font-size:60px;
@@ -215,20 +223,26 @@ export const DescriptionItems = styled.ul`
 
 export const Marque = styled.div`
     height:188px;  
+    @media ${device.tablet} {
+        height:0;
+        position:relative !important;  
+    }
     button {
         @media ${device.tablet} {
            display:none;
         }
     }
+    
+    .runner {
+        @media ${device.tablet} {
+            opacity: 0;
+        }
+    }
     .marquee__inner {
         @media ${device.tablet} {
             background-color:transparent;
-        }
-        
-        span {
-            @media ${device.tablet} {
-                
-            }
+            height:0;
+            padding:0;
         }
     }
     

@@ -59,7 +59,7 @@ export const TitleProjects  = styled.h2`
     overflow:hidden;
     padding-bottom:20px;
     @media ${device.tablet} {
-        font-size:39px;
+        font-size:38px;
         line-height:50px;
     }
     p {

@@ -1,5 +1,5 @@
 import styled from "styled-components"
-
+import { device } from "../constants"
 export const InsightsSectionWrapper = styled.div`
     height: auto;
     display: flex;
@@ -10,11 +10,18 @@ export const InsightsSectionWrapper = styled.div`
     border-bottom:1px solid #E8ECF3;
     margin:0 auto;
     max-width:1002px;
-   
-      .insights-container {
-        
-      
-      }
+    @media ${device.laptopL} {
+      max-width:960px;
+    }
+    @media ${device.laptop} {
+        max-width:744px;
+    }
+    @media ${device.tablet} {
+        max-width:588px;
+    }
+    @media ${device.mobileL} {
+        padding:0 20px;
+    }
       
 `
 
@@ -41,6 +48,9 @@ export const InsightsTitle = styled.h2`
       p {
         position:absolute;
       }
+      @media ${device.tablet} {
+        font-size:38px;
+      }
 `
 
 
@@ -62,7 +72,9 @@ export const InsightsQuote = styled.h5`
     width:100%;
     max-width:400px;
     display:inline;
-    
+    @media ${device.tablet} {
+      font-size:24px;
+    }
 `
 
 export const Column = styled.div`
@@ -85,6 +97,9 @@ export const InsightsDescription = styled.p`
     font-weight:400;
     position:relative;
     overflow:hidden;
+    @media ${device.tablet} {
+      font-size:20px;
+    }
 `
 
 export const WrapInform = styled.div`
@@ -122,6 +137,9 @@ export const PostTitle = styled.h5`
   position:relative;
   overflow:hidden;
   margin-bottom:32px !important;
+  @media ${device.tablet} {
+    font-size:28px;
+  }
 `
 
 export const InsightsMonth = styled.div`

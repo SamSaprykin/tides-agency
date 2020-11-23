@@ -23,7 +23,7 @@ import {
 import BorderElement from "../../DecorationElements/borderElement"
 import StainsBackgrounds from "../../DecorationElements/stainsBackgrounds"
 const FormSection = ({data}) => {
-  console.log(data)
+  
   const [inputs, setInputs] = useState({
     name: "",
     company: "",
@@ -138,11 +138,9 @@ const FormSection = ({data}) => {
       .then(r => {
         handleServerResponse(true, "Thanks!");
         navigate('/thank-you');
-        console.log(inputs)
       })
       .catch(r => {
         handleServerResponse(false, r.response.data.error);
-        console.log(r.response.data.error)
       });
   };
 

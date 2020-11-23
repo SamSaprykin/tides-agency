@@ -1,5 +1,5 @@
 import styled, { keyframes }  from "styled-components"
-
+import { device } from "../constants"
 
 export const SubscribeWrapper = styled.div`
     padding:150px 0;
@@ -7,7 +7,9 @@ export const SubscribeWrapper = styled.div`
     width:100%;
     overflow:hidden;
     position:relative;
-   
+    @media ${device.tablet} {
+        padding:100px 0 80px;
+    }
 `
 
 const marquee = keyframes`
@@ -31,6 +33,24 @@ export const SubscribeMarque = styled.h5`
     z-index:1;
     top:50%;
     animation: ${marquee} 30s linear infinite;
+    @media ${device.laptopL} {
+        font-size:80px;
+        line-height:58.5px;
+        -webkit-text-stroke: 1.5px #E8ECF3;
+      }
+      @media ${device.laptop} {
+          font-size:56px;
+          line-height:58.5px;
+      }
+      @media ${device.tablet} {
+        font-size:50px;
+        width:500vw;
+        -webkit-text-stroke: 1px #E8ECF3;
+        top:45%;
+      }
+      @media ${device.mobileL} {
+        font-size:32px;
+    }
 `
 export const SubscribeForm = styled.form`
     margin:0 auto;

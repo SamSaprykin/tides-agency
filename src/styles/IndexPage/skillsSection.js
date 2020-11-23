@@ -140,6 +140,9 @@ export const SkillSectionMoonWrapper = styled.div`
     width:50%;
     position:relative;
     height:500px;
+    @media ${device.tablet} {
+        height:300px
+    }
 `
 
 
@@ -160,6 +163,11 @@ export const SmallPlanet = styled.img`
     @media ${device.tablet} {
         width:35px;
         height:35px;
+        top:135px;
+        left:125px;
+        transform: ${({ position }) => {
+            if (position) return `rotate(${position/5}deg) translateX(70px) rotate(${position/5}deg);`
+        }};
     }
 `
 

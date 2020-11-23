@@ -14,7 +14,7 @@ import {
 } from "../../../styles/ProjectPage/servicesProjectSection"
 
 const ServicesProjectSection = ({data}) => {
-  console.log(data.projectAwwards)
+  
   return (
   <>
   <ServicesProjectWrapper>

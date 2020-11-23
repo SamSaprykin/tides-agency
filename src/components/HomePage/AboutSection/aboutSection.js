@@ -17,10 +17,11 @@ import AnimParagraph from "../../animateParagraph"
 import AnimHighParagraph from "../../animateHeight"
 import AnimBorder from "../../borderAnimation"
 import BorderElement from "../../DecorationElements/borderElement"
-
+import useWindowSize from "../../../hooks/useWindowSize"
 
 
 const AboutSection = ({data}) => {
+  const size = useWindowSize();
   return (
   <WrapperAbout>
     <TextSectionAbout>
@@ -41,7 +42,7 @@ const AboutSection = ({data}) => {
             <ImpactAreasList>
                 {data.marqueeAbout.map((marque,index) => {
                     return (
-                      <MarqueeComponent data={marque} id={index} />
+                      <MarqueeComponent data={marque} id={index} size={size.width} />
                     )
                 })}
             </ImpactAreasList>

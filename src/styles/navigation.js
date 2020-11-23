@@ -22,6 +22,9 @@ export const MenuSecondaryBackgroundColor = styled.div`
     height: 100%;
     width: 100%;
     z-index: 10;
+    @media ${device.tablet} {
+        width: 200%;
+    }
     .first {
         height:90%;
     }
@@ -41,6 +44,7 @@ export const MenuSecondaryBackgroundColor = styled.div`
         z-index:100;
         position:absolute;
         transform:rotate(180deg);
+        
     }
 `
 

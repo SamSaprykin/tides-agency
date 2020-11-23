@@ -97,12 +97,10 @@
   }
   .menu__item-link:hover ~ .marquee .button-expand {
     opacity: 1;
-    
   }
   .menu__item-link:hover ~ .marquee .marquee__inner {
       animation-play-state: running;
-      opacity: 1;
-      
+      opacity: 1; 
   }
   
   .marquee span {
@@ -121,7 +119,9 @@
       text-transform: uppercase;
       position: relative;
       z-index:10;
+      
   }
+  
   
   
   
