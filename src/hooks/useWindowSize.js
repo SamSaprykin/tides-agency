@@ -1,8 +1,8 @@
 import React from "react";
-const isBrowser = typeof window !== `undefined`
 export default function useWindowSize() {
-  if (!isBrowser) return { width: 0, height: 0 }
+  
   const isSSR = typeof window !== "undefined";
+  if (!isSSR) return { width: 0, height: 0 }
   const [windowSize, setWindowSize] = React.useState({
     width: isSSR ? 1200 : window.innerWidth,
     height: isSSR ? 800 : window.innerHeight,

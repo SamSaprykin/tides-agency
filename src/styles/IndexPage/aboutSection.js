@@ -187,6 +187,7 @@ export const DescriptionItems = styled.ul`
     @media ${device.tablet} {
         color:#E8ECF3;
         font-size:22px;
+        padding:30px 0;
     }
     li {
         font-size:28px;
@@ -225,7 +226,8 @@ export const Marque = styled.div`
     height:188px;  
     @media ${device.tablet} {
         height:0;
-        position:relative !important;  
+        position:relative !important;
+        margin-top:-32px;  
     }
     button {
         @media ${device.tablet} {
