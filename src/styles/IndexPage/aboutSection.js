@@ -189,7 +189,7 @@ export const DescriptionItems = styled.ul`
     @media ${device.tablet} {
         color:#E8ECF3;
         font-size:22px;
-        padding:30px 0 0;
+        padding:0;
     }
     li {
         font-size:28px;
