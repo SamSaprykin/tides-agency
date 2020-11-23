@@ -6,6 +6,9 @@ export const SkillsSectionContainer = styled.div`
     height:100%;
     background-image: url('/background-planets.png');
     background-size: 100% 65%;
+    @media ${device.mobileL} {
+        background-size: 100% 40%;
+    }
     background-position: center bottom;
     background-repeat: no-repeat;
 `
@@ -28,7 +31,7 @@ export const SkillsSectionWrapper = styled.div`
         max-width:588px;
     }
     @media ${device.mobileL} {
-        padding:0 20px;
+        margin:50px 20px 0;
     }
 `
 
@@ -47,6 +50,10 @@ export const SkillsSectionTitle = styled.h4`
     margin-bottom:9px;
     @media ${device.tablet} {
         font-size:38px;
+    }
+    @media ${device.mobileL} {
+        font-size:28px;
+        line-height:32.2px;
     }
     p {
         position:absolute;
@@ -67,6 +74,11 @@ export const SkillsSectionDescription = styled.p`
         line-height:42.7px;
         height:120px;
     }
+    @media ${device.mobileL} {
+        font-size:22px;
+        line-height:28.93px;
+        max-width:280px;
+    }
     p {
         position:absolute;
     }
@@ -85,6 +97,12 @@ export const SkillsSectionCta = styled.span`
     @media ${device.tablet} {
        font-size:20px;
     }
+    @media ${device.mobileL} {
+        font-size:22px;
+        line-height:28.93px;
+        max-width:210px;
+        
+    }
 `
 
 export const SkillsSectionCtaWrapper = styled.div`
@@ -92,6 +110,10 @@ export const SkillsSectionCtaWrapper = styled.div`
     display:flex;
     flex-direction:row;
     align-items:center;
+    @media ${device.mobileL} {
+        margin-top:16px;
+        justify-content:space-between;
+    }
 `
 
 export const SkillsSectionCtaButton = styled.button`
@@ -108,8 +130,14 @@ export const SkillsSectionCtaButton = styled.button`
     align-items:center;
     justify-content:center;
     transition: all .2s ease-in-out;
+    @media ${device.mobileL} {
+        width:45px;
+        height:45px;
+        margin-right:20px;
+    }
     ${SkillsSectionCtaWrapper} : hover & {
         background-color:#FFCC00;
+        
         svg {
             path {
                 fill: #191B1C !important;
@@ -143,6 +171,9 @@ export const SkillSectionMoonWrapper = styled.div`
     @media ${device.tablet} {
         height:300px
     }
+    @media ${device.mobileL} {
+        height:200px
+    }
 `
 
 
@@ -168,6 +199,13 @@ export const SmallPlanet = styled.img`
         transform: ${({ position }) => {
             if (position) return `rotate(${position/5}deg) translateX(70px) rotate(${position/5}deg);`
         }};
+    }
+    @media ${device.mobileL} {
+        transform:none;
+        width:20px;
+        height:20px;
+        top:110px;
+        left:45px;
     }
 `
 

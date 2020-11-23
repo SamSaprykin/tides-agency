@@ -58,6 +58,10 @@ const ShapeContainer = styled.div`
         height:100%;
         bottom:100px;
       }
+      @media ${device.mobileL} {
+        height:80%;
+        bottom:100px;
+      }
     }
     .second {
         height:35%;

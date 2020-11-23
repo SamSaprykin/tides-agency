@@ -54,6 +54,9 @@ export const AboutDescription = styled.div`
         }
         @media ${device.mobileL} {
             padding:0 20px;
+            font-size:22px;
+            line-height:28.93px;
+            margin-bottom:50px;
         }
         span {
             color:#1A6AFF;
@@ -64,6 +67,9 @@ export const AboutDescription = styled.div`
             @media ${device.tablet} {
                 font-size:28px;
                 line-height:34px;
+            }
+            @media ${device.mobileL} {
+                font-size:22px;
             }
         }
     }
@@ -104,6 +110,12 @@ export const ImpactAreasTitle = styled.h4`
         line-height:116px;
         height:116px;
         max-width:588px;
+        margin-bottom:16px;
+    }
+    @media ${device.mobileL} {
+        padding:7px 20px 0;
+        font-size:28px;
+        line-height:32px;
     }
     p {
         position:absolute;
@@ -142,6 +154,11 @@ export const ImpactAreasList = styled.ul`
             p {
                 @media ${device.tablet} {
                     font-size:60px;
+                    -webkit-text-stroke: 1px #E8ECF3;
+                }
+                @media ${device.mobileL} {
+                    font-size:32px;
+                    -webkit-text-stroke: 0.5px #E8ECF3;
                 }
             }
             @media ${device.laptopL} {
@@ -155,7 +172,7 @@ export const ImpactAreasList = styled.ul`
                 max-width:588px;
             }
             @media ${device.mobileL} {
-                padding:0 20px;
+                padding:0 20px !important;
             }
         }
         
@@ -191,6 +208,9 @@ export const DescriptionItems = styled.ul`
         font-size:22px;
         padding:0;
     }
+    @media ${device.mobileL} {
+        flex-direction:column;
+    }
     li {
         font-size:28px;
         line-height:36px;
@@ -215,6 +235,12 @@ export const DescriptionItems = styled.ul`
         @media ${device.tablet} {
             font-size:22px;
         }
+        @media ${device.mobileL} {
+            padding:0 40px !important;
+            line-height:29px;
+            margin-bottom:0;
+            width:100%;
+        }
         p {
             height:36px;
             margin-top:36px;
@@ -229,7 +255,8 @@ export const Marque = styled.div`
     @media ${device.tablet} {
         height:0;
         position:relative !important;
-        margin-top:-32px;  
+        margin-top:-32px; 
+        z-index:1 !important;
     }
     button {
         @media ${device.tablet} {

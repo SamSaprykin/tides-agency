@@ -39,7 +39,7 @@ export const WrapperContent = styled.div`
         padding:70px;
     }
     @media ${device.mobileL} {
-        padding:50px 145px 80px;
+        padding:30px 20px;
     }
 `
 
@@ -62,6 +62,11 @@ export const TitleProjects  = styled.h2`
         font-size:38px;
         line-height:50px;
     }
+    @media ${device.mobileL} {
+        font-size:28px;
+        line-height:32px;
+        height:85px;
+    }
     p {
         position:absolute;
     }
@@ -72,11 +77,15 @@ export const TitleProjects  = styled.h2`
 export const DescriptionWrapper = styled.div`
     padding:50px 0 100px;
     display:flex;
-    flex-drection:column;
+    
     justify-content:space-between;
     align-items:flex-start;
     @media ${device.tablet} {
         padding-bottom:50px;
+    }
+    @media ${device.mobileL} {
+        flex-direction:column;
+        padding-top:22px;
     }
 `
 
@@ -91,6 +100,11 @@ export const Description = styled.h5`
         line-height:27.45px;
         width:33%;
     }
+    @media ${device.mobileL} {
+        width:100%;
+        margin-bottom:23px;
+        line-height:23.76px;
+    }
 `
 
 export const Information = styled.p`
@@ -103,6 +117,11 @@ export const Information = styled.p`
         max-width:300px;
         font-size:16px;
         line-height:26.88px;
+    }
+    @media ${device.mobileL} {
+        width:100%;
+        font-size:14px;
+        line-height:25.31px;
     }
 `
 
@@ -142,9 +161,10 @@ export const ProjectItem = styled.li`
         text-align:left;
         width:100%;
         max-width:300px; 
-        
     }
-    
+    @media ${device.mobileL} {
+        padding:28px 0;
+    }
     
 `
 
@@ -164,6 +184,13 @@ export const WorkType = styled.span `
         font-size:16px;
         width:260px;
     }
+    @media ${device.mobileL} {
+        width:75px;
+        font-size:10px;
+        line-height:13px;
+        display:flex;
+        flex-direction:column;
+    }
 `
 
 export const IconItem = styled.img`
@@ -171,6 +198,9 @@ export const IconItem = styled.img`
     margin-bottom:0;
     ${ProjectItem}:hover & {
         filter: invert(1);
+    }
+    @media ${device.mobileL} {
+        width:73px;
     }
 `
 
@@ -186,6 +216,9 @@ export const WorkYear = styled.h5`
     }
     @media ${device.tablet} {
         font-size:16px;
+    }
+    @media ${device.mobileL} {
+        font-size:10px;
     }
 `
 

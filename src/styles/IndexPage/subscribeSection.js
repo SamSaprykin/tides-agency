@@ -10,6 +10,9 @@ export const SubscribeWrapper = styled.div`
     @media ${device.tablet} {
         padding:100px 0 80px;
     }
+    @media ${device.mobileL} {
+        padding:30px 0 0;
+    }
 `
 
 const marquee = keyframes`
@@ -50,7 +53,8 @@ export const SubscribeMarque = styled.h5`
       }
       @media ${device.mobileL} {
         font-size:32px;
-    }
+        width:550vw;
+      }
 `
 export const SubscribeForm = styled.form`
     margin:0 auto;
@@ -60,7 +64,9 @@ export const SubscribeForm = styled.form`
     flex-direction:column;
     position:relative;
     z-index:2;
-   
+    @media ${device.mobileL} {
+        max-width:295px;
+    }
 `
 
 
@@ -68,7 +74,9 @@ export const SubscribeForm = styled.form`
 export const FormCta = styled.div`
     padding:60px 40px;
     background-color: #E8ECF3;
-    
+    @media ${device.mobileL} {
+        padding:26px 20px 0px;
+    }
     h5 {
         color: #191B1C;
         font-family: Bandeins Sans;
@@ -78,6 +86,10 @@ export const FormCta = styled.div`
         height:80px;
         position:relative;
         overflow:hidden;
+        @media ${device.mobileL} {
+            font-size:22px;
+            line-height:28.93px;
+        }
         p {
             position:absolute;
         }
@@ -106,6 +118,18 @@ export const InputContainer = styled.div`
         background-color:transparent;
         outline:none;
         border:none;
+        @media ${device.mobileL} {
+            width:12px;
+            height:12px;
+            svg {
+                width:12px;
+                height:12px;
+                margin-bottom:16px;
+            }
+        }
+    }
+    @media ${device.mobileL} {
+        height:70px;
     }
 `
 
@@ -123,7 +147,10 @@ export const StyledInput = styled.input`
     font-weight:400;
     padding-bottom:4px;
     box-sizing:border-box;
-    
+    @media ${device.mobileL} {
+        margin:20px;
+        font-size:22px;
+    }
     
 `
 

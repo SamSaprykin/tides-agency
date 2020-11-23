@@ -17,6 +17,9 @@ export const HeroLayout = styled.div`
   @media ${device.tablet} {
     height:50vh;
   }
+  @media ${device.mobileL} {
+    height:55vh;
+  }
 `
 
 
@@ -29,6 +32,9 @@ export const HeroText = styled.div`
   }
   @media ${device.tablet} {
     margin-top:13vh;
+  }
+  @media ${device.mobileL} {
+    margin-top:15vh;
   }
   ul {
     width:100%;
@@ -66,6 +72,12 @@ export const HeroText = styled.div`
         line-height:60px;
         height:60px;
         max-width:567px;
+      }
+      @media ${device.mobileL} {
+        font-size:28px;
+        line-height:40px;
+        height:40px;
+        max-width:360px;
       }
       svg {
         margin-top:-15px;
@@ -128,6 +140,9 @@ export const WordsWrapper = styled.div`
   }
   @media ${device.tablet} {
     height:60px;
+  }
+  @media ${device.mobileL} {
+    height:40px;
   }
   li {
     position:absolute;    

@@ -20,7 +20,8 @@ export const InsightsSectionWrapper = styled.div`
         max-width:588px;
     }
     @media ${device.mobileL} {
-        padding:0 20px;
+        padding:0 0 30px;
+        margin:0 20px;
     }
       
 `
@@ -51,6 +52,10 @@ export const InsightsTitle = styled.h2`
       @media ${device.tablet} {
         font-size:38px;
       }
+      @media ${device.mobileL} {
+        font-size:28px;
+        line-height:32.2px;
+      }
 `
 
 
@@ -75,11 +80,19 @@ export const InsightsQuote = styled.h5`
     @media ${device.tablet} {
       font-size:24px;
     }
+    @media ${device.mobileL} {
+      font-size:18px;
+      line-height:23.67px;
+    }
 `
 
 export const Column = styled.div`
     width:50%;
     margin:0 39px;
+    @media ${device.mobileL} {
+      width:100%;
+      margin:30px 0 0;
+    }
     :nth-of-type(1) {
       margin-left:0;
     }
@@ -100,6 +113,10 @@ export const InsightsDescription = styled.p`
     @media ${device.tablet} {
       font-size:20px;
     }
+    @media ${device.mobileL} {
+      font-size:14px;
+      line-height:25.37px;
+    }
 `
 
 export const WrapInform = styled.div`
@@ -110,6 +127,9 @@ export const WrapInform = styled.div`
   opacity:0;
   :nth-of-type(1) {
     opacity:1;
+  }
+  @media ${device.mobileL} {
+    flex-direction:column;
   }
 `
 
