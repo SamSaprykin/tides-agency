@@ -71,7 +71,10 @@ export const ButtonMenu  = styled.button`
   display:flex;
   flex-direction:row;
   align-items:center;
-  
+  @media ${device.tablet} {
+    justify-content:flex-end;
+    padding:0 !important;
+  }
 `
 
 export const IconWaveWrapper = styled.div`

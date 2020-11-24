@@ -140,7 +140,9 @@ export const ProjectItem = styled.li`
     justify-content:space-between;
     height:48px;
     transition: all .5s;
-    
+    @media ${device.mobileL} {
+        padding:28px 0;
+    }
     div {
         height:88px;
         overflow:hidden;
@@ -155,7 +157,7 @@ export const ProjectItem = styled.li`
         padding:50px 30px;
         background-color:#191B1C;
         @media ${device.mobileL} {
-            padding:50px 10px;
+            padding:28px 10px;
         }
     }
     
@@ -164,9 +166,7 @@ export const ProjectItem = styled.li`
         width:100%;
         max-width:300px; 
     }
-    @media ${device.mobileL} {
-        padding:28px 0;
-    }
+    
     
 `
 
