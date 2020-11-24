@@ -11,7 +11,7 @@ import {
 import AnimParagraph from "../../animateParagraph"
 import BorderElement from "../../DecorationElements/borderElement"
 import AnimBorder from "../../borderAnimation"
-import useWindowSize from "../../../hooks/useWindowSize"
+
 const plugins = [ CSSPlugin ];
 
 class MarqueeComponent extends React.Component {

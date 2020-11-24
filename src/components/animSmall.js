@@ -1,11 +1,12 @@
 import React, { useEffect } from "react"
 import { useInView } from "react-intersection-observer"
 import { motion, useAnimation } from "framer-motion"
-
+import useWindowSize from "../hooks/useWindowSize"
 const AnimSmall = ({ children, delay }) => {
   const controls = useAnimation()
+  const size = useWindowSize();
   const [ref, inView] = useInView({
-    rootMargin: "-90px",
+    rootMargin: size.width > 425 ? "-100px" : "-10px",
   })
 
   useEffect(() => {
