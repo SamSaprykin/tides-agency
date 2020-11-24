@@ -38,7 +38,7 @@ class MarqueeComponent extends React.Component {
     if(this.props.size > 768) {
       heightAnimation = `400px`
     } else {
-      heightAnimation = `140px`
+      heightAnimation = `auto`
     }
     
     if(this.marqueRef && this.marqueRef.current !== null) {

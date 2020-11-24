@@ -144,6 +144,9 @@ export const ImpactAreasList = styled.ul`
             @media ${device.tablet} {
                 line-height: 100px;
             }
+            @media ${device.mobileL} {
+                height: 150px;
+            }
             :hover {
                 @media ${device.tablet} {
                     opacity: 1 !important;
@@ -158,6 +161,7 @@ export const ImpactAreasList = styled.ul`
                 }
                 @media ${device.mobileL} {
                     font-size:32px;
+                    line-height:53px;
                     -webkit-text-stroke: 0.5px #E8ECF3;
                 }
             }
@@ -257,6 +261,9 @@ export const Marque = styled.div`
         position:relative !important;
         margin-top:-32px; 
         z-index:1 !important;
+    }
+    @media ${device.mobileL} {
+        margin-top:-50px; 
     }
     button {
         @media ${device.tablet} {
