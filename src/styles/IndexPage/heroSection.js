@@ -90,6 +90,10 @@ export const HeroText = styled.div`
         @media ${device.tablet} {
           width:140px;
         }
+        @media ${device.tablet} {
+          width:90px;
+          margin-top:-10px;
+        }
       }
     }
   }

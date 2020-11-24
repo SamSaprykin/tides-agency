@@ -6,7 +6,7 @@ const AnimSmall = ({ children, delay }) => {
   const controls = useAnimation()
   const size = useWindowSize();
   const [ref, inView] = useInView({
-    rootMargin: size.width > 425 ? "-100px" : "-10px",
+    rootMargin: size.width > 425 ? "-100px" : "-50px",
   })
 
   useEffect(() => {

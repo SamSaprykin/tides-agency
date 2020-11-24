@@ -7,9 +7,9 @@ const AnimParagraph = ({ children, delay, top }) => {
   console.log(size.width)
   const controls = useAnimation()
   const [ref, inView] = useInView({
-    rootMargin: size.width > 425 ? "-100px" : "-10px",
+    rootMargin: size.width > 425 ? "-100px" : "-50px",
   })
-
+  
   useEffect(() => {
     if (inView) {
       controls.start("visible")
@@ -27,7 +27,7 @@ const AnimParagraph = ({ children, delay, top }) => {
         opacity:1,
         transition: { duration: .8, delay:.2, ease: [0.6, 0.05, -0.01, 0.9] },
         },
-        hidden: {opacity:0,  y: 80 },
+        hidden: {opacity:0,  y: size.width > 425 ? 80 : 40, },
       }}
     >
       {children}

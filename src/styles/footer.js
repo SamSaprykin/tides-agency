@@ -44,6 +44,7 @@ export const FooterTitle = styled.h3`
         line-height:32px;
         height:40px;
         margin-top:16px;
+        margin-bottom:11px;
     }
     p {
         position:absolute;
@@ -233,6 +234,9 @@ export const ClockWrapper = styled.div`
         @media ${device.tablet} {
             font-size:18px;
         }
+        @media ${device.mobileL} {
+            font-size:14px;
+        }
     }
     
     div {
@@ -243,6 +247,7 @@ export const ClockWrapper = styled.div`
         @media ${device.tablet} {
             width:110px;
         }
+        
         text-align:left;
         display:flex;
         
