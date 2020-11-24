@@ -1,5 +1,5 @@
 import styled from "styled-components"
-
+import { device } from "./constants"
 
 export const WrapperPreloading = styled.div`
     height:100%;
@@ -8,6 +8,12 @@ export const WrapperPreloading = styled.div`
     top:0;
     background-color:#191B1C;
     z-index:100;
+    @media ${device.tablet} {
+        height:100vh;
+    }
+    @media ${device.mobileL} {
+        height:100vh;
+    }
 `
 
 export const ListItem = styled.li`
