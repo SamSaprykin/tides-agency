@@ -46,6 +46,9 @@ const ShapeContainer = styled.div`
     @media ${device.tablet} {
       height:50vh;
     }
+    @media ${device.mobileL} {
+      height:50vh;
+    }
     div {
       position:absolute;
       z-index:-100;
@@ -59,8 +62,8 @@ const ShapeContainer = styled.div`
         bottom:100px;
       }
       @media ${device.mobileL} {
-        height:80%;
-        bottom:100px;
+        height:120%;
+        bottom:10px;
       }
     }
     .second {
@@ -68,7 +71,7 @@ const ShapeContainer = styled.div`
         bottom:0;
         transform:rotate(-5deg) scale(1.15);
         @media ${device.tablet} {
-          height:45%;
+          height:55%;
         }
     }    
 `
