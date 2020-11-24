@@ -53,9 +53,10 @@ export const MenuLayer = styled.div`
     position: relative;
     background: #191B1C;
     height: 100%;
-    overflow-y: scroll;
+    overflow:hidden;
     @media ${device.mobileL} {
         padding-bottom: 120px;
+        overflow-y: scroll;
     }
 `
 
