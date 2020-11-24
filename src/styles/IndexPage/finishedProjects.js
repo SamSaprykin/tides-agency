@@ -154,7 +154,9 @@ export const ProjectItem = styled.li`
     :hover {
         padding:50px 30px;
         background-color:#191B1C;
-        
+        @media ${device.mobileL} {
+            padding:50px 10px;
+        }
     }
     
     div {

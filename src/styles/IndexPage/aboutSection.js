@@ -116,6 +116,7 @@ export const ImpactAreasTitle = styled.h4`
         padding:7px 20px 0;
         font-size:28px;
         line-height:32px;
+        height:68px;
     }
     p {
         position:absolute;

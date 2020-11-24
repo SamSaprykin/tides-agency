@@ -55,6 +55,7 @@ export const InsightsTitle = styled.h2`
       @media ${device.mobileL} {
         font-size:28px;
         line-height:32.2px;
+        height:40px;
       }
 `
 
@@ -130,6 +131,7 @@ export const WrapInform = styled.div`
   }
   @media ${device.mobileL} {
     flex-direction:column;
+    margin-top:0px;
   }
 `
 

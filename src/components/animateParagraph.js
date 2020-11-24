@@ -4,7 +4,6 @@ import { motion, useAnimation } from "framer-motion"
 import useWindowSize from "../hooks/useWindowSize"
 const AnimParagraph = ({ children, delay, top }) => {
   const size = useWindowSize();
-  console.log(size.width)
   const controls = useAnimation()
   const [ref, inView] = useInView({
     rootMargin: size.width > 425 ? "-100px" : "-50px",

@@ -54,6 +54,7 @@ export const SkillsSectionTitle = styled.h4`
     @media ${device.mobileL} {
         font-size:28px;
         line-height:32.2px;
+        height:40px;
     }
     p {
         position:absolute;

@@ -1,9 +1,10 @@
 import React, { useEffect } from "react"
 import { useInView } from "react-intersection-observer"
 import { motion, useAnimation } from "framer-motion"
-
+import useWindowSize from "../hooks/useWindowSize"
 const AnimHighParagraph = ({ children, delay, top }) => {
   const controls = useAnimation()
+  const size = useWindowSize();
   const [ref, inView] = useInView({
     rootMargin: "50px",
   })
@@ -25,7 +26,7 @@ const AnimHighParagraph = ({ children, delay, top }) => {
         opacity:1,
         transition: { duration: .6, delay:0.2, ease: [0.6, 0.05, -0.01, 0.9] },
         },
-        hidden: {  opacity:0,y: 100 },
+        hidden: {  opacity:0,y: size.width > 425 ? 100 : 50, },
       }}
     >
       {children}
