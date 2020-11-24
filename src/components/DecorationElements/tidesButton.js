@@ -78,6 +78,7 @@ const ButtonContainer = styled.div`
         r:50px;
         transform-origin:72.5px 75px;
       }
+      
   }
     #Circle2 {
         animation: ${from360to0} 2s linear infinite;
@@ -250,6 +251,7 @@ const Button = styled.button`
           width:150px;
           height:150px;
           font-size:14px;
+          
         }
     }
 `

@@ -40,7 +40,7 @@ const SkillsSection = ({ data}) => {
           </SkillsSectionTitle>
           <SkillsSectionDescription>
               <AnimParagraph>
-                <div dangerouslySetInnerHTML={{ __html: `<div> ${data.descriptionText.descriptionText} </div>` }} />
+                Tides is a documented world phenonomen. Similarly, the people of <span> Tides </span> are a force to be weckonend with.
               </AnimParagraph>
           </SkillsSectionDescription>
           
