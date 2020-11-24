@@ -92,6 +92,9 @@ export const IconWaveWrapper = styled.div`
       if (hovered === true) return "translate(-75px,0);"
       if (hovered === false) return "initial;"
     }};
+    @media ${device.tablet} {
+      transform:none;
+    }
   }
 `
 

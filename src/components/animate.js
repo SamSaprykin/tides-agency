@@ -18,7 +18,7 @@ export const menuShow = (elem1, elem2) => {
 //Close menu
 export const menuHide = (elem1, elem2) => {
   gsap.to([elem1, elem2], {
-    duration: 1.2,
+    duration: 1.8,
     opacity: 0,
     ease: "power4.inOut",
     stagger: {

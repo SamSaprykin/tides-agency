@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { device } from "./constants"
+
 export const HamburgerMenu = styled.div`
     display: none;
     z-index: 9;
@@ -52,7 +53,10 @@ export const MenuLayer = styled.div`
     position: relative;
     background: #191B1C;
     height: 100%;
-    overflow: hidden;
+    overflow-y: scroll;
+    @media ${device.mobileL} {
+        padding-bottom: 120px;
+    }
 `
 
 export const MenuContainer = styled.div`
@@ -85,7 +89,7 @@ export const MenuLinks = styled.div`
     }
     @media ${device.mobileL} {
         flex-direction:column;
-        top: 3vh;
+        top: 8vh;
     }
     nav {
     display: block;
