@@ -316,9 +316,11 @@ export const ButtonPlusMinus = styled.button`
     top: 25%;
     bottom: 25%;
     width:5px;
+    height: 25px;
     left: 45%;
     @media ${device.mobileL} {
         width: 3.8px;
+        height:19px;
     }
   }
   
@@ -326,8 +328,10 @@ export const ButtonPlusMinus = styled.button`
     left: 25%;
     right: 25%;
     height: 5px;
+    width: 25px;
     @media ${device.mobileL} {
         height: 3.8px;
+        width: 19px;
     }
     top: 45%;
   }
