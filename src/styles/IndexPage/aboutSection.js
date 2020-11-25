@@ -288,3 +288,70 @@ export const Marque = styled.div`
     
 `
 
+export const ButtonPlusMinus = styled.button`
+  color: #ecf0f1;
+  background: transparent;
+  width: 50px;
+  height: 50px;
+  border: 0;
+  font-size: 1.5em;
+  position: relative;
+  right:0;
+  outline:none;
+  transition: .3s;
+  display:none;
+  @media ${device.mobileL} {
+    width: 38px;
+    height: 38px;
+  }
+  @media ${device.tablet} {
+    display:block;
+  }
+  span {
+    position: absolute;
+    transition: .3s;
+    background: #1A6AFF;
+  }
+  span:first-of-type {
+    top: 25%;
+    bottom: 25%;
+    width: 10%;
+    left: 45%;
+    
+  }
+  
+  span:last-of-type {
+    left: 25%;
+    right: 25%;
+    height: 10%;
+    top: 45%;
+    @media ${device.mobileL} {
+        display:block;
+    }
+  }
+  span:last-of-type {
+    left: ${({ open }) => {
+        if (open === true) return `50%;`
+        if (open === false) return `25%`
+    }};;
+    right:${({ open }) => {
+        if (open === true) return `50%;`
+        if (open === false) return `25%;`
+    }};;
+  }
+  span:first-of-type, button span:last-of-type {
+    transform: ${({ open }) => {
+        if (open === true) return `rotate(90deg);`
+        if (open === false) return `rotate(0deg);`
+    }};
+  }
+`
+
+export const WrapperTitle = styled.div`
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  align-items:center;
+  
+`
+

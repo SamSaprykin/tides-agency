@@ -5,7 +5,8 @@ import {
     DescriptionArea,
     DescriptionItems,
     Marque,
-    
+    WrapperTitle,
+    ButtonPlusMinus,
 } from "../../../styles/IndexPage/aboutSection"
 
 import AnimParagraph from "../../animateParagraph"
@@ -18,6 +19,9 @@ class MarqueeComponent extends React.Component {
   
   constructor(props) {
     super(props);
+    this.state = {
+      descrOpen: false,
+    };
     this.itemRef = React.createRef();
     this.marqueRef = React.createRef();
     this.descrRef = React.createRef();
@@ -34,7 +38,7 @@ class MarqueeComponent extends React.Component {
   }
   showDescr = () => {
     let heightAnimation
-    
+    this.setState({descrOpen: true});
     if(this.props.size > 768) {
       heightAnimation = `400px`
     } else {
@@ -58,6 +62,7 @@ class MarqueeComponent extends React.Component {
     
   }
   hideDescr = () => {
+    this.setState({descrOpen: false});
     let heightAnimationStart
     if(this.props.size > 768) {
       heightAnimationStart = `188px`
@@ -80,8 +85,9 @@ class MarqueeComponent extends React.Component {
       TweenLite.to(element, 0.8, { marginTop:"36px" })
     }
   }
+  
   render() {
-    
+    console.log(this.state.descrOpen)
     return (
       <>
         <li className="menu__item"  key={this.props.data.id} onMouseLeave={this.hideDescr} >
@@ -90,7 +96,13 @@ class MarqueeComponent extends React.Component {
                 <BorderElement padding="0 0 30px"/>
               </AnimBorder>
               <AnimParagraph>
-                {this.props.data.titleMarquee}
+                <WrapperTitle>
+                  {this.props.data.titleMarquee} 
+                  <ButtonPlusMinus open={this.state.descrOpen}>
+                      <span></span><span></span>
+                  </ButtonPlusMinus>
+                </WrapperTitle>
+                
               </AnimParagraph>
                 <button className="button-expand">+</button>
             </h5>
