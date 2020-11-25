@@ -21,7 +21,7 @@ import { GlitchEffect } from "../../../styles/glitchEffect"
 const SectionQuote = ({data}) => {
   
   return (
-  <QuoteLayout>
+  <QuoteLayout id="quote-section">
     <QuoteHeader>
         <TidesIcons type="moonsGroup" />
         <QuoteTitle>we make any digital dream come true</QuoteTitle>

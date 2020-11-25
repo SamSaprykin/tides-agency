@@ -9,7 +9,7 @@ export const menuShow = (elem1, elem2) => {
     transformOrigin: "right top",
     ease: "power1.inOut",
     stagger: {
-      amount: .12,
+      amount: .11,
     },
     y:"-100%"
   })

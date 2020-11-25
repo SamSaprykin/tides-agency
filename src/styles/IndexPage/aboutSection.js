@@ -315,19 +315,21 @@ export const ButtonPlusMinus = styled.button`
   span:first-of-type {
     top: 25%;
     bottom: 25%;
-    width: 10%;
+    width:5px;
     left: 45%;
-    
+    @media ${device.mobileL} {
+        width: 3.8px;
+    }
   }
   
   span:last-of-type {
     left: 25%;
     right: 25%;
-    height: 10%;
-    top: 45%;
+    height: 5px;
     @media ${device.mobileL} {
-        display:block;
+        height: 3.8px;
     }
+    top: 45%;
   }
   span:last-of-type {
     left: ${({ open }) => {

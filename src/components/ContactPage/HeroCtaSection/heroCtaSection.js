@@ -13,7 +13,7 @@ const HeroCtaSection = ({data}) => {
 
   return (
   <>
-  <HeroCtaWrapper>
+  <HeroCtaWrapper id="hero-contact-section">
       {
           data.heroTitleContactPage && (
             <HeroCtaTitle>
