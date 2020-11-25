@@ -337,7 +337,7 @@ export const ButtonPlusMinus = styled.button`
     top: 45%;
   }
   
-  span:first-of-type, button span:last-of-type {
+  span:first-of-type {
     transform: ${({ open }) => {
         if (open === true) return `rotate(90deg);`
         if (open === false) return `rotate(0deg);`
