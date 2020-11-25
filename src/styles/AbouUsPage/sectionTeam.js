@@ -7,12 +7,11 @@ export const WrapperTeam = styled.div`
     margin:0 auto;
     padding: 136px 145px;
     @media ${device.laptopL} {
-        max-width:960px;
+        max-width:1160px;
         padding:100px;
     }
     @media ${device.laptop} {
-        
-        max-width:744px;
+        max-width:960px;
         padding:80px;
     }
     @media ${device.tablet} {

@@ -8,10 +8,10 @@ export const FinishedProjectsWrapper = styled.div`
     max-width:1302px;
     margin:0 auto;
     @media ${device.laptopL} {
-        max-width:960px;
+        max-width:1160px;
     }
     @media ${device.laptop} {
-        max-width:744px;
+        max-width:960px;
     }
     @media ${device.tablet} {
         max-width:728px;
