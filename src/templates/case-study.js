@@ -11,15 +11,16 @@ import AuthorsProjectSection from "../components/CaseStudyPage/AuthorsProjectSec
 
 const CaseStudy = props => {
   const components = props.data.contentfulCaseStudyPage.components
-  
+  const anchorId = props.data.contentfulCaseStudyPage.slug
+  const projectAnchor = `/case-study/${anchorId}#${anchorId}`
   return (
-    <Layout>
+    <Layout anchorId={projectAnchor}>
       <SEO title="CaseStudy" keywords={[`gatsby`, `application`, `react`]} />
       {components?.map(ele => {
           const type = ele.__typename;
           if (type === 'ContentfulTitleSectionCaseStudy') {
             return (
-              <ProjectNameSection data={ele}/>
+              <ProjectNameSection data={ele} anchorId={anchorId}/>
             )
           } else if (type === 'ContentfulAboutSectionCaseStudy') {
             return  <AboutProjectSection data={ele} /> ;

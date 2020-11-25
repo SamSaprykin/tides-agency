@@ -26,7 +26,8 @@ import BorderElement from "./DecorationElements/borderElement"
 import AnimParagraph from "./animateParagraph"
 import AnimSmall from "./animSmall"
 
-const Footer = () => {
+const Footer = (props) => {
+    console.log(props)
     return (
         <>
         <FooterWrapper>
@@ -127,7 +128,7 @@ const Footer = () => {
         </FooterWrapper>
         <FooterFooter>
             <BackToTop>
-                <AnchorLink to="/#hero-section" title="Our team">
+                <AnchorLink to={props.anchorId} title="Our team">
                         <TidesIcons type="arrowButton" />
                         <span>Back to Top</span>
                 </AnchorLink>

@@ -18,10 +18,10 @@ import { GlitchEffect } from "../../../styles/glitchEffect"
 
 
 
-const SectionQuote = ({data}) => {
+const SectionQuote = (props) => {
   
   return (
-  <QuoteLayout id="quote-section">
+  <QuoteLayout id={props.anchorId}>
     <QuoteHeader>
         <TidesIcons type="moonsGroup" />
         <QuoteTitle>we make any digital dream come true</QuoteTitle>
@@ -29,9 +29,9 @@ const SectionQuote = ({data}) => {
     <ContentContainer>
           <GlitchEffect>
               {
-                data.quoteText && (
+                props.data.quoteText && (
                   <QuoteText>
-                    <div dangerouslySetInnerHTML={{ __html: `<div> ${data.quoteText.quoteText} </div>` }} />
+                    <div dangerouslySetInnerHTML={{ __html: `<div> ${props.data.quoteText.quoteText} </div>` }} />
                     <TidesIcons type="waveTextDecoration" className="wave"/>
                     <TidesIcons type="bigQuote" className="quote"/>
                   </QuoteText>
@@ -40,14 +40,14 @@ const SectionQuote = ({data}) => {
           </GlitchEffect>
         <QuoteAuthorWrapper>
               {
-                data.quoteAuthorIcon && (
+                props.data.quoteAuthorIcon && (
                   <QuoteAuthorIcon>
                     <img src="/Jonathan-icon.png" />
                   </QuoteAuthorIcon>
                 )
               }
               {
-                data.quoteAuthorName && (
+                props.data.quoteAuthorName && (
                   <QuoteAuthorName>
                     <TidesIcons type="signatureJonathan" />
                   </QuoteAuthorName>

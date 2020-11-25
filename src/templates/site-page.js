@@ -22,15 +22,22 @@ import SubscribeSection from "../components/HomePage/SubscribeSection/subscribeS
 
 const SitePage = props => {
   const components = props.data.contentfulContentfulPage.components
+  const anchorId = props.data.contentfulContentfulPage.slug
+  let pageAnchor = `/case-study/${anchorId}#${anchorId}`
+  if (anchorId === "/") {
+    pageAnchor = '/#hero-section'
+  } else {
+    pageAnchor = `/${anchorId}#${anchorId}`
+  }
   
   return (
-    <Layout>
+    <Layout anchorId={pageAnchor}>
       <SEO title="Home" />
       {components?.map(ele => {
           const type = ele.__typename;
           if (type === 'ContentfulHeroIndexPage') {
             return (
-              <HeroSection data={ele} />
+              <HeroSection data={ele} anchorId={anchorId}/>
             )
           } else if (type === 'ContentfulAboutIndexPage') {
             return <AboutSection data={ele}/> ;
@@ -43,7 +50,7 @@ const SitePage = props => {
           } else if (type === 'ContentfulSubscribeIndexPage') {
             return <SubscribeSection data={ele}/> ;
           } else if (type === 'ContentfulHeroAboutPage') {
-            return <SectionQuote data={ele}/> ;
+            return <SectionQuote data={ele} anchorId={anchorId} /> ;
           } else if (type === 'ContentfulOurStoryAboutPage') {
             return <SectionOurStory data={ele} />;
           } else if (type === 'ContentfulTeamAboutPage') {
@@ -51,7 +58,7 @@ const SitePage = props => {
           } else if (type === 'ContentfulDifferencesAboutUsPage') {
             return <SectionDifferent data={ele} />;
           } else if (type === 'ContentfulHeroContactPage') {
-            return <HeroCtaSection data={ele} />;
+            return <HeroCtaSection data={ele} anchorId={anchorId}/>;
           } else if (type === 'ContentfulContactFormComponent') {
             return <FormSection data={ele} />;
           } 

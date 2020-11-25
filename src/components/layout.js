@@ -9,7 +9,7 @@ import Header from "./header"
 import Preloading from "./Preloading/preloading"
 import CustomCursor from "../components/customCursor"
 
-const Layout = ({ children }) => (
+const Layout = (props) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -26,8 +26,8 @@ const Layout = ({ children }) => (
         <GlobalStyle />
         <CustomCursor />
         <Header />
-          <main>{children}</main>
-        <Footer />
+          <main>{props.children}</main>
+        <Footer anchorId={props.anchorId}/>
       </>
     )}
   />

@@ -9,23 +9,23 @@ import {
     HeroCtaCta,
 } from "../../../styles/ContactPage/sectionHeroCta"
 
-const HeroCtaSection = ({data}) => {
+const HeroCtaSection = (props) => {
 
   return (
   <>
-  <HeroCtaWrapper id="hero-contact-section">
+  <HeroCtaWrapper id={props.anchorId}>
       {
-          data.heroTitleContactPage && (
+          props.data.heroTitleContactPage && (
             <HeroCtaTitle>
-              <div dangerouslySetInnerHTML={{ __html: `<div> ${data.heroTitleContactPage} </div>` }} />
+              <div dangerouslySetInnerHTML={{ __html: `<div> ${props.data.heroTitleContactPage} </div>` }} />
               <TidesIcons type="waveTextDecoration" className="wave"/>
             </HeroCtaTitle>
           )
       }
       <ScrollDown margin="64px 0 0"/>
       {
-        data.heroCta && (
-          <HeroCtaCta>{data.heroCta}</HeroCtaCta>
+        props.data.heroCta && (
+          <HeroCtaCta>{props.data.heroCta}</HeroCtaCta>
         )
       }
   </HeroCtaWrapper>
