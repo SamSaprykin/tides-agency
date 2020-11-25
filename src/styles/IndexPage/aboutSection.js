@@ -311,6 +311,7 @@ export const ButtonPlusMinus = styled.button`
     position: absolute;
     transition: .3s;
     background: #1A6AFF;
+    display:block;
   }
   span:first-of-type {
     top: 25%;
