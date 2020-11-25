@@ -301,11 +301,13 @@ export const ButtonPlusMinus = styled.button`
   transition: .3s;
   display:none;
   @media ${device.mobileL} {
-    width: 38px;
-    height: 38px;
+    width: 19px;
+    height: 19px;
   }
   @media ${device.tablet} {
-    display:block;
+    display:flex;
+    align-items:center;
+    justify-content:center;
   }
   span {
     position: absolute;
@@ -314,11 +316,10 @@ export const ButtonPlusMinus = styled.button`
     display:block;
   }
   span:first-of-type {
-    top: 25%;
-    bottom: 25%;
+  
     width:5px;
     height: 25px;
-    left: 45%;
+    
     @media ${device.mobileL} {
         width: 3.8px;
         height:19px;
@@ -326,15 +327,14 @@ export const ButtonPlusMinus = styled.button`
   }
   
   span:last-of-type {
-    left: 25%;
-    right: 25%;
+    
     height: 5px;
     width: 25px;
     @media ${device.mobileL} {
         height: 3.8px;
         width: 19px;
     }
-    top: 45%;
+    
   }
   
   span:first-of-type {
