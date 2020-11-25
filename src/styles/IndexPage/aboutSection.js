@@ -309,7 +309,7 @@ export const ButtonPlusMinus = styled.button`
   }
   span {
     position: absolute;
-    transition: .3s;
+    transition: all .3s;
     background: #1A6AFF;
     display:block;
   }
@@ -336,16 +336,7 @@ export const ButtonPlusMinus = styled.button`
     }
     top: 45%;
   }
-  span:last-of-type {
-    left: ${({ open }) => {
-        if (open === true) return `50%;`
-        if (open === false) return `25%;`
-    }};;
-    right:${({ open }) => {
-        if (open === true) return `50%;`
-        if (open === false) return `25%;`
-    }};;
-  }
+  
   span:first-of-type, button span:last-of-type {
     transform: ${({ open }) => {
         if (open === true) return `rotate(90deg);`
