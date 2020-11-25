@@ -87,7 +87,6 @@ class MarqueeComponent extends React.Component {
   }
   
   render() {
-    console.log(this.state.descrOpen)
     return (
       <>
         <li className="menu__item"  key={this.props.data.id} onMouseLeave={this.hideDescr} >

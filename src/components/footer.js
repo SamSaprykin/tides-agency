@@ -27,7 +27,6 @@ import AnimParagraph from "./animateParagraph"
 import AnimSmall from "./animSmall"
 
 const Footer = (props) => {
-    console.log(props)
     return (
         <>
         <FooterWrapper>
