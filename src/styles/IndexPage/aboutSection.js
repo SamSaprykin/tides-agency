@@ -339,7 +339,7 @@ export const ButtonPlusMinus = styled.button`
   span:last-of-type {
     left: ${({ open }) => {
         if (open === true) return `50%;`
-        if (open === false) return `25%`
+        if (open === false) return `25%;`
     }};;
     right:${({ open }) => {
         if (open === true) return `50%;`
