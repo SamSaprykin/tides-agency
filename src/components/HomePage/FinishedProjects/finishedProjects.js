@@ -72,6 +72,7 @@ const FinishedProjects = ({data}) => {
                         let worTypesList = workTypes.join(", ")
                         return (
                           <>
+                          <Link to={`/case-study/${item.node.slug}`}>
                             <ProjectItem key={index}>
                                 <AnimSmall delay={.1}>
                                   <IconItem 
@@ -87,14 +88,13 @@ const FinishedProjects = ({data}) => {
                                   <WorkYear>{year}</WorkYear>
                                 </AnimSmall>
                                 <AnimSmall delay={.4}>
-                                  <Link to={`/case-study/${item.node.slug}`}>
                                     <ArrowWork src="/arrow-angle.svg" />
-                                  </Link>
                                 </AnimSmall>
                             </ProjectItem>
                             <AnimBorder delay={index/10 +.1}>
                               <BorderElement color="#191B1C"/>
                             </AnimBorder>
+                          </Link>
                           </>
                         )
                       })
