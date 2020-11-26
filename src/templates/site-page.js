@@ -161,16 +161,7 @@ query WebsitePageQuery($slug: String!) {
         information {
           information
         }
-        projectsItem {
-          workTypes
-          year
-          linkTo
-          icon {
-            file {
-              url
-            }
-          }
-        }
+        
       }
       ... on ContentfulSkillsIndexPage {
         callToAction
