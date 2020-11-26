@@ -23,7 +23,12 @@ import AnimSmall from "../../animSmall"
 import AnimBorder from "../../borderAnimation"
 import BorderElement from "../../DecorationElements/borderElement"
 
+import useLatestProjects from "../../../hooks/useLatestProjects"
+
 const FinishedProjects = ({data}) => {
+  const latestProjects = useLatestProjects()
+  
+  
   return (
     <FinishedProjectsWrapper>
         <WrapperBoard>
@@ -49,24 +54,40 @@ const FinishedProjects = ({data}) => {
                     </Information>
                 </DescriptionWrapper>
                 <ProjectsLinks>
+                
                     {
-                      data.projectsItem.map((item,index) => {
+                      latestProjects.map((item,index) => {
+                        let year, workTypes
+                        item.node.components.map(ele => {
+                          const type = ele.__typename;
+                          if (type === 'ContentfulAboutSectionCaseStudy') {
+                            return (
+                              year = ele.launchDate
+                            )
+                          }  else if (type === 'ContentfulServicesSectionCaseStudy') {
+                            return  workTypes = ele.services;
+                          } 
+                        })
+                        
+                        let worTypesList = workTypes.join(", ")
                         return (
                           <>
                             <ProjectItem key={index}>
                                 <AnimSmall delay={.1}>
                                   <IconItem 
-                                    src={item.icon.file.url}
+                                    src={item.node.iconCaseStudy.file.url}
                                   />
                                 </AnimSmall>
                                 <AnimSmall delay={.2}>
-                                  <WorkType>{item.workTypes} </WorkType>
+                                  <WorkType>
+                                    {worTypesList} 
+                                  </WorkType>
                                 </AnimSmall>
                                 <AnimSmall delay={.3}>
-                                  <WorkYear>{item.year}</WorkYear>
+                                  <WorkYear>{year}</WorkYear>
                                 </AnimSmall>
                                 <AnimSmall delay={.4}>
-                                  <Link to={item.linkTo}>
+                                  <Link to={`/case-study/${item.node.slug}`}>
                                     <ArrowWork src="/arrow-angle.svg" />
                                   </Link>
                                 </AnimSmall>

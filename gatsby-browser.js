@@ -1,2 +1,2 @@
-require("./static/fonts/fonts.css")
-require("./src/styles/global.css")
+import "./src/styles/global.css"
+import "./static/fonts/fonts.css"

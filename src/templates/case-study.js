@@ -15,7 +15,11 @@ const CaseStudy = props => {
   const projectAnchor = `/case-study/${anchorId}#${anchorId}`
   return (
     <Layout anchorId={projectAnchor}>
-      <SEO title="CaseStudy" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO 
+        title={`Tides project: ${anchorId}`}
+        keywords={[`finished projects`, `applications`, `web design`, `marketing`]} 
+        description="This is our finished projects"
+      />
       {components?.map(ele => {
           const type = ele.__typename;
           if (type === 'ContentfulTitleSectionCaseStudy') {

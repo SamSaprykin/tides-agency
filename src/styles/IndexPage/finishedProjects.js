@@ -177,7 +177,7 @@ export const WorkType = styled.span `
     line-height:34px;
     color: #191B1C;
     font-weight:400;
-    width:300px;
+    width:350px;
     display:inline-block;
     ${ProjectItem} : hover & {
         color:#E8ECF3;

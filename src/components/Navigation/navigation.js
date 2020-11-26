@@ -90,7 +90,7 @@ const Navigation = ({ state, setState }) => {
       
       staggerLinks(line3, line4, line5, line6);
       staggerLinksFast(line1, line2);
-      staggerLinksSocial(line7,line8,line9,line10,line11,line12,line13,line14)
+      staggerLinksSocial(line7,line8,line9,line10,line11,line12,line13)
     }
   }, [state])
   const handleMenu = () => {
@@ -204,13 +204,6 @@ const Navigation = ({ state, setState }) => {
                   </li>
                   <li>
                     <h2 ref={(el) => (line5 = el)}>
-                      <Link to="/case-study">
-                        Case study
-                      </Link>
-                    </h2>
-                  </li>
-                  <li>
-                    <h2 ref={(el) => (line6 = el)}>
                       <Link to="/contact">
                         Contact
                       </Link>
@@ -220,13 +213,13 @@ const Navigation = ({ state, setState }) => {
               </nav>
               <MenuInfo  className="info">
                 <WrapperText >
-                  <h5 ref={(el) => (line7 = el)}>Social Media</h5>
+                  <h5 ref={(el) => (line6 = el)}>Social Media</h5>
                 </WrapperText>
                 
                 <SocialLinks>
                   
                       <SocialLinksItem>
-                        <h3 ref={(el) => (line8 = el)}>
+                        <h3 ref={(el) => (line7 = el)}>
                           <TidesIcons type="arrowButton"  />
                           <a 
                             href="https://dribbble.com/"
@@ -241,7 +234,7 @@ const Navigation = ({ state, setState }) => {
                       <SocialLinksItem 
                           
                       >
-                        <h3 ref={(el) => (line9 = el)}>
+                        <h3 ref={(el) => (line8 = el)}>
                           <TidesIcons type="arrowButton"  />
                           <a 
                             href="https://dribbble.com/" 
@@ -257,7 +250,7 @@ const Navigation = ({ state, setState }) => {
                       <SocialLinksItem 
                           
                       >
-                        <h3 ref={(el) => (line10 = el)}>
+                        <h3 ref={(el) => (line9 = el)}>
                           <TidesIcons type="arrowButton"  />  
                           <a 
                             href="https://dribbble.com/" 
@@ -273,7 +266,7 @@ const Navigation = ({ state, setState }) => {
                       <SocialLinksItem 
                          
                       >
-                        <h3 ref={(el) => (line11 = el)}>
+                        <h3 ref={(el) => (line10 = el)}>
                           <TidesIcons type="arrowButton"  />
                           <a 
                             href="https://dribbble.com/"
@@ -289,7 +282,7 @@ const Navigation = ({ state, setState }) => {
                       <SocialLinksItem 
                           
                       >
-                        <h3 ref={(el) => (line12 = el)}>
+                        <h3 ref={(el) => (line11 = el)}>
                           <TidesIcons type="arrowButton"  />
                           <a 
                             href="https://dribbble.com/" 
@@ -305,9 +298,9 @@ const Navigation = ({ state, setState }) => {
                    
                 </SocialLinks>
                 <WrapperText >
-                  <h5 ref={(el) => (line13 = el)}>Contact</h5>
+                  <h5 ref={(el) => (line12 = el)}>Contact</h5>
                 </WrapperText>
-                <WrapperText ref={(el) => (line14 = el)}>
+                <WrapperText ref={(el) => (line13 = el)}>
                   <EmailTides>
                     info@tides.agency
                   </EmailTides>
