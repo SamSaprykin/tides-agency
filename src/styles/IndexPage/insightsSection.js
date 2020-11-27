@@ -124,7 +124,7 @@ export const WrapInform = styled.div`
   display:flex;
   flex-direction:row;
   justify-content:space-between;
-  margin-top:50px;
+  margin-top:40px;
   opacity:0;
   :nth-of-type(1) {
     opacity:1;
@@ -140,6 +140,7 @@ export const ImageContainer = styled.div`
   height: auto;
   position: relative;
   width:100%;
+  margin-bottom:25px;
   p {
     width:100%;
     img {
@@ -159,8 +160,11 @@ export const PostTitle = styled.h5`
   position:relative;
   overflow:hidden;
   margin-bottom:32px !important;
-  @media ${device.tablet} {
+  @media ${device.laptopL} {
     font-size:28px;
+  }
+  @media ${device.mobileL} {
+    margin-bottom:10px !important;
   }
 `
 

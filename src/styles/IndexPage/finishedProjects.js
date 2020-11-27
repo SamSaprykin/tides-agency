@@ -187,8 +187,8 @@ export const WorkType = styled.span `
         width:260px;
     }
     @media ${device.mobileL} {
-        width:75px;
-        font-size:10px;
+        width:150px;
+        font-size:9px;
         line-height:13px;
         display:flex;
         flex-direction:column;

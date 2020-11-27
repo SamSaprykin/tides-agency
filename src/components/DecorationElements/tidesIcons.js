@@ -268,12 +268,12 @@ const TidesIcons = ({
         )  : type === 'blobButton' ? (
             <svg id="organic-blob" width="300" height="300" xmlns="http://www.w3.org/2000/svg" filter="url(#animate)" fill="#FFCC00">
            
-                <filter id="animate">
-                <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="1" result="warpper"/>
-                <feColorMatrix in="warpper" type="hueRotate">
-                <animate attributeType="XML" attributeName="values" values="0;110;150;210;360" dur="5s" repeatCount="indefinite"/>
-                </feColorMatrix>
-                <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="70" in="SourceGraphic"/>
+                <filter id="animate">    
+                    <feTurbulence type="fractalNoise" baseFrequency="0.009" numOctaves="1" result="warpper"/>
+                    <feColorMatrix in="warpper" type="hueRotate">
+                    <animate attributeType="XML" attributeName="values" values="0;110;150;210;360" dur="5s" repeatCount="indefinite"/>
+                    </feColorMatrix>
+                    <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="50" xChannelSelector="R" yChannelSelector="G"/>
                 </filter>
             
             <circle id="Circle1" ></circle>
