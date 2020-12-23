@@ -6,32 +6,7 @@ import {
     AuthorsListTitle,
 } from "../../../styles/ProjectPage/authorsProjectSection"
 import StainsBackground from "../../DecorationElements/stainsBackgrounds"
-const authorsList  = [
-    {
-        position: "Art Direction",
-        name: "Jonathan Crowe",
-    },
-    {
-        position: "Graphic Design",
-        name: "Mariia Yatsenko",
-    },
-    {
-        position: "UI/UX Design",
-        name: "Pablo Cucchi",
-    },
-    {
-        position: "Project Manager",
-        name: "Rachel Crowe",
-    },
-    {
-        position: "Developers",
-        name: "Miranda Gomez Tejada",
-    },
-    {
-        position: "Special Thanks",
-        name: "Milosz Bazela, Lubos Kmetko",
-    }
-]
+
 
 const AuthorsProjectSection = ({data}) => {
   return (
